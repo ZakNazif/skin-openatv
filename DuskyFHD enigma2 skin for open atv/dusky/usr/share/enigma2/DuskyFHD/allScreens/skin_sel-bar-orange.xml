@@ -1,0 +1,25 @@
+<skin>
+  <colors>
+	<color name="bs" value="#00c59e19" />
+  </colors>
+  <windowstyle type="skinned" id="0">
+    <title font="Regular;30" offset="20,5" />
+    <color name="Background" color="tb" />
+    <color name="LabelForeground" color="fc" />
+    <color name="ListboxBackground" color="tb" />
+    <color name="ListboxForeground" color="fc" />
+    <color name="ListboxSelectedBackground" color="bs" />
+    <color name="ListboxSelectedForeground" color="fcs" />
+    <color name="ListboxMarkedBackground" color="tb" />
+    <color name="ListboxMarkedForeground" color="red" />
+    <color name="ListboxMarkedAndSelectedBackground" color="bs" />
+    <color name="ListboxMarkedAndSelectedForeground" color="red" />
+    <color name="WindowTitleForeground" color="lightgrey2" />
+    <color name="WindowTitleBackground" color="tb" />
+    <borderset name="bsWindow">
+      <pixmap filename="DuskyFHD/window/top_left_corner.png" pos="bpTopLeft" />
+      <pixmap filename="DuskyFHD/window/top_edge.png" pos="bpTop" />
+      <pixmap filename="DuskyFHD/window/top_right_corner.png" pos="bpTopRight" />
+    </borderset>
+  </windowstyle>
+</skin>

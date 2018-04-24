@@ -1,0 +1,14 @@
+#!/bin/sh
+rm -rf /usr/share/enigma2/eDARKNESS_FHD
+rm -rf /usr/lib/enigma2/python/Components/Converter/DARK*
+rm -rf /usr/lib/enigma2/python/Components/Renderer/DARK*
+echo " " 
+echo "*******************************" 
+echo " "                                                         
+echo "       skin successful removed...  "
+echo " "    
+echo "           restart gui now..."      
+echo " "   
+echo "*******************************" 
+echo " "  
+exit 0                                               

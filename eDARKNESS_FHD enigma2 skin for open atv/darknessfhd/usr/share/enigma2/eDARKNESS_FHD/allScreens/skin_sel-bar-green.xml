@@ -1,0 +1,33 @@
+<skin>
+  <windowstyle type="skinned" id="0">
+    <title font="Regular;30" offset="20,5" />
+    <color name="Background" color="tb" />
+    <color name="LabelForeground" color="lightgrey" />
+    <color name="ListboxBackground" color="tb" />
+    <color name="ListboxForeground" color="lightgrey" />
+    <color name="ListboxSelectedBackground" color="#00076207" />
+    <color name="ListboxSelectedForeground" color="white" />
+    <color name="ListboxMarkedBackground" color="tb" />
+    <color name="ListboxMarkedForeground" color="red" />
+    <color name="ListboxMarkedAndSelectedBackground" color="#00076207" />
+    <color name="ListboxMarkedAndSelectedForeground" color="red" />
+    <color name="WindowTitleForeground" color="lightgrey2" />
+    <color name="WindowTitleBackground" color="tb" />
+    <borderset name="bsWindow">
+      <pixmap filename="eDARKNESS_FHD/window/top_left_corner.png" pos="bpTopLeft" />
+      <pixmap filename="eDARKNESS_FHD/window/top_edge.png" pos="bpTop" />
+      <pixmap filename="eDARKNESS_FHD/window/top_right_corner.png" pos="bpTopRight" />
+      <pixmap filename="eDARKNESS_FHD/window/left_edge.png" pos="bpLeft" />
+      <pixmap filename="eDARKNESS_FHD/window/right_edge.png" pos="bpRight" />
+      <pixmap filename="eDARKNESS_FHD/window/bottom_left_corner.png" pos="bpBottomLeft" />
+      <pixmap filename="eDARKNESS_FHD/window/bottom_edge.png" pos="bpBottom" />
+      <pixmap filename="eDARKNESS_FHD/window/bottom_right_corner.png" pos="bpBottomRight" />
+    </borderset>
+    <borderset name="bsListboxEntry">
+      <pixmap filename="eDARKNESS_FHD/border/linegreen.png" pos="bpTop" />
+      <pixmap filename="eDARKNESS_FHD/border/linegreen.png" pos="bpBottom" />
+      <pixmap filename="eDARKNESS_FHD/border/vlinegreen.png" pos="bpLeft" />
+      <pixmap filename="eDARKNESS_FHD/border/vlinegreen.png" pos="bpRight" />
+    </borderset>
+  </windowstyle>
+</skin>

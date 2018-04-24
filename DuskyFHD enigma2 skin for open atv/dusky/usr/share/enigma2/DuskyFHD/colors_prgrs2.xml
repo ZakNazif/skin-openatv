@@ -1,0 +1,34 @@
+<skin>
+  <screen name="prgrs_infobar">
+    <widget source="session.Event_Now" render="Progress" position="601,906" size="1015,14" backgroundColor="tb" pixmap="DuskyFHD/e1/prgrs2.png" zPosition="1" transparent="1">
+      <convert type="EventTime">Progress</convert>
+    </widget>
+  </screen>
+  <screen name="prgrs_volume">
+    <widget name="Volume" position="55,19" size="427,12" zPosition="2" pixmap="DuskyFHD/e1/vprgrs2.png" transparent="1" alphatest="blend" />
+  </screen>
+  <screen name="prgrs_snr-agc">
+    <widget source="session.FrontendStatus" render="Progress" pixmap="DuskyFHD/e1/snrbar2.png" orientation="orBottomToTop" position="1700,802" size="14,165" backgroundColor="tb" alphatest="blend" transparent="1" zPosition="2">
+      <convert type="FrontendInfo">SNR</convert>
+    </widget>
+    <widget source="session.FrontendStatus" render="Progress" orientation="orBottomToTop" backgroundColor="tb" transparent="1" zPosition="2" pixmap="DuskyFHD/e1/snrbar2.png" position="1806,802" size="14,165">
+      <convert type="FrontendInfo">AGC</convert>
+    </widget>
+  </screen>
+  <screen name="prgrs_mediaplayer">
+    <widget size="870,14" position="540,870" pixmap="DuskyFHD/e1/prgrs2.png" zPosition="2" transparent="1" source="session.CurrentService" render="Progress">
+      <convert type="ServicePosition">Position</convert>
+    </widget>
+  </screen>
+  <screen name="prgrs_movieplayer">
+    <widget size="1011,14" position="403,125" pixmap="DuskyFHD/e1/prgrs2.png" zPosition="3" transparent="1" source="session.CurrentService" render="Progress">
+      <convert type="ServicePosition">Position</convert>
+    </widget>
+  </screen>
+  <screen name="prgrs_emcplayer">
+    <widget source="session.CurrentService" render="Progress" position="402,938" size="1011,13" backgroundColor="tb" pixmap="DuskyFHD/e1/prgrs2.png" zPosition="1" transparent="1">
+      <convert type="ServicePosition">Position</convert>
+    </widget>
+  </screen>
+ 
+</skin>

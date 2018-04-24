@@ -1,0 +1,5 @@
+<skin>
+  <screen name="pig">
+	  <widget source="session.VideoPicture" render="Pig" position="1248,71" size="640,360" zPosition="2" backgroundColor="transparent" />
+  </screen>
+</skin>

@@ -1,0 +1,5 @@
+<skin>
+  <screen name="rgyb_png">
+    <ePixmap pixmap="DuskyFHD/e1/rgyb.png" position="76,972" size="1100,40" zPosition="0" alphatest="blend" transparent="1" />
+  </screen>
+</skin>

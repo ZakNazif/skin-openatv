@@ -1,0 +1,5 @@
+<skin>
+  <fonts>
+    <font filename="/usr/share/enigma2/DuskyFHD/fonts/nasalization-rg.ttf" name="Regular" scale="100" />
+  </fonts>
+</skin>  

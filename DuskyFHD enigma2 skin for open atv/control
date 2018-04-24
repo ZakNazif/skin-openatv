@@ -1,0 +1,10 @@
+Package: enigma2-plugin-skins-duskyfhd
+Version: 1.2
+Section: base
+Priority: optional
+Architecture: all
+Maintainer: digiteng
+Description: enigma2 skin by digiteng for openatv
+Depends: 
+Source: 
+Homepage: 

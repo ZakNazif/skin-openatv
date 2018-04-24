@@ -1,0 +1,11 @@
+#!/bin/sh
+echo " " 
+echo "*******************************"   
+echo ""                                                    
+echo " DuskyFHD skin successful installed...  "
+echo ""
+echo " select skin DuskyFHD..." 
+echo ""
+echo "*******************************"   
+echo " "                                                       
+exit 0
