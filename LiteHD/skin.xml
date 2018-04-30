@@ -110,7 +110,7 @@
     </widget>
   </screen>
   <screen name="mn">
-    <widget source="menu" render="Listbox" position="0,0" size="500,500" scrollbarMode="showOnDemand" zPosition="2" transparent="1">
+    <widget source="menu" render="Listbox" position="0,15" size="500,500" scrollbarMode="showOnDemand" zPosition="2" transparent="1">
       <convert type="TemplatedMultiContent">
 				{"template": [
 				MultiContentEntryText(pos = (20, 0), size = (480, 40), flags = RT_HALIGN_LEFT, text = 0)
@@ -141,19 +141,19 @@
     <widget source="session.CurrentService" render="Label" position="230,2" size="695,40" zPosition="2" font="Regular; 35" transparent="1">
       <convert type="ServiceName">Name</convert>
     </widget>
-    <widget backgroundColor="tb" font="Regular; 27" zPosition="2" halign="left" position="230,44" render="Label" size="604,40" source="session.Event_Now" transparent="1" foregroundColor="gr2">
+    <widget backgroundColor="tb" font="Regular; 27" zPosition="2" halign="left" position="229,49" render="Label" size="604,33" source="session.Event_Now" transparent="1" foregroundColor="gr2">
       <convert type="EventName">Name</convert>
     </widget>
     <widget source="session.CurrentService" render="Picon" position="4,41" zPosition="2" size="220,132" transparent="1" alphatest="blend">
       <convert type="ServiceName">Reference</convert>
     </widget>
-    <widget source="session.Event_Next" backgroundColor="tb" font="Regular; 27" halign="left" position="230,91" render="Label" size="600,40" transparent="1" zPosition="2" foregroundColor="gr2">
+    <widget source="session.Event_Next" backgroundColor="tb" font="Regular; 27" halign="left" position="230,91" render="Label" size="600,33" transparent="1" zPosition="2" foregroundColor="gr2">
       <convert type="EventName">Name</convert>
     </widget>
     <widget source="session.Event_Now" render="Progress" position="230,83" size="700,6" zPosition="2" backgroundColor="gr" foregroundColor="blue" transparent="0">
       <convert type="EventTime">Progress</convert>
     </widget>
-    <widget source="session.Event_Now" backgroundColor="tb" font="Regular; 27" halign="right" zPosition="2" position="781,44" render="Label" size="150,40" transparent="1" foregroundColor="gr2">
+    <widget source="session.Event_Now" backgroundColor="tb" font="Regular; 27" halign="right" zPosition="2" position="781,49" render="Label" size="150,33" transparent="1" foregroundColor="gr2">
       <convert type="EventTime">Remaining</convert>
       <convert type="RemainingToText">InMinutes</convert>
     </widget>
@@ -169,7 +169,7 @@
     <widget source="session.FrontendStatus" render="Label" zPosition="3" foregroundColor="white" position="1164,100" size="35,18" transparent="1">
       <convert type="FrontendInfo">AGC</convert>
     </widget>
-    <widget source="session.FrontendStatus" render="FixedLabel" text="B E R !.." font="Regular; 100" zPosition="-11" position="0,0" size="1200,175" halign="center" alphatest="blend" backgroundColor="red" valign="center" transparent="0">
+    <widget source="session.FrontendStatus" render="FixedLabel" text="B E R !.." font="Regular; 100" zPosition="11" position="0,0" size="1200,175" halign="center" alphatest="blend" backgroundColor="red" valign="center" transparent="0">
       <convert type="FrontendInfo">BER</convert>
       <convert type="ConditionalShowHide" />
     </widget>
@@ -255,7 +255,7 @@
       <convert type="MSNWeather">temperature_current</convert>
     </widget>
     <widget alphatest="blend" render="MSNWeatherPixmap" position="50,380" size="50,50" source="session.MSNWeather" transparent="1" zPosition="8">
-      <convert type="MSNWeather">weathericon,current,/usr/lib/enigma2/python/Plugins/Extensions/WeatherPlugin/icons/,png</convert>
+      <convert type="MSNWeather">weathericon,current,/usr/lib/enigma2/python/Plugins/Extensions/WeatherPlugin/icons/,gif</convert>
     </widget>
     <eLabel name="" backgroundColor="b2" position="50,380" size="50,50" zPosition="2" transparent="0" foregroundColor="b2" noWrap="1" />
     <eLabel name="" backgroundColor="gr" position="100,380" size="204,50" />
@@ -415,7 +415,7 @@
   </screen>
   <screen backgroundColor="tb" flags="wfNoBorder" name="MoviePlayer" position="40,570" size="1200,120" title="InfoBar">
     <eLabel name="" Label="LiteHD/infobar.png" position="0,0" size="1200,40" zPosition="1" />
-    <widget backgroundColor="tb" font="Regular; 29" halign="left" position="195,0" render="Label" size="598,40" source="session.CurrentService" transparent="1" zPosition="1">
+    <widget backgroundColor="tb" font="Regular; 29" halign="left" position="195,0" render="Label" size="598,40" source="session.CurrentService" transparent="1" zPosition="5">
       <convert type="ServiceName">Name</convert>
     </widget>
     <widget backgroundColor="tb" font="Regular; 29" halign="left" position="11,44" render="Label" size="230,44" source="session.CurrentService" transparent="1" zPosition="4">
@@ -424,8 +424,11 @@
     <widget backgroundColor="tb" font="Regular; 29" halign="right" position="961,44" render="Label" size="230,44" source="session.CurrentService" transparent="1" zPosition="1">
       <convert type="ServicePosition">Remaining,Negate,ShowHours</convert>
     </widget>
-    <widget size="1180,20" position="11,89" foregroundColor="b7" zPosition="3" transparent="1" source="session.CurrentService" render="Progress" borderWidth="1" borderColor="blue">
+    <widget source="session.CurrentService" render="Progress" size="1180,10" position="11,99" foregroundColor="b7" zPosition="3" transparent="1"  borderWidth="1" borderColor="blue">
       <convert type="ServicePosition">Position</convert>
+    </widget>
+    <widget source="session.CurrentService" render="PositionGauge" size="1180,10" position="11,99" transparent="1" zPosition="8">
+      <convert type="ServicePosition">Gauge</convert>
     </widget>
     <widget source="session.CurrentService" render="FixedLabel" text="HbbTV" position="1041,0" size="80,35" zPosition="5" alphatest="on" halign="center" font="Regular; 18" foregroundColor="y2">
       <convert type="ServiceInfo">IsMultichannel</convert>
@@ -528,8 +531,17 @@
     <widget source="Adapter" render="Label" position="0,0" size="0,0" font="Regular;22" halign="left" transparent="1" />
     <widget source="introduction2" render="Label" position="39,483" size="650,28" font="Regular; 20" foregroundColor="y2" halign="center" valign="center" />
   </screen>
+  <screen name="AdapterSetupConfiguration" position="40,80" flags="wfBorder" title="Network Configuration" size="1200,600">
+    <panel name="rgyb_source" />
+    <widget name="menulist" position="25,25" size="750,456" itemHeight="38" font="Regular;28" zPosition="10" scrollbarMode="showAlways" transparent="1" />
+    <widget source="description" render="Label" position="788,182" size="400,300" transparent="1" font="Regular; 25" valign="center" halign="center" foregroundColor="y2" />
+    <widget source="IFtext" render="Label" position="1270,880" size="247,37" transparent="1" zPosition="10" font="Regular;31" halign="right" />
+    <widget source="IF" render="Label" position="1530,880" size="375,37" transparent="1" zPosition="10" font="Regular;31" halign="left" />
+    <widget source="Statustext" render="Label" position="793,25" size="300,25" transparent="1" zPosition="10" font="Regular; 20" valign="center" halign="right" />
+    <widget name="statuspic" position="1108,25" size="25,25" transparent="1" zPosition="10" pixmaps="buttons/green.png,buttons/red.png" alphatest="on" />
+  </screen>
   <!-- SAT -->
-  <screen name="Satfinder" position="240,130" size="800,500" title="Satfinder">
+  <screen name="Satfinder" position="240,80" size="800,600" title="Satfinder">
     <eLabel name="snr" text="SNR:" position="170,25" size="70,25" font="Regular;22" halign="right" transparent="1" />
     <widget source="Frontend" render="Progress" foregroundColor="b7" position="260,25" size="400,20" backgroundColor="gr">
       <convert type="FrontendInfo">SNR</convert>
@@ -563,15 +575,15 @@
     <widget source="Frontend" render="Label" position="320,115" zPosition="2" size="470,25" font="Regular;22" transparent="1">
       <convert type="FrontendInfo">SNRdB</convert>
     </widget>
-    <widget name="config" position="10,165" size="780,325" scrollbarSliderBorderColor="gr" scrollbarWidth="5" scrollbarSliderForegroundColor="gr" scrollbarMode="showAlways" transparent="1" font="Regular; 20" foregroundColor="white" />
+    <widget name="config" position="10,165" size="780,423" transparent="1" font="Regular; 24" foregroundColor="white" />
   </screen>
   <screen name="NameserverSetup" position="40,80" size="750,600" title="Nameserver Setup" backgroundColor="tb" flags="wfBorder">
     <panel name="rgyb_source" />
-    <panel name="config" />
+    <widget name="config" position="25,25" font="Regular; 24" itemHeight="30" size="700,450" transparent="1" />
     <widget source="introduction" render="Label" position="22,483" size="622,50" zPosition="10" font="Regular;19" transparent="1" />
   </screen>
   <screen name="NimSelection" position="40,80" size="750,600" title="Choose Tuner" backgroundColor="tb">
-    <widget source="nimlist" render="Listbox" position="0,0" size="750,500" transparent="1">
+    <widget source="nimlist" render="Listbox" position="25,25" size="700,500" transparent="1">
       <convert type="TemplatedMultiContent">
 				{"template": [
 						MultiContentEntryText(pos = (10, 5), size = (550, 60), flags = RT_HALIGN_LEFT, text = 1), # index 1 is the nim name,
@@ -585,23 +597,23 @@
   </screen>
   <screen name="NimSetup" position="40,80" size="750,600" title="Reception Settings" backgroundColor="tb" flags="wfBorder">
     <panel name="rgyb_name" />
-    <panel name="config" />
+    <widget name="config" position="25,25" font="Regular; 24" itemHeight="30" size="700,500" transparent="1" />
   </screen>
   <screen name="ScanSetup" position="40,80" size="750,600" title="Manual Scan" backgroundColor="tb">
-    <panel name="config" />
-    <widget name="introduction" position="8,558" size="700,30" font="Regular;22" halign="center" transparent="1" foregroundColor="y2" />
+    <widget name="config" position="25,25" font="Regular; 24" itemHeight="30" size="700,500" transparent="1" />
+    <widget name="introduction" position="25,548" size="700,30" font="Regular;22" halign="center" transparent="1" foregroundColor="y2" />
   </screen>
   <screen name="ScanSimple" position="40,80" size="750,600" title="Automatic Scan" backgroundColor="tb">
-    <panel name="config" />
+    <widget name="config" position="25,25" font="Regular; 24" itemHeight="30" size="700,500" transparent="1" />
     <widget name="footer" position="25,558" size="700,30" font="Regular;22" halign="center" transparent="1" foregroundColor="y2" />
   </screen>
   <screen name="FastScanScreen" position="40,80" size="750,600" title="Fast Scan" backgroundColor="tb">
-    <panel name="config" />
+    <widget name="config" position="25,25" font="Regular; 24" itemHeight="30" size="700,500" transparent="1" />
     <widget name="introduction" position="25,558" size="700,30" font="Regular;22" halign="center" transparent="1" foregroundColor="y2" />
   </screen>
   <screen name="Blindscan" position="40,80" flags="wfBorder" size="750,600" title="Satellite Blindscan" backgroundColor="tb">
-    <panel name="config" />
-    <widget name="rotorstatus" position="8,561" size="700,25" font="Regular;20" halign="center" transparent="1" foregroundColor="y2" />
+    <widget name="config" position="25,25" font="Regular; 24" itemHeight="30" size="700,500" transparent="1" />
+    <widget name="rotorstatus" position="23,561" size="700,25" font="Regular;20" halign="center" transparent="1" foregroundColor="y2" />
   </screen>
   <!-- OTHER -->
   <screen name="ButtonSetup" position="40,80" size="1200,600" flags="wfBorder" backgroundColor="tb">
@@ -628,11 +640,11 @@
     <widget name="UnhandledKeyPixmap" pixmap="LiteHD/stop.png" position="0,0" size="100,100" alphatest="blend" transparent="1" />
   </screen>
   <screen name="QuickMenu" title="Quick Launch Menu" position="40,80" size="1200,600" flags="wfBorder" backgroundColor="tb">
-    <widget name="list" position="50,5" size="550,450" font="Regular; 30" scrollbarMode="showAlways" itemHeight="70" scrollbarSliderBorderColor="gr" scrollbarWidth="5" scrollbarSliderForegroundColor="gr" transparent="1" backgroundColor="tb" zPosition="3" />
-    <widget name="sublist" position="600,5" size="550,450" selectionPixmap="LiteHD/e1/sel100.png" itemHeight="70" font="Regular; 30" scrollbarMode="showNever" transparent="1" backgroundColor="tb" zPosition="3" />
+    <widget name="list" position="50,5" size="550,470" font="Regular; 30" scrollbarMode="showAlways" itemHeight="70" scrollbarSliderBorderColor="gr" scrollbarWidth="5" scrollbarSliderForegroundColor="gr" transparent="1" backgroundColor="tb" zPosition="3" />
+    <widget name="sublist" position="600,5" size="550,470" selectionPixmap="LiteHD/e1/sel100.png" itemHeight="70" font="Regular; 30" scrollbarMode="showNever" transparent="1" backgroundColor="tb" zPosition="3" />
     <panel name="rgyb_name" />
     <panel name="clk" />
-    <widget name="description" position="50,462" size="750,55" zPosition="1" font="Regular;25" foregroundColor="y2" halign="center" backgroundColor="tb" transparent="1" />
+    <widget name="description" position="50,487" size="1100,55" zPosition="1" font="Regular;25" foregroundColor="y2" halign="center" backgroundColor="tb" transparent="1" />
   </screen>
   <screen name="SoftcamPanel" title="Softcam Panel" position="40,80" size="750,600" flags="wfBorder" backgroundColor="tb">
     <panel name="rgyb_name" />
@@ -754,10 +766,10 @@ self.autoResize()
     <widget name="text" position="0,0" size="750,500" font="Regular;25" transparent="1" />
   </screen>
   <screen name="AtileHD_Config" position="40,80" size="1200,600" title="AtileHD Setup" flags="wfBorder" backgroundColor="tb">
-  <panel name="rgyb_name" />
-  <widget name="config" position="15,20" font="Regular; 24" itemHeight="30" size="700,450" transparent="1" />
-  <widget name="Picture" position="715,148" size="480,270" alphatest="on" transparent="1" />
-</screen>
+    <panel name="rgyb_name" />
+    <widget name="config" position="15,20" font="Regular; 24" itemHeight="30" size="700,450" transparent="1" />
+    <widget name="Picture" position="715,148" size="480,270" alphatest="on" transparent="1" />
+  </screen>
   <screen name="AtileHDScreens" position="40,80" size="1200,600" title="AtileHD Setup" flags="wfBorder">
     <panel name="rgyb_source" />
     <widget source="menu" render="Listbox" position="20,0" size="676,500" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarSliderBorderColor="tb" scrollbarWidth="4" scrollbarSliderForegroundColor="ss" scrollbarSliderPicture="LiteHD/e1/scrollbar.png" enableWrapAround="1" transparent="1">
