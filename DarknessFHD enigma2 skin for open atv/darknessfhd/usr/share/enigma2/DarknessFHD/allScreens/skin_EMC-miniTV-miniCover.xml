@@ -1,0 +1,39 @@
+<skin>
+  <screen name="EMCSelection" position="0,0" size="1920,1080" title=" " flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="ch" />
+    <panel name="rgyb" />
+    <panel name="pig" />
+    <widget source="Title" render="Label" position="1290,925" size="429,30" font="Regular; 26" backgroundColor="tb" transparent="1" halign="left" foregroundColor="orange" />
+    <widget source="Service" render="Label" position="1720,925" size="149,30" font="Regular; 26" backgroundColor="tb" halign="right" transparent="1" zPosition="1" foregroundColor="green">
+      <convert type="ServiceTime">StartTime</convert>
+      <convert type="ClockToText">Format:%d.%m.%Y</convert>
+    </widget>
+    <widget source="Service" render="Label" position="1671,890" size="200,30" font="Regular; 26" backgroundColor="tb" halign="right" transparent="1" zPosition="1" foregroundColor="b7">
+      <convert type="ServiceTime">StartTime</convert>
+      <convert type="ClockToText">Format:%H:%M </convert>
+    </widget>
+    <widget source="Service" render="Label" position="1483,890" zPosition="1" size="200,30" font="Regular; 26" foregroundColor="y5" backgroundColor="tb" halign="center" transparent="1">
+      <convert type="ServiceTime">Duration</convert>
+      <convert type="ClockToText">InMinutes</convert>
+    </widget>
+    <widget source="Service" render="Label" position="1290,890" zPosition="1" size="208,30" font="Regular; 26" halign="left" foregroundColor="b8" backgroundColor="tb" transparent="1">
+      <convert type="MovieInfo">FileSize</convert>
+    </widget>
+    <widget name="list" position="75,75" size="1100,720" itemHeight="60" CoolIconPos="10" CoolIconHPos="10" CoolIconSize="40,40" CoolPiconPos="670" CoolPiconHPos="0" CoolPiconWidth="80" CoolPiconHeight="40" CoolMoviePiconPos="60" CoolMoviePiconSize="600" CoolFont="Regular;25" CoolSelectFont="Regular;25" CoolDateFont="Regular;25" CoolDatePos="850" CoolDateHPos="5" CoolDateWidth="250" CoolProgressPos="800" CoolBarPos="60" CoolBarHPos="48" CoolBarSize="1030,7" CoolBarSizeSa="1030,7" CoolMoviePos="60" CoolMovieHPos="5" CoolMovieSize="600" CoolFolderSize="600" CoolTitleColor="0" CoolDateColor="0" CoolHighlightColor="0" DefaultColor="white" UnwatchedColor="gr" WatchingColor="#00ffe271" FinishedColor="#009efeaa" RecordingColor="red" BackColorSel="white" FrontColorSel="b8" backgroundColorSelected="tb2" foregroundColorSelected="b8" backgroundColor="tb" foregroundColor="white" enableWrapAround="1" fieldMargins="25" nonplayableMargins="25" scrollbarMode="showOnDemand" transparent="1" scrollbarSliderBorderWidth="0" scrollbarSliderBorderColor="tb" scrollbarWidth="4" scrollbarSliderForegroundColor="b8" scrollbarSliderPicture="DarknessFHD/e1/scrollbar.png" />
+    <widget source="Service" render="Label" position="1290,999" size="580,30" font="Regular; 25" backgroundColor="tb" valign="center" halign="left" transparent="1" foregroundColor="y5">
+      <convert type="EMCEventName">Name</convert>
+    </widget>
+    <widget source="Service" render="DARKScrollLabel" position="455,863" size="820,150" font="Regular; 30" backgroundColor="tb" halign="left" valign="top" transparent="1">
+      <convert type="EMCEventName">ExtendedDescription</convert>
+    </widget>
+    <widget source="Service" render="Label" position="1290,962" size="575,30" font="Regular; 25" halign="left" backgroundColor="tb" transparent="1" foregroundColor="green">
+      <convert type="EMCMovieInfo">RecordServiceName</convert>
+    </widget>
+    <widget name="freeDiskSpace" position="1290,852" size="580,30" font="Regular; 26" valign="center" halign="left" foregroundColor="g3" transparent="1" backgroundColor="tb" />
+    <widget source="Service" render="Picon" position="1240,498" zPosition="2" size="400,170" transparent="1" alphatest="blend">
+      <convert type="MovieReference" />
+    </widget>
+    <widget name="Cover" position="1645,494" size="237,297" zPosition="2" alphatest="blend" transparent="1" />
+    <ePixmap position="1341,655" size="200,200" zPosition="1" pixmap="DarknessFHD/e2/film2.png" alphatest="blend" transparent="1" />
+  </screen>
+</skin>

@@ -1,0 +1,11 @@
+#!/bin/sh
+echo " " 
+echo "******************************************"   
+echo ""                                                    
+echo "           DarknessFHD skin successful installed...  "
+echo ""
+echo "              select your skin DarknessFHD..." 
+echo ""
+echo "******************************************"   
+echo " "                                                       
+exit 0

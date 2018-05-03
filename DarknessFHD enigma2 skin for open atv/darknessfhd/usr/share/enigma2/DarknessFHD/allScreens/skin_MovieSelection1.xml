@@ -1,0 +1,25 @@
+<skin>
+  <screen name="MovieSelection" position="0,0" size="1920,1080" title="Select a movie" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="cvr" />
+    <panel name="rgyb_source" />
+    <panel name="list" />
+    <widget source="Service" render="DARKScrollLabel" position="522,862" size="700,150" zPosition="2" font="Regular; 25" transparent="1" backgroundColor="tb" foregroundColor="g3">
+      <convert type="MovieInfo">ShortDescription</convert>
+    </widget>
+    <widget source="Service" render="Label" position="1382,950" size="150,40" zPosition="2" font="Regular; 30" halign="left" foregroundColor="blue" transparent="1" backgroundColor="tb">
+      <convert type="ServiceTime">Duration</convert>
+      <convert type="ClockToText">AsLength</convert>
+    </widget>
+    <widget source="Service" render="Label" position="1699,950" size="150,40" zPosition="2" font="Regular; 30" halign="left" foregroundColor="blue" transparent="1" backgroundColor="tb">
+      <convert type="MovieInfo">FileSize</convert>
+    </widget>
+    <widget name="freeDiskSpace" position="1281,878" size="580,50" font="Regular; 35" valign="center" halign="left" foregroundColor="g3" transparent="1" backgroundColor="tb" />
+    <eLabel name="new eLabel" text="TIME :" position="1289,950" size="120,40" foregroundColor="lightgrey" font="Regular; 30" transparent="1" backgroundColor="tb" />
+    <eLabel name="new eLabel" text="SIZE :" position="1609,950" size="120,40" foregroundColor="lightgrey" font="Regular; 30" transparent="1" backgroundColor="tb" />
+    <widget source="Service" render="Picon" position="1378,190" zPosition="1" size="400,170" transparent="1" alphatest="blend">
+      <convert type="MovieReference" />
+    </widget>
+    <ePixmap zPosition="0" position="1444,362" size="259,285" pixmap="DarknessFHD/e2/No-Cover.png" backgroundColor="tb" alphatest="blend" transparent="0" />
+    <widget source="Service" render="Cover" position="1321,72" size="500,700" zPosition="2" backgroundColor="tb" alphatest="on" transparent="0" />
+  </screen>
+</skin>

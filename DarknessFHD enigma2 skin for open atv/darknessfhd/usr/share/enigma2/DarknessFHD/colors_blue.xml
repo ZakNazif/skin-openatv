@@ -1,0 +1,49 @@
+<skin>
+  <screen name="ChannelSelection" position="0,0" size="1920,1080" title="Channel Selection" backgroundColor="transparent" flags="wfNoBorder">
+    <panel name="ch" />
+    <panel name="rgyb" />
+    <panel name="pig" />
+    <widget name="list" position="75,75" size="1100,700" scrollbarMode="showOnDemand" transparent="1" zPosition="1" itemHeight="60" serviceItemHeight="60" 
+	serviceNumberFont="Regular;30" serviceNameFont="Regular;32" serviceInfoFont="Regular;28" 
+	colorServiceDescription="b3" colorServiceDescriptionSelected="b8" colorServiceRecording="red" foregroundColorServiceNotAvail="gr" 
+	colorEventProgressbar="b3" colorEventProgressbarSelected="b8" colorEventProgressbarBorder="b10" colorEventProgressbarBorderSelected="b10" 
+	scrollbarSliderBorderWidth="0" scrollbarSliderBorderColor="#00000000" scrollbarWidth="4" scrollbarSliderForegroundColor="b8" scrollbarSliderPicture="DarknessFHD/e1/scrollbar.png" 
+	fieldMargins="15" nonplayableMargins="15" itemsDistances="8" progressBarWidth="80" progressPercentWidth="90" progressbarHeight="10" />
+    <widget source="ServiceEvent" render="Label" position="1263,763" size="650,40" font="Regular; 30" backgroundColor="tb"  foregroundColor="b10" transparent="1" halign="left" noWrap="1" valign="center" text="19.2E  DVB-S2  10627 27500 3/4 8PSK" zPosition="3">
+      <convert type="ServiceName2">%O  %s  %F %p %Y %f %M %b</convert>
+    </widget>
+    <widget source="ServiceEvent" halign="left" render="Label" position="1263,683" size="602,40" font="Regular; 30" foregroundColor="b10" transparent="1" zPosition="5" backgroundColor="tb">
+      <convert type="EventName">Genre</convert>
+    </widget>
+    <widget source="ServiceEvent" halign="left" render="Label" position="1263,724" size="597,40" font="Regular; 30" foregroundColor="b10" transparent="1" zPosition="5" backgroundColor="tb">
+      <convert type="EventName">SmallRating</convert>
+    </widget>
+    <widget source="ServiceEvent" render="DARKEmptyEpg" position="1290,545" size="600,40" transparent="1" foregroundColor="b8" noWrap="1" backgroundColor="tb" font="Regular;32" halign="left">
+      <convert type="EventName">Name</convert>
+    </widget>
+    <widget source="ServiceEvent" render="DARKScrollLabel" backgroundColor="tb" position="545,857" size="1308,170" transparent="1" font="Regular;30" halign="block" foregroundColor="lightgrey">
+      <convert type="EventName">FullDescription</convert>
+    </widget>
+    <widget source="ServiceEvent" render="Label" position="1263,642" size="590,40" font="Regular; 30" zPosition="5" transparent="1" valign="center" halign="left" noWrap="1" foregroundColor="b10" backgroundColor="tb">
+      <convert type="ServiceName2">Provider</convert>
+    </widget>
+    <widget source="ServiceEvent" render="Label" position="1250,495" size="90,28" transparent="1" foregroundColor="lightgrey" zPosition="8" font="Regular;28" halign="left">
+      <convert type="EventTime">StartTime</convert>
+      <convert type="ClockToText">Format:%H:%M</convert>
+    </widget>
+    <widget source="ServiceEvent" pointer="DarknessFHD/e1/chgauge.png:415,0" position="1365,510" render="PositionGauge" size="415,10" transparent="1" zPosition="8">
+      <convert type="DARKEventPosition">Gauge</convert>
+    </widget>
+    <ePixmap name="" pixmap="DarknessFHD/e1/chprgrsb.png" position="1355,510" size="425,10" zPosition="3" transparent="1" alphatest="blend" />
+    <widget source="ServiceEvent" render="Progress" alphatest="blend" position="1355,510" size="415,10" pixmap="DarknessFHD//e1/chprgrs.png" transparent="1" backgroundColor="gr" borderWidth="0" zPosition="8">
+      <convert type="EventTime">Progress</convert>
+    </widget>
+    <widget source="ServiceEvent" render="Label" position="1800,493" size="90,28" transparent="1" foregroundColor="lightgrey" zPosition="8" font="Regular;28" halign="right">
+      <convert type="EventTime">EndTime</convert>
+      <convert type="ClockToText">Format:%H:%M</convert>
+    </widget>
+    <widget source="ServiceEvent" render="NextEpgInfo" position="1323,591" size="560,40" transparent="1" foregroundColor="lightgrey2" backgroundColor="tb" noWrap="1" font="Regular;30" />
+    <eLabel name="" text="&gt;" foregroundColor="b8" position="1260,550" size="20,25" halign="center" transparent="1" backgroundColor="tb" font="Regular; 25" />
+    <eLabel name="" text="&gt;&gt;" foregroundColor="b8" position="1267,595" size="50,25" halign="center" transparent="1" backgroundColor="tb" font="Regular; 25" />
+  </screen>
+</skin>
