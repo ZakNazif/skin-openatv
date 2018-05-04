@@ -1,7 +1,7 @@
 <skin>
   <screen name="EMCSelection" position="0,0" size="1920,1080" title=" " flags="wfNoBorder" backgroundColor="transparent">
     <panel name="ch" />
-    <panel name="rgyb" />
+    <panel name="rgyb_name" />
     <panel name="pig" />
     <widget source="Title" render="Label" position="1290,925" size="429,30" font="Regular; 26" backgroundColor="tb" transparent="1" halign="left" foregroundColor="orange" />
     <widget source="Service" render="Label" position="1720,925" size="149,30" font="Regular; 26" backgroundColor="tb" halign="right" transparent="1" zPosition="1" foregroundColor="green">

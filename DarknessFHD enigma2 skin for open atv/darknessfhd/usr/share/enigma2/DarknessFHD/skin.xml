@@ -197,7 +197,6 @@
   </windowstyle>
   <include filename="/usr/share/enigma2/DarknessFHD/skin_plugins.xml" />
   <include filename="/usr/share/enigma2/DarknessFHD/skin_panels.xml" />
-
   <!--infobar-->
   <screen name="InfoBar" title="InfoBar" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent" transparent="0">
     <ePixmap position="0,840" size="1920,200" zPosition="-1" pixmap="DarknessFHD/e1/infobar.png" alphatest="off" transparent="1" />
@@ -1178,12 +1177,13 @@
     <panel name="pig" />
     <panel name="cnf" />
     <widget name="Picture" position="1313,508" size="480,270" alphatest="on" />
+    <ePixmap name="" pixmap="DarknessFHD/e2/atile.png" position="1692,894" size="100,100" transparent="0" alphatest="blend" />
   </screen>
   <screen name="AtileHDScreens" position="0,0" size="1920,1080" title="AtileHD Setup" flags="wfNoBorder">
     <panel name="rgyb_source" />
     <panel name="ch" />
     <panel name="pig" />
-    <widget source="menu" render="Listbox" position="75,75" size="1100,700" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarSliderBorderColor="tb" scrollbarWidth="4" scrollbarSliderForegroundColor="b8" scrollbarSliderPicture="DarknessFHD/e1/scrollbar.png" enableWrapAround="1" transparent="1">
+    <widget source="menu" render="Listbox" position="75,75" size="1100,680" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarSliderBorderColor="tb" scrollbarWidth="4" scrollbarSliderForegroundColor="b8" scrollbarSliderPicture="DarknessFHD/e1/scrollbar.png" enableWrapAround="1" transparent="1">
       <convert type="TemplatedMultiContent">
 					{"template":
 						[
@@ -1196,6 +1196,7 @@
 				</convert>
     </widget>
     <widget name="Picture" position="1313,508" size="480,270" alphatest="on" />
+    <ePixmap name="" pixmap="DarknessFHD/e2/atile.png" position="1692,894" size="100,100" transparent="0" alphatest="blend" />
   </screen>
   <screen name="PVRState" position="685,40" zPosition="2" size="550,100" backgroundColor="transparent" flags="wfNoBorder">
     <widget name="state" position="0,0" size="550,100" backgroundColor="tb" foregroundColor="white" font="Regular; 80" halign="center" transparent="1" valign="center" />

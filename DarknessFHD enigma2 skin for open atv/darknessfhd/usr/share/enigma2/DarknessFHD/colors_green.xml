@@ -1,7 +1,7 @@
 <skin>
   <screen name="ChannelSelection" position="0,0" size="1920,1080" title="Channel Selection" backgroundColor="transparent" flags="wfNoBorder">
     <panel name="ch" />
-    <panel name="rgyb" />
+    <panel name="rgyb_name" />
     <panel name="pig" />
     <widget name="list" position="75,75" size="1100,700" scrollbarMode="showOnDemand" transparent="1" zPosition="1" itemHeight="60" serviceItemHeight="60" 
 	serviceNumberFont="Regular;30" serviceNameFont="Regular;32" serviceInfoFont="Regular;28" 
