@@ -1,0 +1,11 @@
+Package: enigma2-plugin-skins-lite-hd2
+Version: 1.0
+Section: skins
+Priority: optional
+Architecture: all
+Maintainer: digiteng
+Description: LiteHD2 Skin by digiteng for-openatv
+Source: https://github.com/digiteng/skin-openatv
+Homepage: https://github.com/digiteng/skin-openatv
+OE: enigma2-skins
+Depends: enigma2-plugin-systemplugins-weathercomponenthandler, enigma2-plugin-extensions-weatherplugin

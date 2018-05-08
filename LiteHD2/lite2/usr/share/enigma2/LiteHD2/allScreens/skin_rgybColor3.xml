@@ -1,0 +1,5 @@
+<skin>
+  <screen name="rgyb_png">
+    <ePixmap pixmap="LiteHD2/rgyb3.png" position="40,565" size="733,25" zPosition="0" alphatest="blend" transparent="1" />
+  </screen>
+</skin>

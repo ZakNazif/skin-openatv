@@ -1,0 +1,65 @@
+<skin>
+  <colors>
+    <color name="fc" value="#00c8c8c8" />
+    <color name="fcs" value="#00ffffff" />
+	<color name="bs" value="#00663300" />
+	<!--######################### -->
+    <color name="cep" value="#00996633" />
+	<color name="ceps" value="#00c8c8c8" />
+	<!--######################### -->
+    <color name="cepb" value="#00996633" />
+    <color name="cepbs" value="#00c8c8c8" />
+    <!--######################### -->
+    <color name="csd" value="#00CEAD75" />
+    <color name="csds" value="#00CEAD75" />
+	<!--######################### -->
+	<color name="ss" value="#00996633" />
+	<color name="sb" value="#003F3F3F" />
+	<!--######################### -->
+	<color name="tfc" value="#00CEAD75" />
+	<!--######################### -->
+    <color name="b2" value="#00005090" />
+    <color name="b3" value="#0086c5f8" />
+    <color name="b6" value="#00b4dafa" />
+    <color name="b7" value="#0000ffff" />
+    <color name="b9" value="#0033ccff" />
+    <color name="blue" value="#000089fa" />
+    <color name="brown" value="#00663300" />
+    <color name="brown2" value="#00996633" />
+    <color name="e2" value="#00a3b016" />
+    <color name="g2" value="#00009d00" />
+    <color name="g3" value="#00d0ff1f" />
+    <color name="gr" value="#005a5a5a" />
+    <color name="gr2" value="#00c5c5c5" />
+    <color name="green" value="#0000ff00" />
+    <color name="mr" value="#003ec2fe" />
+    <color name="red" value="#00ff0000" />
+    <color name="red2" value="#00800404" />
+    <color name="tb" value="#50000000" />
+    <color name="transparent" value="#ff000000" />
+    <color name="white" value="#00ffffff" />
+    <color name="y2" value="#00ffcc00" />
+    <color name="y3" value="#00ffff66" />
+    <color name="yellow" value="#00d5ff45" />
+  </colors>
+  <windowstyle type="skinned" id="0">
+    <title font="Regular;30" offset="20,5" />
+    <color name="Background" color="tb" />
+    <color name="LabelForeground" color="gr2" />
+    <color name="ListboxBackground" color="tb" />
+    <color name="ListboxForeground" color="gr2" />
+    <color name="ListboxSelectedBackground" color="bs" />
+    <color name="ListboxSelectedForeground" color="fcs" />
+    <color name="ListboxMarkedBackground" color="tb" />
+    <color name="ListboxMarkedForeground" color="red" />
+    <color name="ListboxMarkedAndSelectedBackground" color="bs" />
+    <color name="ListboxMarkedAndSelectedForeground" color="red" />
+    <color name="WindowTitleForeground" color="tfc" />
+    <color name="WindowTitleBackground" color="tb" />
+    <borderset name="bsWindow">
+      <pixmap filename="LiteHD2/window/top_left_corner.png" pos="bpTopLeft" />
+      <pixmap filename="LiteHD2/window/top_edge.png" pos="bpTop" />
+      <pixmap filename="LiteHD2/window/top_right_corner.png" pos="bpTopRight" />
+    </borderset>
+  </windowstyle>
+</skin>
