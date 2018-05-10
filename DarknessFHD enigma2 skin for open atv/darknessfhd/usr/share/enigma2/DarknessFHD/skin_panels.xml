@@ -35,8 +35,8 @@
     <widget name="blue" render="Label" position="1190,0" size="300,30" valign="top" halign="left" zPosition="1" font="Regular; 25" transparent="1" foregroundColor="lightgrey" backgroundColor="tb" />
   </screen>
   <screen name="mn">
-    <widget source="title" render="Label" position="75,892" size="1386,120" font="Console; 90" transparent="1" zPosition="2" foregroundColor="gr2" halign="left" />
-    <widget source="menu" render="Listbox" selectionPixmap="DarknessFHD/e1/sel100.png" position="75,65" size="1100,700" scrollbarMode="showOnDemand" zPosition="0" itemHeight="70" scrollbarSliderBorderWidth="0" scrollbarSliderBorderColor="tb" scrollbarWidth="4" scrollbarSliderForegroundColor="b8" scrollbarSliderPicture="DarknessFHD/e1/scrollbar.png" transparent="1">
+    <widget source="title" render="Label" position="75,892" size="1386,120" font="Console; 90" transparent="1" zPosition="2" foregroundColor="gr2" backgroundColor="tb" halign="left" />
+    <widget source="menu" render="Listbox" selectionPixmap="DarknessFHD/e1/sel100.png" position="75,65" size="1100,700" foregroundColor="lightgrey" backgroundColor="tb" scrollbarMode="showOnDemand" zPosition="0" itemHeight="70" scrollbarSliderBorderWidth="0" scrollbarSliderBorderColor="tb" scrollbarWidth="4" scrollbarSliderForegroundColor="b8" scrollbarSliderPicture="DarknessFHD/e1/scrollbar.png" transparent="1">
       <convert type="TemplatedMultiContent">
 					{"template": [
 					MultiContentEntryText(pos = (50, 10), size = (800, 70), flags = RT_HALIGN_LEFT, text = 0)
@@ -56,7 +56,7 @@
 	<panel name="rgyb_menu" />
   </screen>
   <screen name="foot">
-    <widget name="footnote" position="585,869" size="1000,130" zPosition="1" font="Regular; 100" halign="left" transparent="1" valign="top" foregroundColor="g3" />
+    <widget name="footnote" position="585,869" size="1000,130" zPosition="1" font="Regular; 100" halign="left" transparent="1" valign="top" foregroundColor="g3" backgroundColor="tb"/>
     <widget name="description" position="1258,415" size="600,350" font="Regular;27" halign="center" valign="top" transparent="1" zPosition="1" foregroundColor="b6" backgroundColor="tb" />
   </screen>
   <screen name="clk">
@@ -71,22 +71,22 @@
     <ePixmap position="0,0" size="1920,1080" zPosition="-1" pixmap="DarknessFHD/e1/cvr.png" alphatest="off" transparent="1" />
   </screen>
   <screen name="inf">
-    <widget source="Event" render="DARKScrollLabel" position="532,855" size="1325,170" transparent="0" font="Regular;30" halign="block" backgroundColor="tb" foregroundColor="lightgrey" zPosition="5">
+    <widget source="Event" render="DARKScrollLabel" position="532,855" size="1325,170" transparent="0" font="Regular;30" halign="block" foregroundColor="lightgrey" backgroundColor="tb" zPosition="5">
       <convert type="EventName">FullDescription</convert>
     </widget>
   </screen>
   <screen name="cnf">
-    <widget name="config" selectionPixmap="DarknessFHD/e1/sel100.png" itemHeight="50" position="75,75" size="1100,700" zPosition="5" transparent="1" font="Console; 34" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarSliderBorderColor="tb" scrollbarWidth="4" scrollbarSliderForegroundColor="b8" scrollbarSliderPicture="DarknessFHD/e1/scrollbar.png" />
+    <widget name="config" foregroundColor="lightgrey" backgroundColor="tb" selectionPixmap="DarknessFHD/e1/sel100.png" itemHeight="50" position="75,75" size="1100,700" zPosition="5" transparent="1" font="Console; 34" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarSliderBorderColor="tb" scrollbarWidth="4" scrollbarSliderForegroundColor="b8" scrollbarSliderPicture="DarknessFHD/e1/scrollbar.png" />
   </screen>
   <screen name="list">
-    <widget name="list" backgroundColor="tb" itemHeight="80" selectionPixmap="DarknessFHD/e1/sel100.png" position="75,75" font="Console; 32" size="1100,720" transparent="0" zPosition="2" fieldMargins="25" nonplayableMargins="25" scrollbarSliderBorderWidth="0" scrollbarSliderBorderColor="tb" scrollbarWidth="4" scrollbarSliderForegroundColor="b8" scrollbarSliderPicture="DarknessFHD/e1/scrollbar.png" enableWrapAround="1" />
+    <widget name="list" foregroundColor="lightgrey" backgroundColor="tb"  itemHeight="80" selectionPixmap="DarknessFHD/e1/sel100.png" position="75,75" font="Console; 32" size="1100,720" transparent="0" zPosition="2" fieldMargins="25" nonplayableMargins="25" scrollbarSliderBorderWidth="0" scrollbarSliderBorderColor="tb" scrollbarWidth="4" scrollbarSliderForegroundColor="b8" scrollbarSliderPicture="DarknessFHD/e1/scrollbar.png" enableWrapAround="1" />
   </screen>
   <screen name="msg">
-    <widget backgroundColor="tb" font="Regular; 25" name="text" position="512,368" size="837,98" transparent="1" zPosition="2" />
+    <widget font="Regular; 25" name="text" foregroundColor="lightgrey" backgroundColor="tb" position="512,368" size="837,98" transparent="1" zPosition="2" />
     <widget alphatest="blend" name="ErrorPixmap" pixmap="icons/input_error.png" position="434,387" size="60,60" />
     <widget alphatest="blend" name="QuestionPixmap" pixmap="icons/input_question.png" position="434,388" size="60,60" />
     <widget alphatest="blend" name="InfoPixmap" pixmap="icons/input_info.png" position="436,387" size="60,60" />
-    <widget backgroundColor="tb" itemHeight="45" font="Regular;32" name="list" position="444,492" size="900,200" transparent="1" zPosition="2" />
+    <widget itemHeight="45" font="Regular;32" name="list" foregroundColor="lightgrey" backgroundColor="tb" position="444,492" size="900,200" transparent="1" zPosition="2" />
     <applet type="onLayoutFinish">
 # this should be factored out into some helper code, but currently demonstrates applets.
 from enigma import eSize, ePoint
@@ -118,16 +118,16 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
   </screen>
   <screen name="mtrx">
     <widget source="titleText" render="Label" position="75,45" size="1100,40" font="Console2; 30" halign="center" valign="top" foregroundColor="b8" backgroundColor="tb" transparent="1" zPosition="1" />
-    <widget source="cancelBtn" render="Label" position="126,850" size="300,40" zPosition="8" valign="center" font="Regular; 27" halign="left" backgroundColor="tb" transparent="1" />
-    <widget source="applyBtn" render="Label" position="142,890" size="300,40" zPosition="8" valign="center" font="Regular; 27" halign="left" backgroundColor="tb" transparent="1" />
-    <widget source="loadBtn" render="Label" position="142,890" size="300,40" zPosition="8" valign="center" font="Regular; 27" halign="left" backgroundColor="tb" transparent="1" />
-    <widget source="saveBtn" render="Label" position="142,890" size="300,40" zPosition="8" valign="center" font="Regular; 27" halign="left" backgroundColor="tb" transparent="1" />
-    <widget source="deleteBtn" render="Label" position="173,970" size="300,40" zPosition="8" valign="center" font="Regular; 27" halign="left" backgroundColor="tb" transparent="1" />
-    <widget source="testBtn" render="Label" position="158,930" size="300,40" zPosition="8" valign="center" font="Regular; 27" halign="left" backgroundColor="tb" transparent="1" />
-    <widget source="checkBtn" render="Label" position="173,970" size="300,40" zPosition="8" valign="center" font="Regular; 27" halign="left" backgroundColor="tb" transparent="1" />
+    <widget source="cancelBtn" render="Label" position="126,850" size="300,40" zPosition="8" valign="center" font="Regular; 27" halign="left" foregroundColor="lightgrey" backgroundColor="tb" transparent="1" />
+    <widget source="applyBtn" render="Label" position="142,890" size="300,40" zPosition="8" valign="center" font="Regular; 27" halign="left" foregroundColor="lightgrey" backgroundColor="tb" transparent="1" />
+    <widget source="loadBtn" render="Label" position="142,890" size="300,40" zPosition="8" valign="center" font="Regular; 27" halign="left" foregroundColor="lightgrey" backgroundColor="tb" transparent="1" />
+    <widget source="saveBtn" render="Label" position="142,890" size="300,40" zPosition="8" valign="center" font="Regular; 27" halign="left" foregroundColor="lightgrey"  backgroundColor="tb" transparent="1" />
+    <widget source="deleteBtn" render="Label" position="173,970" size="300,40" zPosition="8" valign="center" font="Regular; 27" halign="left" foregroundColor="lightgrey" backgroundColor="tb" transparent="1" />
+    <widget source="testBtn" render="Label" position="158,930" size="300,40" zPosition="8" valign="center" font="Regular; 27" halign="left" foregroundColor="lightgrey" backgroundColor="tb" transparent="1" />
+    <widget source="checkBtn" render="Label" position="173,970" size="300,40" zPosition="8" valign="center" font="Regular; 27" halign="left" foregroundColor="lightgrey" backgroundColor="tb" transparent="1" />
     <widget name="resulttext" position="496,854" size="1180,170" font="Regular;36" backgroundColor="tb" foregroundColor="white" halign="center" transparent="1" />
     <widget name="helperimage" position="1259,498" size="600,300" backgroundColor="tb" zPosition="8" transparent="1" alphatest="blend" />
     <widget name="helpertext" position="496,854" size="1180,170" font="Regular; 36" foregroundColor="uncccccc" halign="center" backgroundColor="tb" valign="center" transparent="1" />
-    <widget name="HelpWindow" position="496,854" size="1180,170" zPosition="1" transparent="1" alphatest="blend" />
+    <widget name="HelpWindow" position="496,854" size="1180,170" foregroundColor="lightgrey" backgroundColor="tb" zPosition="1" transparent="1" alphatest="blend" />
   </screen>
 </skin>

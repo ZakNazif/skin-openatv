@@ -1,5 +1,5 @@
 Package: enigma2-plugin-skins-darkness-fhd
-Version: 1.6
+Version: 1.7
 Section: skins
 Priority: optional
 Architecture: all
@@ -8,4 +8,4 @@ Description:DarknessFHD Skin by digiteng for-openatv
 Source: https://github.com/digiteng/skin-openatv/tree/master/DarknessFHD%20enigma2%20skin%20for%20open%20atv
 Homepage: https://github.com/digiteng/skin-openatv
 OE: enigma2-skins
-Depends: enigma2-plugin-systemplugins-weathercomponenthandler, enigma2-plugin-extensions-weatherplugin
+Depends: enigma2-plugin-systemplugins-weathercomponenthandler, enigma2-plugin-extensions-weather_msn

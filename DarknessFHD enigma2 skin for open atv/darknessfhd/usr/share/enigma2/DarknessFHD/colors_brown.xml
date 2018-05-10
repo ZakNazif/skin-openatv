@@ -1,22 +1,22 @@
 <skin>
   <colors>
     <color name="fc" value="#00c8c8c8" />
-    <color name="fcs" value="#0000ffff" />
-	<color name="bs" value="#00005090" />
+    <color name="fcs" value="#00ffffff" />
+	<color name="bs" value="#00663300" />
 	<!--######################### -->
-    <color name="cep" value="#0000ffff" />
-	<color name="ceps" value="#0099fcfc" />
+    <color name="cep" value="#00996633" />
+	<color name="ceps" value="#00c8c8c8" />
 	<!--######################### -->
-    <color name="cepb" value="#0000ffff" />
-    <color name="cepbs" value="#0000ffff" />
+    <color name="cepb" value="#00996633" />
+    <color name="cepbs" value="#00c8c8c8" />
     <!--######################### -->
-    <color name="csd" value="#0000ffff" />
-    <color name="csds" value="#0099fcfc" />
+    <color name="csd" value="#00CEAD75" />
+    <color name="csds" value="#00CEAD75" />
 	<!--######################### -->
-	<color name="ss" value="#0000ffff" />
-	<color name="sb" value="#0072C4FF" />
+	<color name="ss" value="#00996633" />
+	<color name="sb" value="#003F3F3F" />
 	<!--######################### -->
-	<color name="tfc" value="#0072C4FF" />
+	<color name="tfc" value="#00CEAD75" />
 	<!--######################### -->
     <color name="b2" value="#00005090" />
     <color name="b3" value="#0086c5f8" />
@@ -54,7 +54,7 @@
     <color name="ListboxMarkedForeground" color="red" />
     <color name="ListboxMarkedAndSelectedBackground" color="bs" />
     <color name="ListboxMarkedAndSelectedForeground" color="red" />
-    <color name="WindowTitleForeground" color="csd" />
+    <color name="WindowTitleForeground" color="tfc" />
     <color name="WindowTitleBackground" color="tb" />
     <borderset name="bsWindow">
       <pixmap filename="LiteHD2/window/top_left_corner.png" pos="bpTopLeft" />
@@ -62,5 +62,4 @@
       <pixmap filename="LiteHD2/window/top_right_corner.png" pos="bpTopRight" />
     </borderset>
   </windowstyle>
-</skin>
 </skin>

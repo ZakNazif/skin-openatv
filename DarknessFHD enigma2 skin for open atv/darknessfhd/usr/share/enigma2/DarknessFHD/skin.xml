@@ -4,6 +4,24 @@
     <resolution bpp="32" xres="1920" yres="1080" />
   </output>
   <colors>
+    <color name="fc" value="#00c8c8c8" />
+    <color name="fcs" value="#00ffffff" />
+	<color name="bs" value="#00005090" />
+	<!--######################### -->
+    <color name="cep" value="#009b9b9b" />
+	<color name="ceps" value="#009b9b9b" />
+	<!--######################### -->
+    <color name="cepb" value="#009b9b9b" />
+    <color name="cepbs" value="#009b9b9b" />
+    <!--######################### -->
+    <color name="csd" value="#009b9b9b" />
+    <color name="csds" value="#009b9b9b" />
+	<!--######################### -->
+	<color name="ss" value="#0072C4FF" />
+	<color name="sb" value="#009b9b9b" />
+	<!--######################### -->
+	<color name="tfc" value="#009b9b9b" />
+	<!--######################### -->
     <color name="b10" value="#00b9e6ff" />
     <color name="b2" value="#00005090" />
     <color name="b3" value="#007bc9f3" />
@@ -167,16 +185,16 @@
   <windowstyle type="skinned" id="0">
     <title font="Regular;30" offset="20,5" />
     <color name="Background" color="tb" />
-    <color name="LabelForeground" color="lightgrey" />
+    <color name="LabelForeground" color="gr2" />
     <color name="ListboxBackground" color="tb" />
-    <color name="ListboxForeground" color="lightgrey" />
-    <color name="ListboxSelectedBackground" color="tb2" />
-    <color name="ListboxSelectedForeground" color="white" />
+    <color name="ListboxForeground" color="gr2" />
+    <color name="ListboxSelectedBackground" color="bs" />
+    <color name="ListboxSelectedForeground" color="fcs" />
     <color name="ListboxMarkedBackground" color="tb" />
     <color name="ListboxMarkedForeground" color="red" />
-    <color name="ListboxMarkedAndSelectedBackground" color="tb2" />
+    <color name="ListboxMarkedAndSelectedBackground" color="bs" />
     <color name="ListboxMarkedAndSelectedForeground" color="red" />
-    <color name="WindowTitleForeground" color="lightgrey2" />
+    <color name="WindowTitleForeground" color="csd" />
     <color name="WindowTitleBackground" color="tb" />
     <borderset name="bsWindow">
       <pixmap filename="DarknessFHD/window/top_left_corner.png" pos="bpTopLeft" />
@@ -195,6 +213,20 @@
       <pixmap filename="DarknessFHD/border/vline.png" pos="bpRight" />
     </borderset>
   </windowstyle>
+  <windowstyle type="skinned" id="1">
+    <color name="Background" color="tb" />
+    <color name="LabelForeground" color="white" />
+    <color name="ListboxBackground" color="tb" />
+    <color name="ListboxForeground" color="white" />
+    <color name="ListboxSelectedBackground" color="bs" />
+    <color name="ListboxSelectedForeground" color="white" />
+    <color name="ListboxMarkedBackground" color="tb" />
+    <color name="ListboxMarkedForeground" color="white" />
+    <color name="ListboxMarkedAndSelectedBackground" color="bs" />
+    <color name="ListboxMarkedAndSelectedForeground" color="red" />
+    <color name="WindowTitleForeground" color="white" />
+    <color name="WindowTitleBackground" color="tb" />
+  </windowstyle>
   <include filename="/usr/share/enigma2/DarknessFHD/skin_plugins.xml" />
   <include filename="/usr/share/enigma2/DarknessFHD/skin_panels.xml" />
   <!--infobar-->
@@ -203,13 +235,13 @@
     <widget source="session.CurrentService" render="DARKEmptyEpg" halign="center" position="531,844" size="700,50" zPosition="1" font="Console; 40" transparent="1" backgroundColor="tb" foregroundColor="b6">
       <convert type="ServiceName">Name</convert>
     </widget>
-    <widget backgroundColor="tb" font="Regular; 30" zPosition="2" halign="left" position="559,890" render="Label" size="800,40" source="session.Event_Now" transparent="1">
+    <widget foregroundColor="lightgrey" backgroundColor="tb" font="Regular; 30" zPosition="2" halign="left" position="559,890" render="Label" size="800,40" source="session.Event_Now" transparent="1">
       <convert type="EventName">Name</convert>
     </widget>
     <widget source="session.CurrentService" render="Picon" position="59,855" zPosition="4" size="400,170" transparent="1" alphatest="blend">
       <convert type="ServiceName">Reference</convert>
     </widget>
-    <widget source="session.Event_Next" backgroundColor="tb" font="Regular; 30" halign="left" position="571,947" render="Label" size="800,40" transparent="1" zPosition="2">
+    <widget source="session.Event_Next" foregroundColor="lightgrey" backgroundColor="tb" font="Regular; 30" halign="left" position="571,947" render="Label" size="800,40" transparent="1" zPosition="2">
       <convert type="EventName">Name</convert>
     </widget>
     <eLabel name="" text="(" position="1380,945" size="10,40" font="Console; 30" foregroundColor="gr2" backgroundColor="tb" zPosition="9" halign="center" transparent="1" />
@@ -230,16 +262,16 @@
       <convert type="EventTime">Remaining</convert>
       <convert type="RemainingToText">InMinutes</convert>
     </widget>
-    <widget source="session.FrontendStatus" render="Label" pixmap="DarknessFHD/e1/psnr.png" position="1545,888" size="90,25" backgroundColor="tb" alphatest="blend" transparent="0" zPosition="2" halign="center" font="Regular; 25">
+    <widget source="session.FrontendStatus" render="Label" pixmap="DarknessFHD/e1/psnr.png" position="1545,888" size="90,25" foregroundColor="lightgrey" backgroundColor="tb" alphatest="blend" transparent="0" zPosition="2" halign="center" font="Regular; 25">
       <convert type="FrontendInfo">SNR</convert>
     </widget>
-    <widget source="session.FrontendStatus" render="Label" backgroundColor="tb" transparent="0" zPosition="2" pixmap="DarknessFHD/e1/psnr.png" position="1628,888" size="90,25" halign="center" font="Regular; 25">
+    <widget source="session.FrontendStatus" render="Label" foregroundColor="lightgrey" backgroundColor="tb" transparent="0" zPosition="2" pixmap="DarknessFHD/e1/psnr.png" position="1628,888" size="90,25" halign="center" font="Regular; 25">
       <convert type="FrontendInfo">AGC</convert>
     </widget>
-    <widget source="session.CurrentService" render="Label" position="1705,888" size="93,25" backgroundColor="tb" pixmap="DarknessFHD/e1/psnr.png" transparent="0" zPosition="2" halign="center" font="Regular; 25">
+    <widget source="session.CurrentService" render="Label" position="1705,888" size="93,25" foregroundColor="lightgrey" backgroundColor="tb" pixmap="DarknessFHD/e1/psnr.png" transparent="0" zPosition="2" halign="center" font="Regular; 25">
       <convert type="DARKCpuUsage">Total</convert>
     </widget>
-    <widget source="session.CurrentService" render="Label" zPosition="0" position="1554,889" size="300,25" halign="right" valign="center" font="Regular; 25" transparent="1" backgroundColor="tb">
+    <widget source="session.CurrentService" render="Label" zPosition="0" position="1554,889" size="300,25" halign="right" valign="center" font="Regular; 25" transparent="1" foregroundColor="lightgrey" backgroundColor="tb">
       <convert type="DARKDiskSpaceInfo">MemFree,Short</convert>
     </widget>
     <ePixmap name="" pixmap="icons/icon_rec_off.png" position="1473,856" zPosition="1" size="47,26" transparent="0" alphatest="blend" />
@@ -298,10 +330,10 @@
     <widget source="session.CurrentService" backgroundColor="tb" render="Label" position="981,995" size="419,40" font="Regular; 30" transparent="1" halign="center" zPosition="5" foregroundColor="lightgrey">
       <convert type="PliExtraInfo">CryptoBar</convert>
     </widget>
-    <widget source="session.CurrentService" render="Label" position="1396,995" size="130,40" font="Regular; 30" halign="center" valign="center" backgroundColor="tb" transparent="1" zPosition="2">
+    <widget source="session.CurrentService" render="Label" position="1396,995" size="130,40" font="Regular; 30" halign="center" valign="center" foregroundColor="lightgrey" backgroundColor="tb" transparent="1" zPosition="2">
       <convert type="ServiceOrbitalPosition" />
     </widget>
-    <widget source="session.CurrentService" backgroundColor="tb" render="Label" position="1603,995" size="250,40" font="Regular; 30" transparent="1" halign="center" zPosition="2">
+    <widget source="session.CurrentService" foregroundColor="lightgrey" backgroundColor="tb" render="Label" position="1603,995" size="250,40" font="Regular; 30" transparent="1" halign="center" zPosition="2">
       <convert type="PliExtraInfo">ResolutionString</convert>
     </widget>
     <eLabel text="A" position="1559,935" zPosition="1" size="40,40" font="Regular; 30" halign="center" foregroundColor="gr" backgroundColor="tb" transparent="1" />
@@ -513,7 +545,14 @@
     <panel name="ch" />
     <panel name="rgyb_source" />
     <panel name="pig" />
-    <widget name="list" position="75,75" size="1100,700" scrollbarMode="showOnDemand" transparent="1" zPosition="1" itemHeight="60" serviceItemHeight="60" serviceNumberFont="Regular;30" serviceNameFont="Regular;32" serviceInfoFont="Regular;28" colorServiceDescription="gr2" colorServiceDescriptionSelected="b8" colorServiceRecording="red" foregroundColorServiceNotAvail="gr" colorEventProgressbar="gr2" colorEventProgressbarSelected="b8" colorEventProgressbarBorder="gr2" colorEventProgressbarBorderSelected="b8" scrollbarSliderBorderWidth="0" scrollbarSliderBorderColor="tb" scrollbarWidth="4" scrollbarSliderForegroundColor="b8" scrollbarSliderPicture="DarknessFHD/e1/scrollbar.png" fieldMargins="15" nonplayableMargins="15" itemsDistances="8" progressBarWidth="80" progressPercentWidth="90" progressbarHeight="10" />
+    <widget name="list" position="75,75" size="1100,700" scrollbarMode="showOnDemand" transparent="1" zPosition="1" 
+	itemHeight="60" serviceItemHeight="60" serviceNumberFont="Regular;30" serviceNameFont="Regular;32" serviceInfoFont="Regular;28" 
+	colorServiceRecording="red" foregroundColorServiceNotAvail="gr" 
+	foregroundColor="fc" foregroundColorSelected="fcs" 
+	colorServiceDescription="csd" colorServiceDescriptionSelected="csds" 
+	colorEventProgressbar="cep" colorEventProgressbarSelected="ceps" colorEventProgressbarBorder="cepb" colorEventProgressbarBorderSelected="cepbs" 
+	scrollbarSliderBorderColor="sb" scrollbarSliderForegroundColor="ss"  scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="DarknessFHD/e1/scrollbar.png" 
+	fieldMargins="15" nonplayableMargins="15" itemsDistances="8" progressBarWidth="80" progressPercentWidth="90" progressbarHeight="10" />
     <widget source="ServiceEvent" render="Label" position="1263,763" size="650,40" font="Regular; 30" backgroundColor="tb" transparent="1" halign="left" noWrap="1" valign="center" text="19.2E  DVB-S2  10627 27500 3/4 8PSK" zPosition="3" foregroundColor="p9">
       <convert type="ServiceName2">%O  %s  %F %p %Y %f %M %b</convert>
     </widget>
@@ -868,7 +907,7 @@
     <panel name="ch" />
     <panel name="pig" />
     <panel name="foot" />
-    <widget name="list" position="75,75" size="1100,720" selectionPixmap="DarknessFHD/e1/sel100.png" backgroundColor="tb" scrollbarMode="showNever" zPosition="1" scrollbarSliderBorderWidth="0" scrollbarSliderBorderColor="tb" scrollbarWidth="4" scrollbarSliderForegroundColor="b8" scrollbarSliderPicture="DarknessFHD/e1/scrollbar.png" transparent="1" />
+    <widget name="list" position="75,75" size="1100,720" selectionPixmap="DarknessFHD/e1/sel100.png" foregroundColor="lightgrey" backgroundColor="tb" scrollbarMode="showNever" zPosition="1" scrollbarSliderBorderWidth="0" scrollbarSliderBorderColor="tb" scrollbarWidth="4" scrollbarSliderForegroundColor="b8" scrollbarSliderPicture="DarknessFHD/e1/scrollbar.png" transparent="1" />
     <ePixmap name="" pixmap="DarknessFHD/e2/q.png" position="1699,893" size="300,300" transparent="0" alphatest="blend" />
   </screen>
   <screen name="PluginDownloadBrowser" position="0,0" size="1920,1080">
@@ -880,7 +919,7 @@
     <ePixmap name="" pixmap="DarknessFHD/e2/Download.png" position="1697,888" size="300,300" transparent="0" alphatest="blend" />
   </screen>
   <screen name="SkinSelector" position="0,0" size="1920,1080" title="Choose your Skin" backgroundColor="transparent">
-    <widget name="SkinList" itemHeight="50" font="Regular; 40" selectionPixmap="DarknessFHD/e1/sel100.png" position="75,75" size="1100,700" transparent="1" />
+    <widget name="SkinList" itemHeight="50" font="Regular; 40" foregroundColor="lightgrey" backgroundColor="tb" selectionPixmap="DarknessFHD/e1/sel100.png" position="75,75" size="1100,700" transparent="1" />
     <widget name="Preview" position="1316,508" size="480,270" alphatest="blend" transparent="1" halign="center" />
     <panel name="ch" />
     <panel name="rgyb_source" />
@@ -891,8 +930,8 @@
   <!-- MEDIA -->
   <screen name="MediaPlayer" position="0,0" size="1920,1080" title="MediaPlayer" flags="wfNoBorder" backgroundColor="transparent">
     <ePixmap position="0,0" size="1920,1080" zPosition="-1" pixmap="DarknessFHD/e1/medya.png" alphatest="off" transparent="1" />
-    <widget name="filelist" backgroundColor="tb" selectionPixmap="DarknessFHD/e1/sel100.png" itemHeight="50" position="62,63" scrollbarMode="showNever" size="842,321" transparent="1" />
-    <widget name="playlist" font="Regular; 30" backgroundColor="tb" itemHeight="50" selectionPixmap="DarknessFHD/e1/sel100.png" position="1007,73" scrollbarMode="showNever" selectionDisabled="1" size="832,671" transparent="1" />
+    <widget name="filelist" foregroundColor="lightgrey" backgroundColor="tb" selectionPixmap="DarknessFHD/e1/sel100.png" itemHeight="50" position="62,63" scrollbarMode="showNever" size="842,321" transparent="1" />
+    <widget name="playlist" foregroundColor="lightgrey" backgroundColor="tb" font="Regular; 30" itemHeight="50" selectionPixmap="DarknessFHD/e1/sel100.png" position="1007,73" scrollbarMode="showNever" selectionDisabled="1" size="832,671" transparent="1" />
     <widget backgroundColor="tb" font="Console2; 35" name="title" position="52,463" size="872,75" transparent="1" valign="center" foregroundColor="yellow" halign="center" />
     <widget backgroundColor="tb" font="LCD; 75" halign="center" position="63,849" render="Label" size="400,100" source="session.CurrentService" transparent="1" zPosition="4" foregroundColor="b8">
       <convert type="ServicePosition">Position,ShowHours</convert>
@@ -907,14 +946,14 @@
       <convert type="ServicePosition">Gauge</convert>
     </widget>
     <widget name="repeat" position="1511,860" size="50,21" pixmaps="icons/ico_noreplay.png,icons/ico_replay.png" transparent="1" alphatest="blend" />
-    <widget font="Regular; 30" name="artisttext" backgroundColor="tb" position="85,520" size="130,75" transparent="1" />
-    <widget font="Regular; 30" name="albumtext" backgroundColor="tb" position="85,575" size="130,75" transparent="1" />
-    <widget font="Regular; 30" name="yeartext" backgroundColor="tb" position="85,628" size="130,75" transparent="1" />
-    <widget font="Regular; 30" name="genretext" backgroundColor="tb" position="85,684" size="130,75" transparent="1" />
-    <widget font="Regular; 30" name="artist" backgroundColor="tb" position="270,520" size="500,75" transparent="1" />
-    <widget font="Regular; 30" name="album" backgroundColor="tb" position="270,575" size="500,75" transparent="1" />
-    <widget font="Regular; 30" name="year" backgroundColor="tb" position="270,633" size="500,75" transparent="1" />
-    <widget font="Regular; 30" name="genre" position="270,684" size="500,75" transparent="1" backgroundColor="tb" />
+    <widget font="Regular; 30" name="artisttext" foregroundColor="lightgrey" backgroundColor="tb" position="85,520" size="130,75" transparent="1" />
+    <widget font="Regular; 30" name="albumtext" foregroundColor="lightgrey" backgroundColor="tb" position="85,575" size="130,75" transparent="1" />
+    <widget font="Regular; 30" name="yeartext" foregroundColor="lightgrey" backgroundColor="tb" position="85,628" size="130,75" transparent="1" />
+    <widget font="Regular; 30" name="genretext" foregroundColor="lightgrey" backgroundColor="tb" position="85,684" size="130,75" transparent="1" />
+    <widget font="Regular; 30" name="artist" foregroundColor="lightgrey" backgroundColor="tb" position="270,520" size="500,75" transparent="1" />
+    <widget font="Regular; 30" name="album" foregroundColor="lightgrey" backgroundColor="tb" position="270,575" size="500,75" transparent="1" />
+    <widget font="Regular; 30" name="year" foregroundColor="lightgrey" backgroundColor="tb" position="270,633" size="500,75" transparent="1" />
+    <widget font="Regular; 30" name="genre" position="270,684" size="500,75" transparent="1" foregroundColor="lightgrey" backgroundColor="tb" />
     <widget name="coverArt" pixmap="skin_default/no_coverArt.png" position="1640,841" size="200,200" transparent="0" alphatest="blend" />
   </screen>
   <screen name="MoviePlayer" backgroundColor="transparent" flags="wfNoBorder" position="0,840" size="1920,200" title="InfoBar" transparent="0">
@@ -998,22 +1037,22 @@
   <screen name="MovieContextMenu" position="0,0" size="1920,1080" title="Movielist menu" backgroundColor="transparent">
     <panel name="ch" />
     <panel name="pig" />
-    <widget name="menu" position="75,75" selectionPixmap="DarknessFHD/e1/sel100.png" size="1100,700" scrollbarMode="showOnDemand" itemHeight="35" transparent="1" />
+    <widget name="menu" position="75,75" foregroundColor="lightgrey" backgroundColor="tb" selectionPixmap="DarknessFHD/e1/sel100.png" size="1100,700" scrollbarMode="showOnDemand" itemHeight="35" transparent="1" />
     <ePixmap name="" pixmap="DarknessFHD/e2/qqq.png" position="1700,893" size="300,300" transparent="0" alphatest="blend" />
   </screen>
   <screen name="picshow" position="0,0" size="1920,1080" title="PicturePlayer" flags="wfNoBorder" backgroundColor="transparent">
     <panel name="ch" />
     <panel name="rgyb_source" />
     <ePixmap name="" pixmap="DarknessFHD/e2/Pictures.png" position="1696,887" size="300,300" transparent="0" alphatest="blend" />
-    <widget name="filelist" itemHeight="50" selectionPixmap="DarknessFHD/e1/sel100.png" font="Regular; 30" position="75,75" size="1100,700" zPosition="2" transparent="1" />
-    <widget source="label" render="Label" position="1283,429" size="586,350" transparent="1" halign="center" font="Regular; 25" zPosition="2" backgroundColor="tb" />
+    <widget name="filelist" itemHeight="50" foregroundColor="lightgrey" backgroundColor="tb" selectionPixmap="DarknessFHD/e1/sel100.png" font="Regular; 30" position="75,75" size="1100,700" zPosition="2" transparent="1" />
+    <widget source="label" foregroundColor="lightgrey" backgroundColor="tb" render="Label" position="1283,429" size="586,350" transparent="1" halign="center" font="Regular; 25" zPosition="2" />
     <widget name="thn" position="1283,51" size="586,333" alphatest="blend" zPosition="5" />
   </screen>
   <screen backgroundColor="transparent" flags="wfNoBorder" name="Pic_Exif" position="0,0" size="1920,1080" title="Info">
     <panel name="ch" />
     <panel name="rgyb_source" />
     <panel name="pig" />
-    <widget source="menu" render="Listbox" position="75,75" size="1100,700" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="1">
+    <widget source="menu" render="Listbox" position="75,75" size="1100,700" foregroundColor="lightgrey" backgroundColor="tb" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="1">
       <convert type="TemplatedMultiContent">
 				{
 					"template": [  
@@ -1037,21 +1076,21 @@
     <widget source="Frontend" render="Progress" pixmap="DarknessFHD/e1/satprgrs.png" backgroundColor="gr" position="260,135" size="625,10" transparent="1" borderWidth="1" borderColor="gr">
       <convert type="FrontendInfo">SNR</convert>
     </widget>
-    <widget source="Frontend" render="Label" position="895,111" size="150,50" font="Regular; 35" transparent="1">
+    <widget source="Frontend" render="Label" position="895,111" size="150,50" font="Regular; 35" foregroundColor="lightgrey" backgroundColor="tb" transparent="1">
       <convert type="FrontendInfo">SNR</convert>
     </widget>
     <eLabel name="agc" text="AGC:" position="150,172" size="100,50" font="Regular; 35" halign="center" transparent="1" />
     <widget source="Frontend" render="Progress" pixmap="DarknessFHD/e1/satprgrs.png" backgroundColor="gr" position="260,187" size="625,10" transparent="1" borderWidth="1" borderColor="gr">
       <convert type="FrontendInfo">AGC</convert>
     </widget>
-    <widget source="Frontend" render="Label" position="895,165" size="150,50" font="Regular; 35" transparent="1">
+    <widget source="Frontend" render="Label" position="895,165" size="150,50" font="Regular; 35" foregroundColor="lightgrey" backgroundColor="tb" transparent="1">
       <convert type="FrontendInfo">AGC</convert>
     </widget>
     <eLabel name="ber" text="BER:" position="150,236" size="100,50" font="Regular; 35" halign="center" transparent="1" />
-    <widget source="Frontend" render="Label" position="257,236" size="200,50" font="Regular; 35" transparent="1" foregroundColor="red">
+    <widget source="Frontend" render="Label" position="257,236" size="200,50" font="Regular; 35" transparent="1" backgroundColor="tb" foregroundColor="red">
       <convert type="FrontendInfo">BER</convert>
     </widget>
-    <eLabel text="Lock:" position="142,328" size="100,50" font="Regular; 35" halign="right" />
+    <eLabel text="Lock:" position="142,328" size="100,50" foregroundColor="lightgrey" backgroundColor="tb" font="Regular; 35" halign="right" />
     <widget source="Frontend" render="Pixmap" pixmap="DarknessFHD/e2/ok.png" position="251,321" zPosition="1" size="50,50" alphatest="on">
       <convert type="FrontendInfo">LOCK</convert>
       <convert type="ConditionalShowHide" />
@@ -1066,7 +1105,7 @@
     <panel name="cvr" />
     <ePixmap name="" pixmap="DarknessFHD/e2/sat.png" position="1678,887" size="100,100" transparent="0" alphatest="blend" />
     <ePixmap name="" pixmap="DarknessFHD/e2/sputnik1.png" position="1265,61" size="600,718" transparent="0" alphatest="blend" />
-    <widget name="config" selectionPixmap="DarknessFHD/e1/sel100.png" itemHeight="50" position="142,393" size="1032,379" font="Regular; 30" transparent="1" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarSliderBorderColor="tb" scrollbarWidth="4" scrollbarSliderForegroundColor="b8" scrollbarSliderPicture="DarknessFHD/e1/scrollbar.png" />
+    <widget name="config" selectionPixmap="DarknessFHD/e1/sel100.png" foregroundColor="lightgrey" backgroundColor="tb" itemHeight="50" position="142,393" size="1032,379" font="Regular; 30" transparent="1" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarSliderBorderColor="tb" scrollbarWidth="4" scrollbarSliderForegroundColor="b8" scrollbarSliderPicture="DarknessFHD/e1/scrollbar.png" />
   </screen>
   <screen name="ScanSetup" position="0,0" size="1920,1080" title="Manual Scan" backgroundColor="transparent">
     <panel name="cnf" />
@@ -1139,18 +1178,18 @@
       <convert type="ValueRange">2,2</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget name="network" position="75,863" size="495,30" font="Regular;30" transparent="1" />
-    <widget name="transponder" position="75,928" size="495,30" font="Regular;30" />
-    <widget name="scan_state" position="825,940" zPosition="2" size="600,30" font="Regular;27" transparent="1" />
-    <widget name="pass" position="825,980" size="600,30" font="Regular;27" transparent="1" />
+    <widget name="network" position="75,863" size="495,30" font="Regular;30" foregroundColor="lightgrey" backgroundColor="tb" transparent="1" />
+    <widget name="transponder" position="75,928" size="495,30" foregroundColor="lightgrey" backgroundColor="tb" font="Regular;30" />
+    <widget name="scan_state" position="825,940" zPosition="2" size="600,30" font="Regular;27" foregroundColor="lightgrey" backgroundColor="tb" transparent="1" />
+    <widget name="pass" position="825,980" size="600,30" font="Regular;27" tforegroundColor="lightgrey" backgroundColor="tb" ransparent="1" />
     <widget name="scan_progress" position="821,870" size="600,10" pixmap="DarknessFHD/e1/prgrs.png" borderWidth="3" borderColor="gr" />
-    <widget name="servicelist" position="75,75" size="1100,700" font="Regular;30" selectionDisabled="1" itemHeight="50" transparent="1" />
+    <widget name="servicelist" position="75,75" size="1100,700" font="Regular;30" foregroundColor="lightgrey" backgroundColor="tb" selectionDisabled="1" itemHeight="50" transparent="1" />
   </screen>
   <screen name="NimSelection" position="0,0" size="1920,1080" title="Choose Tuner" backgroundColor="transparent">
     <panel name="ch" />
     <panel name="pig" />
     <ePixmap name="" pixmap="DarknessFHD/e2/sat.png" position="1684,894" size="300,300" transparent="0" alphatest="blend" />
-    <widget source="nimlist" render="Listbox" selectionPixmap="DarknessFHD/e1/sel100.png" position="75,75" size="1100,700" transparent="1" itemHeight="90">
+    <widget source="nimlist" render="Listbox" foregroundColor="lightgrey" backgroundColor="tb" selectionPixmap="DarknessFHD/e1/sel100.png" position="75,75" size="1100,700" transparent="1" itemHeight="90">
       <convert type="TemplatedMultiContent">
 					{"template": [
 							MultiContentEntryText(pos = (20, 5), size = (550, 60), flags = RT_HALIGN_LEFT, text = 1,color_sel = 0x0000ff00), # index 1 is the nim name,
@@ -1183,7 +1222,7 @@
     <panel name="rgyb_source" />
     <panel name="ch" />
     <panel name="pig" />
-    <widget source="menu" render="Listbox" position="75,75" size="1100,680" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarSliderBorderColor="tb" scrollbarWidth="4" scrollbarSliderForegroundColor="b8" scrollbarSliderPicture="DarknessFHD/e1/scrollbar.png" enableWrapAround="1" transparent="1">
+    <widget source="menu" render="Listbox" position="75,75" size="1100,680" foregroundColor="lightgrey" backgroundColor="tb" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarSliderBorderColor="tb" scrollbarWidth="4" scrollbarSliderForegroundColor="b8" scrollbarSliderPicture="DarknessFHD/e1/scrollbar.png" enableWrapAround="1" transparent="1">
       <convert type="TemplatedMultiContent">
 					{"template":
 						[
@@ -1202,7 +1241,7 @@
     <widget name="state" position="0,0" size="550,100" backgroundColor="tb" foregroundColor="white" font="Regular; 80" halign="center" transparent="1" valign="center" />
   </screen>
   <screen name="UpdatePluginMenu" position="0,0" size="1920,1080" title="Software management" backgroundColor="transparent">
-    <widget source="menu" render="Listbox" selectionPixmap="DarknessFHD/e1/sel100.png" position="75,75" size="1100,700" transparent="1">
+    <widget source="menu" render="Listbox" selectionPixmap="DarknessFHD/e1/sel100.png" position="75,75" size="1100,700" foregroundColor="lightgrey" backgroundColor="tb" transparent="1">
       <convert type="TemplatedMultiContent">
 					{"template": [
 					MultiContentEntryText(pos = (20, 0), size = (1100, 70), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1)
@@ -1212,7 +1251,7 @@
 					}
 				</convert>
     </widget>
-    <widget source="menu" render="Listbox" selectionPixmap="DarknessFHD/e1/sel100.png" position="1257,500" size="600,300" selectionDisabled="1" transparent="1">
+    <widget source="menu" render="Listbox" foregroundColor="lightgrey" backgroundColor="tb" selectionPixmap="DarknessFHD/e1/sel100.png" position="1257,500" size="600,300" selectionDisabled="1" transparent="1">
       <convert type="TemplatedMultiContent">
 					{"template": [
 					MultiContentEntryText(pos = (10, 10), size = (320, 350), flags = RT_HALIGN_CENTER|RT_VALIGN_CENTER|RT_WRAP, text = 2), # index 2 is the Description,
@@ -1232,7 +1271,7 @@
       <convert type="ServicePosition">Gauge</convert>
     </widget>
     <widget name="time" position="75,38" size="150,30" font="Regular;30" halign="left" backgroundColor="un4e5a74" transparent="1" />
-    <widget source="session.CurrentService" render="Label" position="630,38" size="135,36" font="Regular;30" halign="right" backgroundColor="un4e5a74" transparent="1">
+    <widget source="session.CurrentService" render="Label" position="630,38" size="135,36" font="Regular;30" halign="right" foregroundColor="lightgrey" backgroundColor="un4e5a74" transparent="1">
       <convert type="ServicePosition">Length</convert>
     </widget>
   </screen>
@@ -1240,9 +1279,9 @@
     <widget source="session.RecordState" render="Pixmap" pixmap="icons/record.png" position="675,0" zPosition="2" size="21,21" alphatest="on">
       <convert type="ConditionalShowHide">Blink</convert>
     </widget>
-    <widget source="Title" render="Label" position="0,0" size="705,30" font="Regular;20" backgroundColor="un33294a6b" />
+    <widget source="Title" render="Label" position="0,0" size="705,30" font="Regular;20" foregroundColor="lightgrey" backgroundColor="un33294a6b" />
     <widget name="CurrentSubserviceNumber" position="0,30" size="75,51" font="Regular;33" backgroundColor="un33294a6b" shadowColor="black" shadowOffset="-1,-1" />
-    <widget source="session.CurrentService" render="Label" position="75,30" size="630,51" font="Regular;33" backgroundColor="un33294a6b" shadowColor="black" shadowOffset="-1,-1">
+    <widget source="session.CurrentService" render="Label" position="75,30" size="630,51" font="Regular;33" foregroundColor="lightgrey" backgroundColor="un33294a6b" shadowColor="black" shadowOffset="-1,-1">
       <convert type="ServiceName">Name</convert>
     </widget>
   </screen>
@@ -1252,10 +1291,10 @@
     <panel name="pig" />
     <panel name="foot" />
     <ePixmap name="" pixmap="DarknessFHD/e2/Refresh.png" position="1692,885" size="300,300" transparent="0" alphatest="blend" />
-    <widget name="checkList" font="Regular;30" selectionPixmap="DarknessFHD/e1/sel100.png" position="75,75" size="1100,700" transparent="1" scrollbarMode="showOnDemand" render="Listbox" itemHeight="50" />
+    <widget name="checkList" font="Regular;30" foregroundColor="lightgrey" backgroundColor="tb" selectionPixmap="DarknessFHD/e1/sel100.png" position="75,75" size="1100,700" transparent="1" scrollbarMode="showOnDemand" render="Listbox" itemHeight="50" />
   </screen>
   <screen name="RestoreMenu" position="0,0" size="1920,1080" title="Restore backups">
-    <widget name="filelist" font="Regular;30" selectionPixmap="DarknessFHD/e1/sel100.png" position="75,75" size="1100,700" scrollbarMode="showOnDemand" transparent="1" itemHeight="50" />
+    <widget name="filelist" font="Regular;30" foregroundColor="lightgrey" backgroundColor="tb" selectionPixmap="DarknessFHD/e1/sel100.png" position="75,75" size="1100,700" scrollbarMode="showOnDemand" transparent="1" itemHeight="50" />
     <panel name="rgyb_source" />
     <panel name="ch" />
     <panel name="pig" />
@@ -1263,7 +1302,7 @@
     <ePixmap name="" pixmap="DarknessFHD/e2/Refresh.png" position="1694,883" size="300,300" transparent="0" alphatest="blend" />
   </screen>
   <screen backgroundColor="transparent" flags="wfNoBorder" name="PacketManager" position="0,0" size="1920,1080" title="PacketManager">
-    <widget position="75,75" render="Listbox" size="1100,700" scrollbarMode="showOnDemand" source="list" transparent="1">
+    <widget position="75,75" render="Listbox" size="1100,700" scrollbarMode="showOnDemand" source="list" foregroundColor="lightgrey" backgroundColor="tb" transparent="1">
       <convert type="TemplatedMultiContent">
 				{"template": [
 						MultiContentEntryPixmapAlphaTest(pos = (27, 7), size = (72, 72), png = 4), # index 4 is the status pixmap
@@ -1283,8 +1322,8 @@
   </screen>
   <screen name="Ipkg" position="0,0" size="1920,1080" title="Software update" backgroundColor="transparent" transparent="0" flags="wfNoBorder">
     <widget name="activityslider" pixmap="DarknessFHD/e1/prgrs.png" position="105,208" size="1000,20" />
-    <widget name="package" position="75,538" size="1100,100" font="Regular; 40" transparent="1" foregroundColor="orange" />
-    <widget name="status" position="75,650" size="1100,100" font="Regular; 40" transparent="1" />
+    <widget name="package" position="75,538" size="1100,100" font="Regular; 40" transparent="1" backgroundColor="tb" foregroundColor="orange" />
+    <widget name="status" position="75,650" size="1100,100" font="Regular; 40" foregroundColor="lightgrey" backgroundColor="tb" transparent="1" />
     <panel name="ch" />
     <panel name="pig" />
     <panel name="rgyb_source" />
@@ -1297,7 +1336,7 @@
     <panel name="ch" />
     <panel name="pig" />
     <panel name="foot" />
-    <widget name="list" backgroundColor="tb" itemHeight="80" selectionPixmap="DarknessFHD/e1/sel100.png" position="75,75" font="Console; 32" size="1100,720" transparent="0" zPosition="2" fieldMargins="40" nonplayableMargins="40" enableWrapAround="1" />
+    <widget name="list" foregroundColor="lightgrey" backgroundColor="tb" itemHeight="80" selectionPixmap="DarknessFHD/e1/sel100.png" position="75,75" font="Console; 32" size="1100,720" transparent="0" zPosition="2" fieldMargins="40" nonplayableMargins="40" enableWrapAround="1" />
     <ePixmap name="" pixmap="DarknessFHD/e2/dwn.png" position="1701,890" size="300,300" transparent="0" alphatest="blend" />
   </screen>
   <screen name="IPKGMenu" position="0,0" size="1920,1080" title="Select IPKG source....." flags="wfNoBorder" backgroundColor="transparent">
@@ -1320,7 +1359,7 @@
     <panel name="ch" />
     <panel name="pig" />
     <panel name="foot" />
-    <widget source="languages" render="Listbox" selectionPixmap="DarknessFHD/e1/sel100.png" position="75,75" size="1110,700" scrollbarMode="showNever" transparent="1">
+    <widget source="languages" render="Listbox" selectionPixmap="DarknessFHD/e1/sel100.png" position="75,75" size="1110,700" scrollbarMode="showNever" foregroundColor="lightgrey" backgroundColor="tb" transparent="1">
       <convert type="TemplatedMultiContent">
 			{"template": [
 						MultiContentEntryText(pos = (120,10), size = (300,40), flags = RT_HALIGN_LEFT, text = 1), # index 1 is the language name,
@@ -1336,7 +1375,7 @@
   <screen name="InputDeviceSelection" title="Select input device" size="1920,1080" position="0,0" flags="wfNoBorder">
     <panel name="ch" />
     <panel name="pig" />
-    <widget source="list" render="Listbox" position="75,75" size="1100,700" selectionPixmap="DarknessFHD/e1/sel100.png" transparent="1" scrollbarMode="showOnDemand">
+    <widget source="list" render="Listbox" position="75,75" size="1100,700" foregroundColor="lightgrey" backgroundColor="tb" selectionPixmap="DarknessFHD/e1/sel100.png" transparent="1" scrollbarMode="showOnDemand">
       <convert type="TemplatedMultiContent">
 			{"template": [
 						MultiContentEntryPixmapAlphaTest(pos = (15,29), size = (48,48), png = 2), # index 3 is the interface pixmap
@@ -1347,26 +1386,26 @@
 			}
 					</convert>
     </widget>
-    <widget source="introduction" render="Label" position="1250,501" size="600,300" backgroundColor="tb" zPosition="1" transparent="1" font="Regular;30" halign="center" />
+    <widget source="introduction" render="Label" position="1250,501" size="600,300" foregroundColor="lightgrey" backgroundColor="tb" zPosition="1" transparent="1" font="Regular;30" halign="center" />
   </screen>
   <screen name="HarddiskSelection" position="0,0" size="1920,1080" flags="wfNoBorder">
     <panel name="ch" />
     <panel name="pig" />
     <panel name="foot" />
     <ePixmap name="" pixmap="DarknessFHD/e2/hdd.png" position="1691,888" size="300,300" transparent="0" alphatest="blend" />
-    <widget name="hddlist" selectionPixmap="DarknessFHD/e1/sel100.png" position="75,75" itemHeight="38" font="Regular;28" size="1100,700" scrollbarMode="showOnDemand" transparent="1" />
+    <widget name="hddlist" selectionPixmap="DarknessFHD/e1/sel100.png" position="75,75" itemHeight="38" font="Regular;28" size="1100,700" foregroundColor="lightgrey" backgroundColor="tb" scrollbarMode="showOnDemand" transparent="1" />
   </screen>
   <screen name="RecordPathsSettings" position="0,0" size="1920,1080" flags="wfNoBorder">
     <panel name="ch" />
     <panel name="pig" />
-    <widget name="config" selectionPixmap="DarknessFHD/e1/sel100.png" position="75,75" size="1100,700" itemHeight="38" font="Regular;28" scrollbarMode="showOnDemand" transparent="1" />
+    <widget name="config" foregroundColor="lightgrey" backgroundColor="tb" selectionPixmap="DarknessFHD/e1/sel100.png" position="75,75" size="1100,700" itemHeight="38" font="Regular;28" scrollbarMode="showOnDemand" transparent="1" />
     <ePixmap name="" pixmap="DarknessFHD/e2/recc.png" position="1714,893" size="300,300" transparent="0" alphatest="blend" />
   </screen>
   <screen name="SelectBouquet" position="0,0" size="1920,1080" title="Choose bouquet" flags="wfNoBorder">
     <panel name="ch" />
     <panel name="pig" />
     <ePixmap name="" pixmap="DarknessFHD/e2/fav.png" position="1700,890" size="100,100" transparent="0" alphatest="blend" />
-    <widget name="menu" selectionPixmap="DarknessFHD/e1/sel100.png" position="75,75" size="1100,700" itemHeight="45" font="Regular;36" scrollbarMode="showOnDemand" transparent="1" />
+    <widget name="menu" foregroundColor="lightgrey" backgroundColor="tb" selectionPixmap="DarknessFHD/e1/sel100.png" position="75,75" size="1100,700" itemHeight="45" font="Regular;36" scrollbarMode="showOnDemand" transparent="1" />
   </screen>
   <screen name="BouquetSelector" position="0,0" size="1920,1080">
     <panel name="ch" />
@@ -1379,7 +1418,7 @@
   <screen name="InputDeviceSetup" title="Input device setup" position="0,0" size="1920,1080" flags="wfNoBorder">
     <panel name="ch" />
     <panel name="pig" />
-    <widget name="config" selectionPixmap="DarknessFHD/e1/sel100.png" position="75,75" size="1100,700" itemHeight="38" font="Regular;28" scrollbarMode="showOnDemand" transparent="1" />
+    <widget name="config" foregroundColor="lightgrey" backgroundColor="tb" selectionPixmap="DarknessFHD/e1/sel100.png" position="75,75" size="1100,700" itemHeight="38" font="Regular;28" scrollbarMode="showOnDemand" transparent="1" />
     <widget source="introduction" render="Label" position="1256,494" size="600,300" backgroundColor="tb" zPosition="1" transparent="1" font="Regular;30" halign="center" />
   </screen>
   <screen name="AudioSelection" position="0,0" size="1920,1080" title="Audio" backgroundColor="transparent" flags="wfNoBorder">
@@ -1395,7 +1434,7 @@
     <widget source="key_blue" render="Pixmap" pixmap="buttons/blue.png" position="145,225" size="35,25" alphatest="on" transparent="1">
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget name="config" selectionPixmap="DarknessFHD/e1/sel100.png" font="Regular; 25" position="187,80" size="807,180" scrollbarMode="showNever" transparent="1" backgroundColor="tb" render="Listbox" itemHeight="45" />
+    <widget name="config" selectionPixmap="DarknessFHD/e1/sel100.png" font="Regular; 25" position="187,80" size="807,180" scrollbarMode="showNever" transparent="1" foregroundColor="lightgrey" backgroundColor="tb" render="Listbox" itemHeight="45" />
     <widget source="streams" render="Listbox" selectionPixmap="DarknessFHD/e1/sel100.png" scrollbarMode="showNever" backgroundColor="tb" position="165,292" size="828,473" zPosition="3" transparent="1">
       <convert type="TemplatedMultiContent">
 					{"templates": {
@@ -1429,15 +1468,15 @@
     <panel name="pig" />
     <panel name="foot" />
     <widget name="text" position="75,865" size="1100,55" font="Regular; 25" foregroundColor="orange" transparent="1" />
-    <widget name="list" font="Regular; 30" selectionPixmap="DarknessFHD/e1/sel100.png" position="75,75" size="1100,700" scrollbarMode="showOnDemand" transparent="1" itemHeight="50" />
+    <widget name="list" font="Regular; 30" foregroundColor="lightgrey" backgroundColor="tb" selectionPixmap="DarknessFHD/e1/sel100.png" position="75,75" size="1100,700" scrollbarMode="showOnDemand" transparent="1" itemHeight="50" />
     <ePixmap name="" pixmap="DarknessFHD/e2/qqq.png" position="1709,886" size="300,300" transparent="0" alphatest="blend" />
   </screen>
   <screen name="MessageBox" position="570,430" size="780,220" title="Message" transparent="0" backgroundColor="tb" flags="wfBorder">
-    <widget backgroundColor="tb" font="Console; 30" name="text" position="140,0" size="600,100" transparent="1" zPosition="2" />
+    <widget foregroundColor="lightgrey" backgroundColor="tb" font="Console; 30" name="text" position="140,0" size="600,100" transparent="1" zPosition="2" />
     <widget alphatest="blend" name="ErrorPixmap" pixmap="icons/input_error.png" position="35,0" size="80,80" />
     <widget alphatest="blend" name="QuestionPixmap" pixmap="icons/input_question.png" position="35,0" size="80,80" />
     <widget alphatest="blend" name="InfoPixmap" pixmap="icons/input_info.png" position="35,0" size="80,80" />
-    <widget backgroundColor="tb" itemHeight="45" font="Console;30" name="list" position="140,100" size="600,100" transparent="1" zPosition="2" />
+    <widget itemHeight="45" font="Console;30" name="list" foregroundColor="lightgrey" backgroundColor="tb" position="140,100" size="600,100" transparent="1" zPosition="2" />
     <applet type="onLayoutFinish">
 # this should be factored out into some helper code, but currently demonstrates applets.
 from enigma import eSize, ePoint
@@ -1468,11 +1507,11 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		</applet>
   </screen>
   <screen name="MessageBoxSimple" position="570,430" size="780,220" flags="wfBorder">
-    <widget backgroundColor="tb" font="Regular; 30" name="text" position="140,0" size="600,100" transparent="1" zPosition="2" />
+    <widget foregroundColor="lightgrey" backgroundColor="tb" font="Regular; 30" name="text" position="140,0" size="600,100" transparent="1" zPosition="2" />
     <widget alphatest="blend" name="ErrorPixmap" pixmap="icons/input_error.png" position="35,0" size="80,80" />
     <widget alphatest="blend" name="QuestionPixmap" pixmap="icons/input_question.png" position="35,0" size="80,80" />
     <widget alphatest="blend" name="InfoPixmap" pixmap="icons/input_info.png" position="35,0" size="80,80" />
-    <widget backgroundColor="tb" itemHeight="45" font="Regular;30" name="list" position="140,102" size="600,100" transparent="1" zPosition="2" />
+    <widget foregroundColor="lightgrey" backgroundColor="tb" itemHeight="45" font="Regular;30" name="list" position="140,102" size="600,100" transparent="1" zPosition="2" />
     <applet type="onLayoutFinish">
 # this should be factored out into some helper code, but currently demonstrates applets.
 from enigma import eSize, ePoint
@@ -1515,15 +1554,15 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
   </screen>
   <screen name="NumberZapPicon" position="460,440" size="1000,170" title="QuickZap" flags="wfNoBorder" backgroundColor="transparent">
     <eLabel name="a" position="0,0" size="1000,170" backgroundColor="tb" zPosition="-10" />
-    <widget name="number" position="0,0" size="600,80" halign="center" valign="center" font="Console;60" backgroundColor="tb" />
+    <widget name="number" position="0,0" size="600,80" halign="center" valign="center" font="Console;60" foregroundColor="lightgrey" backgroundColor="tb" />
     <widget alphatest="blend" position="600,0" render="Picon" size="400,170" source="Service" transparent="1" zPosition="1">
       <convert type="ServiceName">Reference</convert>
     </widget>
     <widget name="servicename" position="0,80" size="600,90" halign="center" valign="center" font="Console;60" backgroundColor="tb" foregroundColor="unc3c3c9" />
   </screen>
   <screen name="QuickMenu" position="0,0" size="1920,1080" title="Quick Launch Menu" flags="wfNoBorder" backgroundColor="transparent">
-    <widget name="list" position="148,73" size="700,700" selectionPixmap="DarknessFHD/e1/sel100.png" font="Regular; 30" scrollbarMode="showOnDemand" itemHeight="70" transparent="1" backgroundColor="tb" zPosition="3" />
-    <widget name="sublist" position="1007,75" size="700,700" selectionPixmap="DarknessFHD/e1/sel100.png" itemHeight="70" font="Regular; 30" scrollbarMode="showNever" transparent="1" backgroundColor="tb" zPosition="3" />
+    <widget name="list" position="148,73" size="700,700" selectionPixmap="DarknessFHD/e1/sel100.png" font="Regular; 30" scrollbarMode="showOnDemand" itemHeight="70" transparent="1" foregroundColor="lightgrey" backgroundColor="tb" zPosition="3" />
+    <widget name="sublist" position="1007,75" size="700,700" selectionPixmap="DarknessFHD/e1/sel100.png" itemHeight="70" font="Regular; 30" scrollbarMode="showNever" transparent="1" foregroundColor="lightgrey" backgroundColor="tb" zPosition="3" />
     <panel name="mn2" />
     <widget name="description" position="145,857" size="1570,165" zPosition="1" font="Regular;33" foregroundColor="white" halign="center" backgroundColor="tb" transparent="1" />
   </screen>
@@ -1531,7 +1570,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="ch" />
     <panel name="rgyb_source" />
     <panel name="pig" />
-    <widget source="menu" render="Listbox" selectionPixmap="DarknessFHD/e1/sel100.png" font="Regular; 27" position="75,75" size="1100,700" itemHeight="35" enableWrapAround="1" scrollbarWidth="10" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="#e6e6e6" scrollbarSliderBorderColor="#3b3e3f" scrollbarMode="showOnDemand" backgroundColor="tb" transparent="1">
+    <widget source="menu" render="Listbox" selectionPixmap="DarknessFHD/e1/sel100.png" font="Regular; 27" position="75,75" size="1100,700" itemHeight="35" enableWrapAround="1" scrollbarWidth="10" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="#e6e6e6" scrollbarSliderBorderColor="#3b3e3f" scrollbarMode="showOnDemand" foregroundColor="lightgrey" backgroundColor="tb" transparent="1">
       <convert type="StringList" />
     </widget>
     <ePixmap name="" pixmap="DarknessFHD/e2/qqq.png" position="1710,892" size="300,300" transparent="0" alphatest="blend" />
@@ -1580,7 +1619,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="ch" />
     <panel name="rgyb_source" />
     <panel name="pig" />
-    <widget name="list" position="75,75" size="1100,700" transparent="0" scrollbarMode="showOnDemand" />
+    <widget name="list" position="75,75" size="1100,700" transparent="0" foregroundColor="lightgrey" backgroundColor="tb" scrollbarMode="showOnDemand" />
     <applet type="onLayoutFinish">
 			self["list"].instance.setItemHeight(38)
 		</applet>
@@ -1589,41 +1628,50 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="ch" />
     <panel name="rgyb_source" />
     <panel name="pig" />
-    <widget name="list" position="75,75" size="1100,700" font="Console;30" itemHeight="50" />
+    <widget name="list" position="75,75" size="1100,700" font="Console;30" foregroundColor="lightgrey" backgroundColor="tb" itemHeight="50" />
   </screen>
   <screen name="LogManagerFb" position="0,0" size="398,645" title="">
     <panel name="ch" />
     <panel name="rgyb_source" />
     <panel name="pig" />
     <panel name="foot" />
-    <widget name="list" font="Regular;30" position="75,75" size="1100,700" scrollbarMode="showOnDemand" transparent="1" itemHeight="40" />
+    <widget name="list" font="Regular;30" position="75,75" size="1100,700" scrollbarMode="showOnDemand" foregroundColor="lightgrey" backgroundColor="tb" transparent="1" itemHeight="40" />
   </screen>
   <screen name="ViewGitLog" position="0,0" size="1920,1080">
     <panel name="ch" />
     <panel name="rgyb_source" />
     <panel name="pig" />
-    <widget name="text" position="75,75" size="1100,700" font="Regular;32" transparent="1" foregroundColor="white" />
+    <widget name="text" position="75,75" size="1100,700" font="Regular;32" transparent="1" foregroundColor="lightgrey" backgroundColor="tb" />
   </screen>
-  <screen name="ChannelSelectionRadio" position="0,0" size="990,600" backgroundColor="tb" transparent="0">
-    <widget name="list" position="75,75" size="1100,700" zPosition="3" scrollbarMode="showOnDemand" foregroundColor="lightgrey" backgroundColor="tb" foregroundColorEvent="b8" foregroundColorEventSelected="b8" foregroundColorServiceNotAvail="#2c2c2c" serviceItemHeight="54" serviceNumberFont="Regular;36" serviceNameFont="Regular;36" serviceInfoFont="Regular;32" transparent="1" />
-    <panel name="ch" />
-    <panel name="rgyb_source" />
-    <panel name="pig" />
-    <ePixmap name="" pixmap="DarknessFHD/e2/radio.png" position="1731,900" size="150,150" transparent="0" alphatest="blend" zPosition="2" />
-  </screen>
+  <screen name="ChannelSelectionRadio" position="0,0" size="1920,1080" backgroundColor="transparent" transparent="0" flags="wfNoBorder">
+  <panel name="ch" />
+  <panel name="rgyb_source" />
+  <panel name="pig" />
+  <widget name="list" position="75,75" size="1100,800" itemHeight="40" backgroundColor="tb" scrollbarMode="showNever" colorServiceDescription="lightgrey" progressbarHeight="10" progressbarBorderWidth="2" colorEventProgressbar="b8" colorEventProgressbarBorder="b8" colorEventProgressbarSelected="b8" colorEventProgressbarBorderSelected="selectedFG" foregroundColorServiceNotAvail="gr" colorServiceRecording="red" serviceItemHeight="40" serviceNumberfont="Regular; 30" serviceNamefont="Regular; 30" serviceInfofont="Regular; 30" transparent="1" />
+  <widget source="RdsDecoder" render="Label" position="1280,493" size="550,268" font="Regular; 28" halign="center" valign="top" backgroundColor="tb" transparent="1" zPosition="1">
+    <convert type="RdsInfo">RadioText</convert>
+  </widget>
+  <widget source="session.Event_Now" render="Label" position="1280,393" size="550,80" noWrap="1" font="Regular; 28" halign="center" valign="center" backgroundColor="tb" transparent="1">
+    <convert type="EventName">Name</convert>
+  </widget>
+  <widget source="session.Event_Next" render="Label" position="1281,775" size="580,80" noWrap="1" font="Regular; 30" backgroundColor="tb" transparent="1">
+    <convert type="EventName">Name</convert>
+  </widget>
+  <ePixmap name="" pixmap="DarknessFHD/e2/radio.png" position="1743,924" size="150,150" transparent="0" alphatest="blend" zPosition="2" />
+</screen>
   <screen name="RecordTimerQuestion" position="675,50" size="570,105" zPosition="5" flags="wfNoBorder">
-    <widget name="text" position="0,0" size="0,0" font="Regular;33" />
+    <widget name="text" position="0,0" size="0,0" font="Regular;33" foregroundColor="lightgrey" backgroundColor="tb" />
     <widget name="list" position="15,15" size="540,75" enableWrapAround="1" />
   </screen>
   <screen name="RemoveTimerQuestion" position="582,50" size="755,195" zPosition="5" flags="wfNoBorder">
-    <widget name="text" position="0,0" size="0,0" font="Regular;33" />
+    <widget name="text" position="0,0" size="0,0" font="Regular;33" foregroundColor="lightgrey" backgroundColor="tb" />
     <widget name="list" position="15,15" size="330,75" enableWrapAround="1" />
     <applet type="onLayoutFinish">
 	self.autoResize()
 		</applet>
   </screen>
   <screen name="HistoryZapSelector" position="90,95" size="700,900" flags="wfBorder">
-    <widget source="menu" render="Listbox" selectionPixmap="DarknessFHD/e1/sel1.png" position="26,45" size="650,800" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarSliderBorderColor="tb" scrollbarWidth="4" scrollbarSliderForegroundColor="b8" scrollbarSliderPicture="DarknessFHD/e1/scrollbar.png" transparent="1">
+    <widget source="menu" render="Listbox" selectionPixmap="DarknessFHD/e1/sel1.png" foregroundColor="lightgrey" backgroundColor="tb" position="26,45" size="650,800" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarSliderBorderColor="tb" scrollbarWidth="4" scrollbarSliderForegroundColor="b8" scrollbarSliderPicture="DarknessFHD/e1/scrollbar.png" transparent="1">
       <convert type="TemplatedMultiContent">
 					{"template": [
 							MultiContentEntryText(pos = (20, 0), size = (15, 90), font = 2, flags = RT_HALIGN_CENTER | RT_VALIGN_CENTER, text = 1,color = 0x0000ff00, color_sel = 0x0000ff00),
@@ -1674,14 +1722,14 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="pig" />
     <panel name="foot" />
     <ePixmap name="" pixmap="DarknessFHD/e2/key.png" position="1700,910" size="100,100" transparent="0" alphatest="blend" zPosition="2" />
-    <widget backgroundColor="tb" name="config" font="Regular;32" foregroundColor="white" itemHeight="45" position="75,75" size="1100,700" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
+    <widget name="config" font="Regular;32" foregroundColor="lightgrey" backgroundColor="tb" itemHeight="45" position="75,75" size="1100,700" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
   </screen>
   <screen name="ShowSoftcamPackages" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
     <panel name="ch" />
     <panel name="rgyb_source" />
     <panel name="pig" />
     <panel name="foot" />
-    <widget source="list" render="Listbox" position="75,75" size="1100,700" scrollbarMode="showOnDemand" transparent="1">
+    <widget source="list" render="Listbox" position="75,75" size="1100,700" foregroundColor="lightgrey" backgroundColor="tb" scrollbarMode="showOnDemand" transparent="1">
       <convert type="TemplatedMultiContent">
 				{"template": [
 						MultiContentEntryPixmapAlphaTest(pos = (27, 7), size = (72, 72), png = 4), # index 4 is the status pixmap
@@ -1698,8 +1746,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
   </screen>
   <screen name="VirtualKeyBoard" position="343,247" size="1237,625" zPosition="99">
     <ePixmap pixmap="vkey_text.png" position="14,53" zPosition="-4" size="813,78" alphatest="on" />
-    <widget name="header" position="15,15" size="750,30" font="Regular;30" transparent="1" noWrap="1" />
-    <widget name="text" position="18,53" size="804,69" font="Regular;69" transparent="1" noWrap="1" halign="right" />
+    <widget name="header" position="15,15" size="750,30" font="Regular;30" foregroundColor="lightgrey" backgroundColor="tb" transparent="1" noWrap="1" />
+    <widget name="text" position="18,53" size="804,69" font="Regular;69" foregroundColor="lightgrey" backgroundColor="tb" transparent="1" noWrap="1" halign="right" />
     <widget name="list" position="15,150" size="1165,438" selectionDisabled="1" foregroundColor="lightgrey" backgroundColor="tb" transparent="1" />
   </screen>
   <screen name="FileBrowser" position="0,0" size="1920,1080" backgroundColor="tb" flags="wfNoBorder">
@@ -1713,17 +1761,17 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="ch" />
     <panel name="rgyb_source" />
     <panel name="pig" />
-    <widget name="CiList" position="75,75" size="1100,675" zPosition="10" scrollbarMode="showOnDemand" transparent="1" />
+    <widget name="CiList" position="75,75" size="1100,675" foregroundColor="lightgrey" backgroundColor="tb" zPosition="10" scrollbarMode="showOnDemand" transparent="1" />
   </screen>
   <screen name="CIconfigMenu" position="0,0" size="1920,1080" flags="wfNoBorder">
     <panel name="ch" />
     <panel name="rgyb_source" />
     <panel name="pig" />
-    <widget source="CAidList_desc" render="Label" position="70,725" size="1100,33" font="Regular;30" backgroundColor="tb" transparent="1" />
-    <widget source="CAidList" render="Label" position="662,903" size="1100,68" font="Regular;30" backgroundColor="tb" transparent="1" />
-    <widget source="ServiceList_desc" render="Label" position="75,659" size="1100,33" font="Regular;30" zPosition="1" backgroundColor="tb" transparent="1" />
+    <widget source="CAidList_desc" render="Label" position="70,725" size="1100,33" font="Regular;30" foregroundColor="lightgrey" backgroundColor="tb" transparent="1" />
+    <widget source="CAidList" render="Label" position="662,903" size="1100,68" font="Regular;30" foregroundColor="lightgrey" backgroundColor="tb" transparent="1" />
+    <widget source="ServiceList_desc" render="Label" position="75,659" size="1100,33" font="Regular;30" zPosition="1" foregroundColor="lightgrey" backgroundColor="tb" transparent="1" />
     <widget name="ServiceList" position="75,75" size="1100,555" zPosition="10" scrollbarMode="showOnDemand" transparent="1" />
-    <widget source="infotext" render="Label" position="667,977" size="1100,45" font="Regular;29" halign="center" valign="center" backgroundColor="tb" transparent="1" />
+    <widget source="infotext" render="Label" position="667,977" size="1100,45" font="Regular;29" halign="center" valign="center" foregroundColor="lightgrey" backgroundColor="tb" transparent="1" />
     <panel name="MenuRed2Panel" />
     <panel name="MenuGreen2Panel" />
     <panel name="MenuYellow2Panel" />
@@ -1736,7 +1784,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="pig" />
     <widget source="ServiceList_desc" render="Label" position="511,912" size="825,33" font="Regular;30" backgroundColor="tb" transparent="1" />
     <widget name="ServiceList" position="75,75" size="1100,700" zPosition="1" scrollbarMode="showOnDemand" />
-    <widget source="ServiceList_info" render="Label" position="75,75" size="1100,700" zPosition="2" font="Regular;30" backgroundColor="tb" transparent="1" />
+    <widget source="ServiceList_info" render="Label" position="75,75" size="1100,700" zPosition="2" font="Regular;30" foregroundColor="lightgrey" backgroundColor="tb" transparent="1" />
   </screen>
   <screen name="CAidSelect" position="0,0" size="1920,1080">
     <panel name="ch" />

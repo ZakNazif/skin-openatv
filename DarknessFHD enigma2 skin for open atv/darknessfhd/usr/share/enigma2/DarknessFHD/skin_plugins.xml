@@ -3,8 +3,8 @@
   <!-- Alternative SoftCam Manager -->
   <screen name="AltCamManager" position="0,0" size="1920,1080" title="Alternative SoftCam Manager" flags="wfNoBorder" backgroundColor="transparent">
     <panel name="rgyb_source" />
-    <widget name="status" position="1290,462" size="565,347" font="Regular; 25" halign="left" backgroundColor="tb" transparent="1" />
-    <widget source="list" render="Listbox" position="67,111" size="1100,661" scrollbarMode="showNever" transparent="1" selectionPixmap="DarknessFHD/e1/sel100.png" itemHeight="50">
+    <widget name="status" position="1290,462" size="565,347" font="Regular; 25" halign="left" foregroundColor="lightgrey" backgroundColor="tb" transparent="1" />
+    <widget source="list" render="Listbox" position="67,111" size="1100,661" scrollbarMode="showNever" transparent="1" foregroundColor="lightgrey" backgroundColor="tb" selectionPixmap="DarknessFHD/e1/sel100.png" itemHeight="50">
       <convert type="TemplatedMultiContent">
 					{
 						"template": [MultiContentEntryText(pos=(65, 10), size=(480, 75), \
