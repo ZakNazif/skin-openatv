@@ -1,0 +1,62 @@
+<skin>
+  <screen name="prgrs_infobar">
+    <widget source="session.Event_Now" render="Progress" position="601,905" size="1015,13" backgroundColor="tb" pixmap="DuskyFHD/e1/prgrs4.png" zPosition="1" transparent="1">
+      <convert type="EventTime">Progress</convert>
+    </widget>
+  </screen>
+  <screen name="prgrs_volume">
+    <widget name="Volume" position="55,19" size="427,12" zPosition="2" pixmap="DuskyFHD/e1/vprgrs4.png" transparent="1" alphatest="blend" />
+  </screen>
+  <screen name="prgrs_snr-agc">
+    <widget source="session.FrontendStatus" render="Progress" pixmap="DuskyFHD/e1/snrbar4.png" orientation="orBottomToTop" position="1700,801" size="14,165" backgroundColor="tb" alphatest="blend" transparent="1" zPosition="2">
+      <convert type="FrontendInfo">SNR</convert>
+    </widget>
+    <widget source="session.FrontendStatus" render="Progress" orientation="orBottomToTop" backgroundColor="tb" transparent="1" zPosition="2" pixmap="DuskyFHD/e1/snrbar4.png" position="1806,801" size="14,165">
+      <convert type="FrontendInfo">AGC</convert>
+    </widget>
+  </screen>
+  <screen name="prgrs_mediaplayer">
+    <widget size="1015,13" position="479,864" pixmap="DuskyFHD/e1/prgrs4.png" zPosition="2" transparent="1" source="session.CurrentService" render="Progress">
+      <convert type="ServicePosition">Position</convert>
+    </widget>
+  </screen>
+  <screen name="prgrs_movieplayer">
+    <widget position="600,906" size="1015,13" pixmap="DuskyFHD/e1/prgrs4.png" zPosition="3" transparent="1" source="session.CurrentService" render="Progress">
+      <convert type="ServicePosition">Position</convert>
+    </widget>
+  </screen>
+  <screen name="prgrs_emcplayer">
+    <widget source="session.CurrentService" render="Progress" position="600,906" size="1015,13" backgroundColor="tb" pixmap="DuskyFHD/e1/prgrs4.png" zPosition="1" transparent="1">
+      <convert type="ServicePosition">Position</convert>
+    </widget>
+  </screen>
+  <screen name="channelselection">
+    <panel name="ch" />
+    <panel name="rgyb_name" />
+    <panel name="pig" />
+    <widget name="list" position="75,75" size="1100,870" scrollbarMode="showOnDemand" alphatest="blend" transparent="1" zPosition="1" itemHeight="50" serviceItemHeight="50" 
+	serviceNumberFont="Regular;40" serviceNameFont="Regular;35" serviceInfoFont="Regular;30" 
+	foregroundColor="fc" foregroundColorSelected="fcs" 
+	colorServiceDescription="csd" colorServiceDescriptionSelected="csds" 
+	colorServiceRecording="red" foregroundColorServiceNotAvail="gr" 
+	picServiceEventProgressbar="DuskyFHD/e1/chprgrs4.png" colorEventProgressbarBorder="cepb" colorEventProgressbarBorderSelected="cepbs" 
+	scrollbarSliderBorderWidth="0" scrollbarSliderBorderColor="tb" scrollbarWidth="5" scrollbarSliderForegroundColor="ss" scrollbarBackgroundPicture="DuskyFHD/e1/scrollbar.png" 
+	fieldMargins="15" nonplayableMargins="15" itemsDistances="8" 
+	progressBarWidth="100" progressPercentWidth="100" progressbarHeight="15" progressbarBorderWidth="0" />
+    <widget source="ServiceEvent" render="Label" position="1276,943" size="552,50" font="Regular; 28" backgroundColor="tb" transparent="1" halign="center" noWrap="1" valign="center" zPosition="3" foregroundColor="unffc000">
+      <convert type="ServiceName2">%O / %F %p %Y / %s</convert>
+    </widget>
+    <widget source="ServiceEvent"  render="RunningText" options="movetype=running,startpoint=0,startdelay=4000,steptime=100,wrap=0,always=0,repeat=2,oneshot=1" position="1320,463" size="518,50" transparent="1" foregroundColor="b8" noWrap="1" backgroundColor="tb" font="Regular; 32" halign="left">
+      <convert type="EventName">Name</convert>
+    </widget>
+    <widget source="ServiceEvent" render="Label" position="1266,380" size="570,50" font="Regular; 40" zPosition="5" transparent="1" valign="center" halign="center" noWrap="1" foregroundColor="p6" backgroundColor="tb">
+      <convert type="ServiceName2">Provider</convert>
+    </widget>
+    <widget source="ServiceEvent" render="NextEvents" position="1276,579" size="550,346" noWrap="1" font="Regular;34" foregroundColor="white" backgroundColor="tb" transparent="1">
+      <convert type="ServiceName">Reference</convert>
+    </widget>
+	<ePixmap position="1275,463" size="40,40" zPosition="1" pixmap="DuskyFHD/e2/now.png" alphatest="blend" transparent="1" />
+	<ePixmap position="1270,537" size="80,40" zPosition="1" pixmap="DuskyFHD/e2/nexts.png" alphatest="blend" transparent="1" />
+	<ePixmap position="310,950" size="600,20" zPosition="1" pixmap="DuskyFHD/e1/sep.png" alphatest="off" transparent="1" />
+  </screen>
+</skin>

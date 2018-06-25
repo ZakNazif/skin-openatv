@@ -1,0 +1,65 @@
+<skin>
+  <screen name="weather-infobar">
+    <ePixmap name="" pixmap="DuskyFHD/e1/w2.png" position="50,50" size="1840,150" transparent="0" alphatest="blend" />
+    <widget font="LCD; 80" render="Label" position="173,60" size="218,80" source="session.MSNWeather" transparent="1" zPosition="2" halign="center" valign="center" foregroundColor="lightgrey" backgroundColor="tb">
+      <convert type="MSNWeather">temperature_current</convert>
+    </widget>
+    <widget render="MSNWeatherPixmap" alphatest="blend" position="57,60" size="128,128" source="session.MSNWeather" transparent="1" zPosition="2">
+      <convert type="MSNWeather">weathericon,current,/usr/share/enigma2/DuskyFHD/weathericon/,png</convert>
+    </widget>
+    <widget noWrap="1" backgroundColor="tb" font="Regular; 30" render="Label" position="59,155" size="336,40" source="session.MSNWeather" zPosition="1" halign="center" valign="center" transparent="1" foregroundColor="orange">
+      <convert type="MSNWeather">city</convert>
+    </widget>
+    <ePixmap name="" pixmap="DuskyFHD/weathericon/ud.png" position="732,77" size="30,100" zPosition="1" transparent="0" alphatest="blend" />
+    <ePixmap name="" pixmap="DuskyFHD/weathericon/ud.png" position="1112,77" size="30,100" zPosition="1" transparent="0" alphatest="blend" />
+    <ePixmap name="" pixmap="DuskyFHD/weathericon/ud.png" position="1528,77" size="30,100" zPosition="1" transparent="0" alphatest="blend" />
+    <widget alphatest="blend" render="MSNWeatherPixmap" position="465,100" size="80,80" source="session.MSNWeather" transparent="1" zPosition="60">
+      <convert type="MSNWeather">weathericon,day1,/usr/share/enigma2/DuskyFHD/weathericon/,png</convert>
+    </widget>
+    <widget noWrap="1" backgroundColor="tb" font="Console; 30" render="Label" position="465,60" size="180,40" source="session.MSNWeather" zPosition="30" halign="center" transparent="1" foregroundColor="un2fb20a">
+      <convert type="MSNWeather">weekshortday,day1</convert>
+    </widget>
+    <widget noWrap="1" backgroundColor="tb" font="Regular; 30" render="Label" position="545,100" size="100,40" source="session.MSNWeather" zPosition="30" halign="center" transparent="1" valign="center" foregroundColor="orange">
+      <convert type="MSNWeather">temperature_high,day1</convert>
+    </widget>
+    <widget backgroundColor="tb" font="Regular; 30" render="Label" position="545,140" size="100,40" source="session.MSNWeather" zPosition="30" halign="center" transparent="1" noWrap="1" foregroundColor="b8">
+      <convert type="MSNWeather">temperature_low,day1</convert>
+    </widget>
+    <widget noWrap="1" backgroundColor="tb" font="Console; 30" render="Label" position="847,60" size="180,40" source="session.MSNWeather" zPosition="30" halign="center" transparent="1" foregroundColor="un2fb20a">
+      <convert type="MSNWeather">weekshortday,day2</convert>
+    </widget>
+    <widget alphatest="blend" render="MSNWeatherPixmap" position="848,100" size="80,80" source="session.MSNWeather" transparent="1" zPosition="60">
+      <convert type="MSNWeather">weathericon,day2,/usr/share/enigma2/DuskyFHD/weathericon/,png</convert>
+    </widget>
+    <widget noWrap="1" backgroundColor="tb" font="Regular; 30" render="Label" position="927,100" size="100,40" source="session.MSNWeather" zPosition="30" halign="center" transparent="1" valign="center" foregroundColor="orange">
+      <convert type="MSNWeather">temperature_high,day2</convert>
+    </widget>
+    <widget backgroundColor="tb" font="Regular; 30" render="Label" position="927,140" size="100,40" source="session.MSNWeather" zPosition="30" halign="center" transparent="1" noWrap="1" foregroundColor="b8">
+      <convert type="MSNWeather">temperature_low,day2</convert>
+    </widget>
+    <widget alphatest="blend" render="MSNWeatherPixmap" position="1230,100" size="80,80" source="session.MSNWeather" transparent="1" zPosition="60">
+      <convert type="MSNWeather">weathericon,day3,/usr/share/enigma2/DuskyFHD/weathericon/,png</convert>
+    </widget>
+    <widget noWrap="1" backgroundColor="tb" font="Console; 30" render="Label" position="1230,60" size="180,40" source="session.MSNWeather" zPosition="30" halign="center" transparent="1" foregroundColor="un2fb20a">
+      <convert type="MSNWeather">weekshortday,day3</convert>
+    </widget>
+    <widget noWrap="1" backgroundColor="tb" font="Regular; 30" render="Label" position="1310,100" size="100,40" source="session.MSNWeather" zPosition="30" halign="center" transparent="1" valign="center" foregroundColor="orange">
+      <convert type="MSNWeather">temperature_high,day3</convert>
+    </widget>
+    <widget backgroundColor="tb" font="Regular; 30" render="Label" position="1310,140" size="100,40" source="session.MSNWeather" zPosition="30" halign="center" transparent="1" noWrap="1" foregroundColor="b8">
+      <convert type="MSNWeather">temperature_low,day3</convert>
+    </widget>
+    <widget alphatest="blend" render="MSNWeatherPixmap" position="1632,100" size="80,80" source="session.MSNWeather" transparent="1" zPosition="30">
+      <convert type="MSNWeather">weathericon,day4,/usr/share/enigma2/DuskyFHD/weathericon/,png</convert>
+    </widget>
+    <widget noWrap="1" backgroundColor="tb" font="Console; 30" render="Label" position="1633,60" size="180,40" source="session.MSNWeather" zPosition="30" halign="center" transparent="1" foregroundColor="un2fb20a">
+      <convert type="MSNWeather">weekshortday,day4</convert>
+    </widget>
+    <widget noWrap="1" backgroundColor="tb" font="Regular; 30" render="Label" position="1713,100" size="100,40" source="session.MSNWeather" zPosition="30" halign="center" transparent="1" valign="center" foregroundColor="orange">
+      <convert type="MSNWeather">temperature_high,day4</convert>
+    </widget>
+    <widget backgroundColor="tb" font="Regular; 30" render="Label" position="1713,140" size="100,40" source="session.MSNWeather" zPosition="30" halign="center" transparent="1" noWrap="1" foregroundColor="b8">
+      <convert type="MSNWeather">temperature_low,day4</convert>
+    </widget>
+  </screen>
+</skin>

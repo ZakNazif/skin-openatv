@@ -1,10 +1,11 @@
 Package: enigma2-plugin-skins-duskyfhd
-Version: 1.2
-Section: base
+Version: 1.3
+Section: skins
 Priority: optional
 Architecture: all
 Maintainer: digiteng
-Description: enigma2 skin by digiteng for openatv
-Depends: 
-Source: 
-Homepage: 
+Description: duskyfhd Skin by digiteng for-openatv
+Source: https://github.com/digiteng/skin-openatv/tree/master/DuskyFHD%20enigma2%20skin%20for%20open%20atv
+Homepage: https://github.com/digiteng/skin-openatv
+OE: enigma2-skins
+Depends: enigma2-plugin-systemplugins-weathercomponenthandler, enigma2-plugin-extensions-weather_msn

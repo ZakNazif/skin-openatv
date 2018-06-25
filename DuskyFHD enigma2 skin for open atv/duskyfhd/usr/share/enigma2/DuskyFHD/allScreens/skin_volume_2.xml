@@ -1,0 +1,7 @@
+<skin> 
+  <screen name="Volume" position="50,50" size="568,50" title="Volume" backgroundColor="transparent" zPosition="6" flags="wfNoBorder" transparent="0">
+    <panel name="prgrs_volume" />
+    <ePixmap name="" pixmap="DuskyFHD/e1/volume2.png" alphatest="blend" zPosition="1" position="0,0" size="568,50" transparent="1" />
+    <widget render="VVolumeText" source="global.CurrentTime" position="495,0" size="100,46" font="LCD; 46" halign="left" valign="center" zPosition="6" foregroundColor="lightgrey" backgroundColor="tb" transparent="1" />
+  </screen>
+</skin>  

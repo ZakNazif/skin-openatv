@@ -1,0 +1,22 @@
+<skin>
+  <screen name="MovieSelection" position="0,0" size="1920,1080" title="Select a movie" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="ch" />
+    <panel name="rgyb" />
+    <panel name="list" />
+    <panel name="pig" />
+    <widget source="Service" render="Label" position="1382,950" size="150,40" zPosition="2" font="Regular; 30" halign="left" foregroundColor="blue" transparent="1" backgroundColor="tb">
+      <convert type="ServiceTime">Duration</convert>
+      <convert type="ClockToText">AsLength</convert>
+    </widget>
+    <widget source="Service" render="Label" position="1684,950" size="150,40" zPosition="2" font="Regular; 30" halign="left" foregroundColor="blue" transparent="1" backgroundColor="tb">
+      <convert type="MovieInfo">FileSize</convert>
+    </widget>
+    <widget name="freeDiskSpace" position="1271,878" size="560,50" font="Regular; 35" valign="center" halign="left" foregroundColor="g3" transparent="1" backgroundColor="tb" />
+    <eLabel name="new eLabel" text="TIME :" position="1289,950" size="120,40" foregroundColor="lightgrey" font="Regular; 30" transparent="1" backgroundColor="tb" />
+    <eLabel name="new eLabel" text="SIZE :" position="1594,950" size="120,40" foregroundColor="lightgrey" font="Regular; 30" transparent="1" backgroundColor="tb" />
+    <widget source="Service" render="Picon" position="1313,469" zPosition="5" size="220,132" transparent="0" alphatest="blend">
+      <convert type="MovieReference" />
+    </widget>
+    <widget source="Service" render="Cover" position="1559,471" size="251,317" zPosition="2" backgroundColor="tb" alphatest="on" transparent="0" />
+  </screen>
+</skin>  

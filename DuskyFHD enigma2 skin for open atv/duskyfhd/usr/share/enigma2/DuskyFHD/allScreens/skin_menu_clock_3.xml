@@ -1,0 +1,10 @@
+<skin>
+  <screen name="clk">
+    <widget source="global.CurrentTime" render="Label" position="1278,709" size="535,262" font="LCD2; 140" valign="center" halign="center" foregroundColor="green" backgroundColor="tb" zPosition="2" transparent="1">
+      <convert type="ClockToText">Format:%H_%M</convert>
+    </widget>
+    <widget source="global.CurrentTime" render="Label" position="1275,475" size="551,70" font="Regular; 50" foregroundColor="lightgrey" backgroundColor="tb" transparent="1" halign="center">
+      <convert type="ClockToText">Format:%d.%m.%Y</convert>
+    </widget>
+  </screen>
+</skin>    

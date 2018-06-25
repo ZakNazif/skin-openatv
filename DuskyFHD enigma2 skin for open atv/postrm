@@ -5,8 +5,6 @@ echo "*******************************"
 echo " "                                                         
 echo "  skin successful removed...  "
 echo " "    
-echo "  restart gui now..."      
-echo " "   
 echo "*******************************" 
 echo " "  
 exit 0                                               

@@ -1,0 +1,13 @@
+<skin>
+  <screen name="ch">
+    <ePixmap position="0,0" size="1920,1080" zPosition="-1" pixmap="DuskyFHD/e1/ch5.png" alphatest="off" transparent="0" />
+  </screen>
+  <screen name="pig">
+    <widget source="session.VideoPicture" render="Pig" position="1325,100" size="480,270" zPosition="1" backgroundColor="transparent" />
+  </screen>
+  <screen name="ch_info">  
+      <widget source="ServiceEvent" render="Label" position="1276,970" size="552,40" font="Regular; 28" backgroundColor="tb" transparent="1" halign="center" noWrap="1" valign="center" zPosition="3" foregroundColor="unffc000">
+      <convert type="ServiceName2">%O / %F %p %Y / %s</convert>
+    </widget>
+  </screen>  
+</skin>

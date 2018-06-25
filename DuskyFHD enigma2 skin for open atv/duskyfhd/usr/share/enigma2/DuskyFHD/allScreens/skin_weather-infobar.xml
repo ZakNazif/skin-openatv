@@ -1,0 +1,14 @@
+<skin>
+  <screen name="weather-infobar">
+    <widget noWrap="1" font="Regular; 30" render="Label" position="59,136" size="336,40" source="session.MSNWeather" zPosition="5" halign="center" transparent="1" backgroundColor="gr" valign="center" foregroundColor="uncccccc">
+      <convert type="MSNWeather">city</convert>
+    </widget>
+    <widget noWrap="1" font="LCD; 60" foregroundColor="lightgrey" render="Label" position="173,60" size="218,80" source="session.MSNWeather" transparent="1" zPosition="2" halign="center" valign="center" backgroundColor="gr">
+      <convert type="MSNWeather">temperature_current</convert>
+    </widget>
+    <widget alphatest="blend" render="MSNWeatherPixmap" position="70,60" size="100,100" source="session.MSNWeather" transparent="1" zPosition="8">
+      <convert type="MSNWeather">weathericon,current,/usr/share/enigma2/DuskyFHD/weathericon/,png</convert>
+    </widget>
+    <ePixmap name="" pixmap="DuskyFHD/e1/w1.png" position="50,50" size="350,128" transparent="0" alphatest="blend" />
+  </screen>
+</skin>
