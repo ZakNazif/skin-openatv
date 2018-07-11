@@ -1,0 +1,18 @@
+<skin>
+  <screen name="weather-infobar">
+	<widget noWrap="1" font="Regular; 30" render="Label" position="250,50" size="350,40" source="session.MSNWeather" zPosition="5" halign="right" transparent="1" backgroundColor="gr" valign="top" foregroundColor="white">
+	  <convert type="MSNWeather">city</convert>
+	</widget>
+	<widget noWrap="1" font="Regular; 20" render="Label" position="250,117" size="350,30" source="session.MSNWeather" zPosition="30" halign="right" transparent="1" valign="bottom" backgroundColor="gr" foregroundColor="une7e7e7">
+	  <convert type="MSNWeather">temperature_text,current</convert>
+	</widget>
+	<widget noWrap="1" font="LCD; 50" foregroundColor="yellow" render="Label" position="150,50" size="150,100" source="session.MSNWeather" transparent="1" zPosition="2" halign="center" valign="center" backgroundColor="gr">
+	  <convert type="MSNWeather">temperature_current</convert>
+	</widget>
+	<widget alphatest="blend" render="MSNWeatherPixmap" position="50,50" size="100,100" source="session.MSNWeather" transparent="1" zPosition="8">
+	  <convert type="MSNWeather">weathericon,current,/usr/share/enigma2/Nacht/weathericon/,png</convert>
+	</widget>
+	<eLabel name="" backgroundColor="b2" position="50,50" size="100,100" zPosition="2" transparent="0" foregroundColor="b2" noWrap="1" />
+	<eLabel name="" backgroundColor="gr" position="150,50" size="500,100" />
+  </screen>			
+</skin>

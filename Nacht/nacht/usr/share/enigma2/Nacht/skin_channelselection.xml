@@ -1,0 +1,36 @@
+<skin>
+  <screen name="channelselection">
+	  <panel name="ch" />
+	  <panel name="rgyb_name" />
+	  <panel name="pig" />
+	  <panel name="clockneon2" />
+	  <widget name="list" position="75,75" size="1100,870" scrollbarMode="showNever" alphatest="blend" transparent="1" zPosition="1" itemHeight="50" serviceItemHeight="50" 
+	  serviceNumberFont="Regular;40" serviceNameFont="Regular;40" serviceInfoFont="Regular;30" 
+	  foregroundColor="fc" foregroundColorSelected="fcs" 
+	  colorServiceDescription="csd" colorServiceDescriptionSelected="csds" 
+	  colorServiceRecording="red" foregroundColorServiceNotAvail="gr" 
+	  picServiceEventProgressbar="Nacht/e1/ch_progress.png" colorEventProgressbarBorder="cepb" colorEventProgressbarBorderSelected="cepbs" 
+	  scrollbarSliderBorderWidth="0" scrollbarSliderBorderColor="tb" scrollbarWidth="5" scrollbarSliderForegroundColor="ss" scrollbarBackgroundPicture="Nacht/e1/scrollbar.png" 
+	  fieldMargins="15" nonplayableMargins="15" itemsDistances="8" 
+	  progressBarWidth="100" progressbarHeight="21" progressPercentWidth="90" progressbarBorderWidth="0" />
+	  <widget source="ServiceEvent" render="Label" position="1266,874" size="600,50" font="Console; 28" backgroundColor="tb" transparent="1" halign="left" noWrap="1" valign="center" text="19.2E  DVB-S2  10627 27500 3/4 8PSK" zPosition="3" foregroundColor="unffc000">
+		<convert type="ServiceName2">%O - %F %p %Y - %s</convert>
+	  </widget>
+	  <widget source="ServiceEvent" render="RunningText" options="movetype=running,startpoint=0,startdelay=1000,steptime=10,wrap=0,always=0,repeat=2,oneshot=1" position="1266,488" size="600,50" transparent="1" foregroundColor="white" noWrap="1" backgroundColor="tb" font="Console; 33" halign="left">
+		<convert type="EventName">Name</convert>
+	  </widget>
+	  <widget source="ServiceEvent" render="Label" position="1266,380" size="600,50" font="Regular; 40" zPosition="5" transparent="1" valign="center" halign="center" noWrap="1" foregroundColor="p6" backgroundColor="tb">
+		<convert type="ServiceName2">Provider</convert>
+	  </widget>
+	  <widget source="ServiceEvent" render="NextEvents" position="1266,615" size="600,40" noWrap="1" font="Regular;32" foregroundColor="white" backgroundColor="tb" transparent="1">
+		<convert type="ServiceName">Reference</convert>
+	  </widget>
+	  <widget alphatest="blend" render="NachtEventListDisplay" position="1266,744" size="600,40" source="ServiceEvent" rowHeight="40" column0="0,110,#00baff,Regular,32,0,0" column1="120,545,white,Regular,32,0,1" primetimeoffset="10" transparent="1">
+		<convert type="NachtEventList">primetime=yes</convert>
+	  </widget>
+	  <ePixmap name="" pixmap="Nacht/e4/now.png" position="1170,439" size="200,50" transparent="1" alphatest="blend" zPosition="5" />
+	  <ePixmap name="" pixmap="Nacht/e4/next.png" position="1180,565" size="200,50" transparent="1" alphatest="blend" zPosition="5" />
+	  <ePixmap name="" pixmap="Nacht/e4/prime.png" position="1257,697" size="250,50" transparent="1" alphatest="blend" zPosition="5" />
+	  <ePixmap name="" pixmap="Nacht/e4/chinfo.png" position="1221,827" size="200,50" transparent="1" alphatest="blend" zPosition="5" />
+  </screen>
+</skin>  		

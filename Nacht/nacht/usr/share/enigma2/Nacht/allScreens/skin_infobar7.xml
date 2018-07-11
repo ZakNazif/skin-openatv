@@ -1,0 +1,28 @@
+<skin>  
+  <screen name="infobar">
+    <ePixmap position="40,650" size="1920,400" zPosition="-1" pixmap="Nacht/e1/infobar7.png" alphatest="off" transparent="0" />
+    <widget source="session.CurrentService" render="Label" halign="left" position="496,858" size="1216,184" zPosition="1" font="Regular; 150" transparent="1" backgroundColor="tb" foregroundColor="white">
+      <convert type="ServiceName">Name</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Picon" position="55,858" zPosition="4" size="400,170" transparent="1" alphatest="blend">
+      <convert type="ServiceName">Reference</convert>
+    </widget>
+    <!--SNR-AGC-BER-->
+    <widget source="session.FrontendStatus" render="Progress" pixmap="Nacht/e1/snr7.png" orientation="orBottomToTop" position="1762,870" size="14,131" backgroundColor="tb" alphatest="blend" transparent="1" zPosition="2">
+      <convert type="FrontendInfo">SNR</convert>
+    </widget>
+    <widget source="session.FrontendStatus" render="Progress" orientation="orBottomToTop" backgroundColor="tb" transparent="1" zPosition="2" pixmap="Nacht/e1/snr7.png" position="1823,869" size="14,131">
+      <convert type="FrontendInfo">AGC</convert>
+    </widget>
+    <widget source="session.FrontendStatus" render="Label" font="Console; 18" position="1777,861" size="50,20" backgroundColor="tb" alphatest="blend" transparent="1" zPosition="3" halign="left">
+      <convert type="FrontendInfo">SNR</convert>
+    </widget>
+    <widget source="session.FrontendStatus" render="Label" font="Console; 18" size="50,20" backgroundColor="tb" transparent="1" zPosition="3" position="1837,861" halign="center">
+      <convert type="FrontendInfo">AGC</convert>
+    </widget>
+    <widget source="session.FrontendStatus" render="FixedLabel" text="B E R !.." font="Regular; 100" zPosition="11" position="0,0" size="1920,1080" halign="center" alphatest="blend" backgroundColor="red" valign="center" transparent="0">
+      <convert type="FrontendInfo">BER</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+  </screen>
+</skin>   

@@ -1,0 +1,11 @@
+<skin>
+  <screen name="weather-infobar">
+    <widget noWrap="1" font="LCD; 90" render="Label" position="175,40" size="200,100" source="session.MSNWeather" transparent="1" zPosition="2" halign="center" valign="center" backgroundColor="gr" foregroundColor="lightgrey2">
+      <convert type="MSNWeather">temperature_current</convert>
+    </widget>
+    <widget alphatest="blend" render="MSNWeatherPixmap" position="50,50" size="100,100" source="session.MSNWeather" transparent="1" zPosition="8">
+      <convert type="MSNWeather">weathericon,current,/usr/share/enigma2/Nacht/weathericon/,png</convert>
+    </widget>
+    <ePixmap name="" pixmap="Nacht/e1/weather_back.png" position="50,50" size="350,100" transparent="0" alphatest="blend" />
+  </screen>
+</skin>

@@ -1,0 +1,5 @@
+<skin>
+  <screen name="ch">
+    <ePixmap position="0,0" size="1920,1080" zPosition="-1" pixmap="Nacht/e1/ch3.png" alphatest="off" transparent="0" />
+  </screen>
+</skin>

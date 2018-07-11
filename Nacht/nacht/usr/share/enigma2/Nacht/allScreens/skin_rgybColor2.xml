@@ -1,0 +1,26 @@
+<skin>
+  <screen name="rgyb_source">
+    <ePixmap pixmap="Nacht/e1/rgyb2.png" position="42,950" size="1180,121" zPosition="0" alphatest="blend" transparent="1" />
+    <widget source="key_red" render="Label" position="97,970" size="235,92" valign="center" halign="center" zPosition="1" font="Regular; 30" transparent="1" foregroundColor="lightgrey" backgroundColor="tb3" />
+    <widget source="key_green" render="Label" position="374,970" size="235,92" valign="center" halign="center" zPosition="1" font="Regular; 30" transparent="1" foregroundColor="lightgrey" backgroundColor="tb3" />
+    <widget source="key_yellow" render="Label" position="650,970" size="235,92" valign="center" halign="center" zPosition="1" font="Regular; 30" transparent="1" foregroundColor="lightgrey" backgroundColor="tb3" />
+    <widget source="key_blue" render="Label" position="923,970" size="235,92" valign="center" halign="center" zPosition="1" font="Regular; 30" transparent="1" foregroundColor="lightgrey" backgroundColor="tb3" />
+  </screen>
+  <screen name="rgyb_name">
+    <ePixmap pixmap="Nacht/e1/rgyb2.png" position="42,954" size="1180,121" zPosition="0" alphatest="blend" transparent="1" />
+    <widget name="key_red" render="Label" position="97,970" size="235,92" valign="center" halign="center" zPosition="1" font="Regular; 30" transparent="1" foregroundColor="lightgrey" backgroundColor="tb3" />
+    <widget name="key_green" render="Label" position="374,970" size="235,92" valign="center" halign="center" zPosition="1" font="Regular; 30" transparent="1" foregroundColor="lightgrey" backgroundColor="tb3" />
+    <widget name="key_yellow" render="Label" position="650,970" size="235,92" valign="center" halign="center" zPosition="1" font="Regular; 30" transparent="1" foregroundColor="lightgrey" backgroundColor="tb3" />
+    <widget name="key_blue" render="Label" position="923,970" size="235,92" valign="center" halign="center" zPosition="1" font="Regular; 30" transparent="1" foregroundColor="lightgrey" backgroundColor="tb3" />
+  </screen>
+  <screen name="rgyb_menu">
+    <panel name="rgyb_png" />
+    <widget name="red" render="Label" position="97,970" size="235,92" valign="center" halign="center" zPosition="1" font="Regular; 30" transparent="1" foregroundColor="lightgrey" backgroundColor="tb3" />
+    <widget name="green" render="Label" position="374,970" size="235,92" valign="center" halign="center" zPosition="1" font="Regular; 30" transparent="1" foregroundColor="lightgrey" backgroundColor="tb3" />
+    <widget name="yellow" render="Label" position="650,970" size="235,92" valign="center" halign="center" zPosition="1" font="Regular; 30" transparent="1" foregroundColor="lightgrey" backgroundColor="tb3" />
+    <widget name="blue" render="Label" position="935,970" size="235,92" valign="center" halign="center" zPosition="1" font="Regular; 30" transparent="1" foregroundColor="lightgrey" backgroundColor="tb3" />
+  </screen>
+  <screen name="rgyb_png">
+    <ePixmap pixmap="Nacht/e1/rgyb2.png" position="42,955" size="1180,121" zPosition="0" alphatest="blend" transparent="1" />
+  </screen>
+</skin>
