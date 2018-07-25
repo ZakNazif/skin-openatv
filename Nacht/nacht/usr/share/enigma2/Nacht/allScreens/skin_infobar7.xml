@@ -1,7 +1,7 @@
 <skin>  
   <screen name="infobar">
     <ePixmap position="40,650" size="1920,400" zPosition="-1" pixmap="Nacht/e1/infobar7.png" alphatest="off" transparent="0" />
-    <widget source="session.CurrentService" render="Label" halign="left" position="496,858" size="1216,184" zPosition="1" font="Regular; 150" transparent="1" backgroundColor="tb" foregroundColor="white">
+    <widget source="session.CurrentService" render="Label" halign="left" position="496,858" size="1216,184" zPosition="1" font="Regular; 120" transparent="1" backgroundColor="tb" foregroundColor="white">
       <convert type="ServiceName">Name</convert>
     </widget>
     <widget source="session.CurrentService" render="Picon" position="55,858" zPosition="4" size="400,170" transparent="1" alphatest="blend">
