@@ -191,11 +191,11 @@
 	  <widget source="Service" render="PositionGauge" position="500,288" size="1000,30" transparent="1" zPosition="3">
 		<convert type="ServicePosition">Gauge</convert>
 	  </widget>
-	  <widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/e4/dolby.png" position="1092,138" size="80,50" zPosition="2" alphatest="on">
+	  <widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/e4/dolby.png" position="1092,138" size="80,50" zPosition="2" alphatest="blend">
 		<convert type="ServiceInfo">IsMultichannel</convert>
 		<convert type="ConditionalShowHide" />
 	  </widget>
-	  <widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/e4/169.png" position="1182,138" size="80,50" zPosition="2" alphatest="on">
+	  <widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/e4/169.png" position="1182,138" size="80,50" zPosition="2" alphatest="blend">
 		<convert type="ServiceInfo">IsWidescreen</convert>
 		<convert type="ConditionalShowHide" />
 	  </widget>
@@ -209,10 +209,10 @@
 		<convert type="ValueRange">2160,3840</convert>
 		<convert type="ConditionalShowHide" />
 	  </widget>
-	  <widget source="session.RecordState" render="Pixmap" pixmap="Nacht/icons/icon_rec.png" position="1343,152" size="70,25" zPosition="3" alphatest="on">
+	  <widget source="session.RecordState" render="Pixmap" pixmap="Nacht/icons/icon_rec.png" position="1343,152" size="70,25" zPosition="3" alphatest="blend">
 		<convert type="ConditionalShowHide" />
 	  </widget>
-	  <widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/e4/sub.png" position="914,138" size="80,50" alphatest="on" halign="center" valign="center" backgroundColor="tb" transparent="1" zPosition="2">
+	  <widget source="session.CurrentService" render="Pixmap" pixmap="Nacht/e4/sub.png" position="914,138" size="80,50" alphatest="blend" halign="center" valign="center" backgroundColor="tb" transparent="1" zPosition="2">
 		<convert type="ServiceInfo">SubtitlesAvailable</convert>
 		<convert type="ConditionalShowHide" />
 	  </widget>
@@ -223,7 +223,7 @@
 		<convert type="NachtServiceInfoEX">AVtype: %avtype </convert>
 	  </widget>
 	  <widget render="VideoSize" source="session.CurrentService" position="1511,144" size="285,40" backgroundColor="tb" font="Regular;30" foregroundColor="lightgrey2" halign="right" valign="center" transparent="1" zPosition="5" />
-	  <widget name="Cover" position="171,201" size="164,191" zPosition="1" backgroundColor="tb3" transparent="1" />
+	  <widget name="Cover" position="171,201" size="164,191" zPosition="1" backgroundColor="tb3" alphatest="blend" transparent="1" />
   </screen>
   <screen name="EMCSelection" position="0,0" size="1920,1080" title=" " flags="wfNoBorder" backgroundColor="transparent">
     <panel name="cvr" />
@@ -252,7 +252,7 @@
     <widget source="Service" render="Label" position="1270,917" size="575,30" font="Regular; 25" halign="left" backgroundColor="tb" transparent="1" foregroundColor="green">
       <convert type="EMCMovieInfo">RecordServiceName</convert>
     </widget>
-    <widget name="Cover" position="1556,400" size="293,369" zPosition="22" alphatest="on" transparent="0" />
+    <widget name="Cover" position="1556,400" size="293,369" zPosition="22" alphatest="blend" transparent="0" />
     <widget source="Service" render="Picon" position="1303,518" zPosition="2" size="220,132" transparent="1" alphatest="blend">
       <convert type="MovieReference" />
     </widget>
@@ -274,7 +274,7 @@
     <panel name="rgyb_png" />
     <panel name="pig" />
     <widget backgroundColor="tb" font="Regular; 30" name="m_info" position="75,783" size="1100,150" transparent="1" foregroundColor="orange" halign="center" />
-    <widget alphatest="on" name="poster" position="1394,425" size="320,354" />
+    <widget alphatest="blend" name="poster" position="1394,425" size="320,354" />
     <widget backgroundColor="tb" font="Regular; 28" halign="center" name="ButtonRedText" position="97,970" size="235,92"  transparent="1" zPosition="3" />
     <widget backgroundColor="tb" font="Regular; 28" halign="center" name="ButtonGreenText" position="374,970" size="235,92" transparent="1" zPosition="3" />
     <widget name="menulist" selectionPixmap="Nacht/e1/sel100.png" position="75,75" size="1100,680" itemHeight="75" font="Regular; 27" scrollbarMode="showNever" enableWrapAround="1" scrollbarSliderBorderWidth="0" scrollbarSliderBorderColor="tb" scrollbarWidth="4" scrollbarSliderForegroundColor="ss" scrollbarSliderPicture="Nacht/e1/scrollbar.png" backgroundColor="tb" transparent="1" />
@@ -292,7 +292,7 @@
   <!-- EMC Single CoverSearch -->
   <screen name="getCover" position="0,0" size="1920,1080" title="EMC Cover Selecter" >
     <panel name="ch" />
-	<widget name="poster" zPosition="2" position="1394,425" size="320,354" alphatest="on" />
+	<widget name="poster" zPosition="2" position="1394,425" size="320,354" alphatest="blend" />
 	<widget name="menulist" position="75,75" size="1100,750" scrollbarMode="showOnDemand" transparent="1" enableWrapAround="on" />
 	<widget name="info" position="75,850" size="1100,40" zPosition="0" font="Regular;28" halign="left" valign="center" transparent="1" foregroundColor="orange" backgroundColor="tb"/>
   </screen>
@@ -381,7 +381,7 @@
     <panel name="ch" />
     <panel name="rgyb_source" />
     <widget name="title" position="75,65" size="1100,100" zPosition="2" font="Regular; 30" foregroundColor="y5" transparent="1" />
-    <widget name="pic" position="1283,51" size="586,333" transparent="1" alphatest="on" />
+    <widget name="pic" position="1283,51" size="586,333" transparent="1" alphatest="blend" />
     <widget name="description" position="75,174" size="1100,550" font="Regular;27" scrollbarSliderBorderWidth="0" scrollbarSliderBorderColor="tb" scrollbarWidth="4" scrollbarSliderForegroundColor="ss" scrollbarSliderPicture="Nacht/e1/scrollbar.png" backgroundColor="tb" transparent="1" />
     <widget name="views" position="1275,510" size="550,30" font="Regular; 26" foregroundColor="green" />
     <widget name="duration" position="1275,566" size="550,30" font="Regular; 26" />
@@ -600,7 +600,7 @@
   </screen>
   <!-- NumberZapExt-->
   <screen name="NumberZapExt" position="610,455" size="700,170" title="Channel" flags="wfNoBorder" transparent="0" backgroundColor="tb">
-    <widget name="chPicon" position="298,0" size="400,170" alphatest="on" backgroundColor="tb" />
+    <widget name="chPicon" position="298,0" size="400,170" alphatest="blend" backgroundColor="tb" />
     <widget name="chNum" position="10,20" size="280,130" halign="center" font="LCD; 88" transparent="1" backgroundColor="tb" />
   </screen>
   <!-- Metrix Lite -->
@@ -773,7 +773,7 @@
     </widget>
     <widget name="timeline_text" position="75,372" size="1773,40" foregroundColor="g3" backgroundColor="tb" transparent="1" />
     <widget name="list" position="75,424" size="1773,360" CoolBorderColR="#000000" CoolBorderColL="#000000" scrollbarMode="showNever" transparent="1" />
-    <widget name="timeline_now" position="75,424" zPosition="2" size="30,360" pixmap="/usr/share/enigma2/Nacht/epg/timeline-now.png" alphatest="on" />
+    <widget name="timeline_now" position="75,424" zPosition="2" size="30,360" pixmap="/usr/share/enigma2/Nacht/epg/timeline-now.png" alphatest="blend" />
     <widget source="Title" render="Label" position="75,61" size="330,40" zPosition="3" font="Console; 26" foregroundColor="unfff000" backgroundColor="tb" halign="left" transparent="1" />
   </screen>
   <screen name="CoolNiceGuide" position="0,0" size="1920,1080" backgroundColor="transparent" title="Cool Nice Guide" flags="wfNoBorder">
@@ -860,7 +860,7 @@
 	<panel name="clockneon2" />
     <widget name="timeline_text" position="75,75" size="1765,40" foregroundColor="unfff000" backgroundColor="tb" transparent="1" font="Regular; 30" />
     <widget name="list" position="75,141" size="1765,480" scrollbarMode="showNever" transparent="1" />
-    <widget name="timeline_now" position="75,143" zPosition="2" size="30,480" pixmap="/usr/share/enigma2/Nacht/epg/timeline-now.png" alphatest="on" />
+    <widget name="timeline_now" position="75,143" zPosition="2" size="30,480" pixmap="/usr/share/enigma2/Nacht/epg/timeline-now.png" alphatest="blend" />
     <widget source="Event" render="Label" position="76,645" size="150,40" font="Regular;30" foregroundColor="y3" backgroundColor="tb" halign="right" transparent="1">
       <convert type="EventTime">StartTime</convert>
       <convert type="ClockToText" />

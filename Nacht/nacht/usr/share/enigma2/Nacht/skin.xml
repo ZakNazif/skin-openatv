@@ -244,7 +244,6 @@
   <include filename="/usr/share/enigma2/Nacht/skin_channelselection.xml" />
   <include filename="/usr/share/enigma2/Nacht/skin_vertical_EPG.xml" />
   <!-- /// -->
-
   <!--infobar-->
   <screen name="InfoBar" title="InfoBar" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent" transparent="0">
     <panel name="infobar" />
@@ -298,7 +297,7 @@
     <ePixmap name="" pixmap="Nacht/weathericon/temp2.png" position="624,448" size="28,70" transparent="0" alphatest="blend" />
     <ePixmap name="" pixmap="Nacht/weathericon/temp2.png" position="934,448" size="28,70" transparent="0" alphatest="blend" />
     <ePixmap name="" pixmap="Nacht/weathericon/umbrella.png" position="1099,76" size="50,50" transparent="0" alphatest="blend" />
-    <ePixmap name="" pixmap="Nacht/weathericon/wind.png" position="685,211" size="60,60" transparent="0" alphatest="blend" />
+    <ePixmap name="" pixmap="Nacht/weathericon/wind.png" position="685,211" size="80,80" transparent="0" alphatest="blend" />
     <widget noWrap="1" backgroundColor="tb" font="Regular; 40" render="Label" position="763,210" size="450,60" source="session.MSNWeather" zPosition="5" halign="left" transparent="1" foregroundColor="lightgrey2">
       <convert type="MSNWeather">winddisplay</convert>
     </widget>
@@ -563,7 +562,7 @@
     <widget font="Regular; 30" name="genre" position="270,684" size="500,75" transparent="1" backgroundColor="tb" />
     <widget name="coverArt" pixmap="skin_default/no_coverArt.png" position="1640,841" size="200,200" transparent="0" alphatest="blend" />
   </screen>
-  <screen name="MoviePlayer" position="0,650" size="1920,400" title="InfoBar" flags="wfNoBorder" backgroundColor="transparent">
+  <screen name="MoviePlayer" position="0,650" size="1920,398" title="InfoBar" flags="wfNoBorder" backgroundColor="transparent">
     <ePixmap name="" pixmap="Nacht/e1/mplayer.png" position="40,0" size="1840,398" transparent="1" alphatest="blend" />
     <widget backgroundColor="tb" font="Regular; 50" halign="center" position="540,203" render="Label" size="1000,80" source="session.CurrentService" transparent="1" zPosition="1">
       <convert type="ServiceName">Name</convert>
@@ -608,14 +607,18 @@
       <convert type="ServiceInfo">IsSDAndWidescreen</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.CurrentService" render="Label" position="439,146" size="337,40" font="Regular; 22" backgroundColor="tb" transparent="1" halign="right" noWrap="1" valign="center" zPosition="5">
+    <widget source="session.CurrentService" render="Label" position="877,148" size="600,40" font="Regular; 30" backgroundColor="tb" transparent="1" halign="right" noWrap="1" valign="center" zPosition="5">
       <convert type="NachtServiceInfoEX">AVtype: %avtype </convert>
     </widget>
-    <widget render="VideoSize" source="session.CurrentService" position="67,146" size="335,40" backgroundColor="tb" font="Regular;30" foregroundColor="lightgrey2" halign="right" valign="center" transparent="1" zPosition="5" />
-    <widget source="session.RecordState" render="Pixmap" pixmap="Nacht/icons/icon_rec.png" position="1105,154" size="70,25" zPosition="3" alphatest="on">
+    <widget source="session.RecordState" render="Pixmap" pixmap="Nacht/icons/icon_rec.png" position="1011,340" size="70,25" zPosition="3" alphatest="on">
       <convert type="ConditionalShowHide" />
     </widget>
     <widget source="session.CurrentService" render="Cover" position="126,202" size="270,186" zPosition="4" transparent="1" alphatest="blend" />
+  </screen>
+  <screen name="PVRState" position="0,650" size="650,198" backgroundColor="transparent" flags="wfNoBorder" transparent="0">
+    <ePixmap name="" pixmap="Nacht/e1/pvr.png" position="40,0" size="650,198" transparent="1" alphatest="blend" />
+    <widget name="statusicon" pixmaps="media/play.png,media/pause.png,media/stop.png,media/forward.png,media/backward.png" zPosition="11" position="72,124" size="342,80" backgroundColor="tb" alphatest="blend" transparent="1" />
+    <widget name="speed" position="437,137" size="150,60" font="Regular; 40" foregroundColor="white" backgroundColor="tb" halign="center" transparent="1" zPosition="5" />
   </screen>
   <screen name="MovieSelection" position="0,0" size="1920,1080" title="Select a movie" flags="wfNoBorder" backgroundColor="transparent">
     <panel name="ch" />
@@ -672,9 +675,6 @@
     <panel name="rgyb_name" />
     <panel name="pig" />
     <panel name="list" />
-  </screen>
-  <screen name="PVRState" position="559,232" zPosition="2" size="801,321" backgroundColor="transparent" flags="wfNoBorder">
-    <widget name="state" position="0,0" size="801,321" backgroundColor="tb" foregroundColor="white" font="Regular; 150" halign="center" transparent="1" valign="center" />
   </screen>
   <!-- SAT -->
   <screen name="Satfinder" position="0,0" size="1920,1080" title="Satfinder">
@@ -1083,40 +1083,20 @@
     <widget name="list" font="Regular; 30" selectionPixmap="Nacht/e1/sel100.png" position="75,75" size="1100,780" scrollbarMode="showNever" transparent="1" itemHeight="50" />
     <ePixmap name="" pixmap="Nacht/e2/qqq.png" position="1709,886" size="300,300" transparent="0" alphatest="blend" />
   </screen>
-  <screen name="MessageBox" position="570,430" size="780,220" title="Message" transparent="0" backgroundColor="tb" flags="wfBorder">
-    <widget foregroundColor="lightgrey" backgroundColor="tb" font="Console; 30" name="text" position="140,0" size="600,100" transparent="1" zPosition="2" />
-    <widget alphatest="blend" name="ErrorPixmap" pixmap="Nacht/skin_default/icons/input_error.png" position="35,0" size="80,80" />
-    <widget alphatest="blend" name="QuestionPixmap" pixmap="Nacht/skin_default/icons/input_question.png" position="35,0" size="80,80" />
-    <widget alphatest="blend" name="InfoPixmap" pixmap="Nacht/skin_default/icons/input_info.png" position="35,0" size="80,80" />
-    <widget itemHeight="45" font="Console;30" name="list" foregroundColor="lightgrey" backgroundColor="tb" position="140,100" size="600,100" transparent="1" zPosition="2" />
-    <applet type="onLayoutFinish">
-# this should be factored out into some helper code, but currently demonstrates applets.
-from enigma import eSize, ePoint
-orgwidth = self.instance.size().width()
-orgpos = self.instance.position()
-textsize = self["text"].getSize()
-# y size still must be fixed in font stuff...
-textsize = (textsize[0] + 120, textsize[1] + 120)
-offset = 45
-if self.type == self.TYPE_YESNO:
-	offset = 105
-wsizex = textsize[0] + 180
-wsizey = textsize[1] + offset
-if (1200 &gt; wsizex):
-	wsizex = 1200
-wsize = (wsizex, wsizey)
-# resize
-self.instance.resize(eSize(*wsize))
-# resize label
-self["text"].instance.resize(eSize(*textsize))
-# move list
-listsize = (wsizex - 30, 96)
-self["list"].instance.move(ePoint(15, textsize[1]))
-self["list"].instance.resize(eSize(*listsize))
-# center window
-newwidth = wsize[0]
-self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
-		</applet>
+  <screen name="MessageBox" position="center,center" size="1200,500" backgroundColor="black" zPosition="22" title="Message">
+    <panel name="msgbx" />
+  </screen>
+  <screen name="MessageBoxExt" position="center,center" size="1200,500" backgroundColor="black" zPosition="22" title="Message">
+    <panel name="msgbx" />
+  </screen>
+  <screen name="MessageBoxSimple" position="center,center" size="1200,500" backgroundColor="black" zPosition="22" title="Message">
+    <panel name="msgbx" />
+  </screen>
+  <screen name="RecordTimerQuestion" position="60,60" size="572,90" backgroundColor="black" zPosition="22">
+    <widget name="list" position="11,11" size="550,60" itemHeight="50" font="Regular; 36" scrollbarMode="showOnDemand" enableWrapAround="1" foregroundColor="white" backgroundColor="tb"  transparent="1" />
+  </screen>
+  <screen name="RemoveTimerQuestion" position="center,center" size="1200,500" zPosition="22" title="Message">
+    <panel name="msgbx" />
   </screen>
   <screen name="NumberZap" position="center,center" size="500,100" title="QuickZap" flags="wfNoBorder" backgroundColor="transparent">
     <eLabel name="a" position="5,5" size="500,100" backgroundColor="tb" zPosition="-10" />
@@ -2576,6 +2556,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
   </screen>
   <screen name="SubtitleDisplay" position="0,0" size="1920,1080" zPosition="-1" flags="wfNoBorder" backgroundColor="transparent" />
   <screen name="Scart" position="0,0" size="1920,1080" backgroundColor="transparent" />
+  <screen name="Standby" position="0,0" size="1920,1080" title="Standby" flags="wfNoBorder" backgroundColor="black">
   <screen name="QuitMainloopScreen" position="0,0" size="1920,1080" backgroundColor="tb">
     <ePixmap position="0,0" zPosition="0" size="1920,1080" pixmap="Nacht/m1.jpg" transparent="1" />
   </screen>
