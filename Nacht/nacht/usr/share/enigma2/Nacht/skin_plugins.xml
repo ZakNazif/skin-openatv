@@ -47,8 +47,8 @@
     <panel name="ch" />
     <panel name="pig" />
     <panel name="foot" />
-    <widget backgroundColor="tb" name="input" font="Regular;32" foregroundColor="white" itemHeight="45" position="75,75" size="1100,135" scrollbarMode="showNever" enableWrapAround="1" transparent="1" />
-    <widget backgroundColor="tb" name="text" font="Regular;32" foregroundColor="white" position="75,255" size="1100,512" transparent="1" />
+    <widget backgroundColor="tb" name="input" font="Regular;32" foregroundColor="white" itemHeight="45" position="75,75" size="1100,50" scrollbarMode="showNever" enableWrapAround="1" transparent="1" />
+    <widget backgroundColor="tb" name="text" font="Regular;32" foregroundColor="white" position="75,255" size="1100,50" transparent="1" />
   </screen>
   <screen name="vEditor" position="0,0" size="1280,720" flags="wfNoBorder" title="File-Explorer" backgroundColor="transparent">
     <panel name="rgyb_png" />

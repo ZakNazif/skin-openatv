@@ -108,7 +108,7 @@
     <font filename="LiberationSans-Italic.ttf" name="Console2" scale="100" />
     <alias name="FileList" font="Regular" size="35" height="60" />
     <alias name="FileListMulti" font="Regular" size="35" height="60" />
-    <alias name="VirtualKeyboard" font="Regular" size="42" height="68" />
+    <alias name="VirtualKeyboard" font="Regular" size="40" height="70" />
     <alias name="ServiceInfo" font="Regular" size="35" height="60" />
     <alias name="SelectionList" font="Regular" size="34" height="50" />
     <alias name="PluginBrowser0" font="Regular" size="40" height="80" />
@@ -152,8 +152,8 @@
     <parameter name="ConfigListSeperator" value="300" />
     <parameter name="MediaPlayerPlayList" value="35,1,700,35" />
     <parameter name="MediaPlayerPlayListFont" value="Regular;30" />
-    <parameter name="VirtualKeyboard" value="68,68" />
-    <parameter name="VirtualKeyboardFont" value="Regular;44" />
+    <parameter name="VirtualKeyboard" value="70,70" />
+    <parameter name="VirtualKeyboardFont" value="Regular;40" />
     <parameter name="SelectionListFont" value="Regular;30" />
     <parameter name="SelectionListDescription" value="35,5,600,35" />
     <parameter name="SelectionListIcon" value="5,5,40,40" />
@@ -858,6 +858,14 @@
       <convert type="EventName">Name</convert>
     </widget>
   </screen>
+  <screen name="UpdatePlugin" position="0,0" size="1920,1080" title="Software Update..." flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="ch" />
+    <panel name="pig" />
+    <widget name="activityslider" position="30,160" size="1000,40" borderColor="b7" foregroundColor="b7" borderWidth="1" transparent="1" />
+    <widget source="package" render="Label" position="30,280" size="1100,50" font="Regular; 40" transparent="1" foregroundColor="g3" />
+    <widget source="status" render="Label" position="30,360" size="1100,50" font="Regular; 40" transparent="1" foregroundColor="yellow" />
+    <widget name="slider" position="30,480" size="1000,40" borderColor="anadollabel" foregroundColor="white" borderWidth="3" transparent="1" />
+  </screen>
   <screen name="UpdatePluginMenu" position="0,0" size="1920,1080" title="Software management" backgroundColor="transparent">
     <widget source="menu" render="Listbox" selectionPixmap="Nacht/e1/sel100.png" position="75,75" size="1100,700" transparent="1">
       <convert type="TemplatedMultiContent">
@@ -1093,7 +1101,7 @@
     <panel name="msgbx" />
   </screen>
   <screen name="RecordTimerQuestion" position="60,60" size="572,90" backgroundColor="black" zPosition="22">
-    <widget name="list" position="11,11" size="550,60" itemHeight="50" font="Regular; 36" scrollbarMode="showOnDemand" enableWrapAround="1" foregroundColor="white" backgroundColor="tb"  transparent="1" />
+    <widget name="list" position="11,11" size="550,60" itemHeight="50" font="Regular; 36" scrollbarMode="showOnDemand" enableWrapAround="1" foregroundColor="white" backgroundColor="tb" transparent="1" />
   </screen>
   <screen name="RemoveTimerQuestion" position="center,center" size="1200,500" zPosition="22" title="Message">
     <panel name="msgbx" />
@@ -1308,24 +1316,6 @@
 		  </convert>
     </widget>
     <ePixmap name="" pixmap="Nacht/e2/key.png" position="1700,910" size="100,100" transparent="0" alphatest="blend" zPosition="2" />
-  </screen>
-  <screen name="VirtualKeyBoard" position="0,0" size="1920,1080" zPosition="99" title="Virtual KeyBoard" backgroundColor="transparent">
-    <panel name="ch" />
-    <panel name="rgyb_png" />
-    <panel name="pig" />
-    <widget name="header" position="225,280" size="950,45" font="Regular;33" backgroundColor="tb" foregroundColor="white" halign="center" transparent="1" noWrap="1" />
-    <widget name="text" position="224,404" size="944,63" backgroundColor="tb" foregroundColor="white" zPosition="3" font="Regular;45" noWrap="1" valign="center" halign="right" />
-    <widget name="list" position="231,480" size="700,250" selectionDisabled="1" transparent="1" />
-    <widget source="country" render="Label" position="591,745" size="150,40" noWrap="1" zPosition="1" valign="center" font="Regular;27" halign="left" backgroundColor="tb" foregroundColor="white" transparent="1" />
-    <widget source="country" render="Pixmap" position="1068,481" size="90,60" alphatest="blend" borderWidth="0">
-      <convert type="ValueToPixmap">LanguageCode</convert>
-    </widget>
-  </screen>
-  <screen name="VirtualKeyBoard2" position="343,247" size="1237,625" zPosition="99">
-    <ePixmap pixmap="vkey_text.png" position="14,53" zPosition="-4" size="813,78" alphatest="on" />
-    <widget name="header" position="15,15" size="750,30" font="Regular;30" transparent="1" noWrap="1" />
-    <widget name="text" position="18,53" size="804,69" font="Regular;69" transparent="1" noWrap="1" halign="right" />
-    <widget name="list" position="15,150" size="1165,438" selectionDisabled="1" foregroundColor="lightgrey" backgroundColor="tb" transparent="1" />
   </screen>
   <screen name="Volume_adjust" position="0,0" size="1920,1080" title="Setup" flags="wfNoBorder" backgroundColor="tb">
     <panel name="ch" />
@@ -1902,29 +1892,29 @@
     <widget backgroundColor="tb" font="Regular;33" foregroundColor="white" name="Adaptertext" position="105,165" size="600,42" transparent="1" zPosition="1" />
     <widget backgroundColor="tb" font="Regular;33" foregroundColors="#8c8c93,#f23d21,#1cff1c" name="Adapter" position="105,225" size="600,37" transparent="1" zPosition="1" />
     <widget alphatest="blend" name="AdapterInfo_OK" pixmap="skin_default/buttons/green.png" position="802,204" size="35,25" zPosition="2" />
-    <widget backgroundColor="un25062748" font="Regular;33" foregroundColors="#8c8c93,grey,#ffffff" halign="center" name="AdapterInfo_Text" position="855,199" size="300,52" transparent="1" valign="center" zPosition="2" />
+    <widget backgroundColor="un25062748" font="Regular;33" foregroundColors="#8c8c93,lightgrey,#ffffff" halign="center" name="AdapterInfo_Text" position="855,199" size="300,52" transparent="1" valign="center" zPosition="2" />
     <widget alphatest="blend" name="AdapterInfo" pixmaps="skin_default/menu/lan-seloff.png,skin_default/menu/nt.png" position="855,195" size="300,52" zPosition="1" />
     <widget backgroundColor="tb" font="Regular;33" foregroundColor="white" name="Networktext" position="105,300" size="600,37" transparent="1" zPosition="1" />
     <widget backgroundColor="tb" font="Regular;33" foregroundColors="#8c8c93,#f23d21,#1cff1c" name="Network" position="105,345" size="600,37" transparent="1" zPosition="1" />
     <widget alphatest="blend" name="NetworkInfo_Check" pixmaps="skin_default/buttons/green.png,skin_default/buttons/red.png" position="802,324" size="35,25" zPosition="2" />
-    <widget backgroundColor="un25062748" font="Regular;33" foregroundColors="#8c8c93,grey,#ffffff" halign="center" name="NetworkInfo_Text" position="855,315" size="300,52" transparent="1" valign="center" zPosition="2" />
+    <widget backgroundColor="un25062748" font="Regular;33" foregroundColors="#8c8c93,lightgrey,#ffffff" halign="center" name="NetworkInfo_Text" position="855,315" size="300,52" transparent="1" valign="center" zPosition="2" />
     <widget alphatest="blend" name="NetworkInfo" pixmaps="skin_default/menu/lan-seloff.png,skin_default/menu/nt.png" position="855,315" size="300,52" zPosition="1" />
     <widget backgroundColor="tb" font="Regular;33" foregroundColor="white" name="Dhcptext" position="105,420" size="600,37" transparent="1" zPosition="1" />
     <widget backgroundColor="tb" font="Regular;33" foregroundColors="#8c8c93,#f23d21,#1cff1c" name="Dhcp" position="105,465" size="600,37" transparent="1" zPosition="1" />
     <widget alphatest="blend" name="DhcpInfo_Check" pixmaps="skin_default/buttons/green.png,skin_default/buttons/red.png" position="802,444" size="35,25" zPosition="2" />
-    <widget backgroundColor="un25062748" font="Regular;33" foregroundColors="#8c8c93,grey,#ffffff" halign="center" name="DhcpInfo_Text" position="855,435" size="300,52" transparent="1" valign="center" zPosition="2" />
+    <widget backgroundColor="un25062748" font="Regular;33" foregroundColors="#8c8c93,lightgrey,#ffffff" halign="center" name="DhcpInfo_Text" position="855,435" size="300,52" transparent="1" valign="center" zPosition="2" />
     <widget alphatest="blend" name="DhcpInfo" pixmaps="skin_default/menu/lan-seloff.png,skin_default/menu/nt.png" position="855,435" size="300,52" zPosition="1" />
     <widget backgroundColor="tb" font="Regular;33" foregroundColor="white" name="IPtext" position="105,540" size="600,37" transparent="1" zPosition="1" />
     <widget backgroundColor="tb" font="Regular;33" foregroundColors="#8c8c93,#f23d21,#1cff1c" name="IP" position="105,585" size="600,37" transparent="1" zPosition="1" />
     <widget alphatest="blend" name="IPInfo_Check" pixmaps="skin_default/buttons/green.png,skin_default/buttons/red.png" position="802,564" size="35,25" zPosition="2" />
-    <widget backgroundColor="un25062748" font="Regular;33" foregroundColors="#8c8c93,grey,#ffffff" halign="center" name="IPInfo_Text" position="855,555" size="300,52" transparent="1" valign="center" zPosition="2" />
+    <widget backgroundColor="un25062748" font="Regular;33" foregroundColors="#8c8c93,lightgrey,#ffffff" halign="center" name="IPInfo_Text" position="855,555" size="300,52" transparent="1" valign="center" zPosition="2" />
     <widget alphatest="blend" name="IPInfo" pixmaps="skin_default/menu/lan-seloff.png,skin_default/menu/nt.png" position="855,555" size="300,52" zPosition="1" />
     <widget backgroundColor="tb" font="Regular;33" foregroundColor="white" name="DNStext" position="105,660" size="600,37" transparent="1" zPosition="1" />
     <widget backgroundColor="tb" font="Regular;33" foregroundColors="#8c8c93,#f23d21,#1cff1c" name="DNS" position="105,705" size="600,37" transparent="1" zPosition="1" />
     <widget alphatest="blend" name="DNSInfo_Check" pixmaps="skin_default/buttons/green.png,skin_default/buttons/red.png" position="802,684" size="35,25" zPosition="2" />
-    <widget backgroundColor="un25062748" font="Regular;33" foregroundColors="#8c8c93,grey,#ffffff" halign="center" name="DNSInfo_Text" position="855,675" size="300,52" transparent="1" valign="center" zPosition="2" />
+    <widget backgroundColor="un25062748" font="Regular;33" foregroundColors="#8c8c93,lightgrey,#ffffff" halign="center" name="DNSInfo_Text" position="855,675" size="300,52" transparent="1" valign="center" zPosition="2" />
     <widget alphatest="blend" name="DNSInfo" pixmaps="skin_default/menu/lan-seloff.png,skin_default/menu/nt.png" position="855,675" size="300,52" zPosition="1" />
-    <widget backgroundColor="tb" font="Regular; 30" foregroundColors="grey,grey,#ffffff" halign="left" name="EditSettings_Text" position="923,972" size="450,40" transparent="1" valign="center" zPosition="8" />
+    <widget backgroundColor="tb" font="Regular; 30" foregroundColors="lightgrey,lightgrey,#ffffff" halign="left" name="EditSettings_Text" position="923,972" size="450,40" transparent="1" valign="center" zPosition="8" />
     <widget font="Regular; 30" foregroundColor="white" halign="center" name="InfoText" position="1273,486" size="600,300" valign="center" zPosition="25" transparent="1" />
     <panel name="rgyb_source" />
     <panel name="ch" />
@@ -2447,6 +2437,19 @@
     <panel name="pig" />
     <panel name="cnf" />
     <ePixmap position="1700,900" size="100,100" zPosition="2" pixmap="Nacht/e2/clk.png" transparent="1" alphatest="blend" />
+  </screen>
+  <screen name="VirtualKeyBoard" position="center,center" size="1100,700" zPosition="99" backgroundColor="black" flags="wfNoBorder">
+    <ePixmap pixmap="Nacht/e1/virt_back.png" position="0,0" size="1100,700" />
+    <ePixmap pixmap="Nacht/buttons/vkey_text.png" position="25,62" size="1055,100" alphatest="blend" />
+    <widget name="header" position="25,10" size="1050,40" font="Regular;30" transparent="1" zPosition="2" noWrap="1" />
+    <widget name="text" position="5,80" size="1050,100" font="Regular;46" transparent="1" zPosition="2" noWrap="1" valign="center" halign="right" />
+    <widget name="list" position="130,222" size="850,350" selectionDisabled="1" foregroundColor="white" backgroundColor="tb" zPosition="1" transparent="1" />
+    <widget source="country" render="Label" position="470,643" size="150,40" noWrap="1" zPosition="1" valign="center" font="Regular; 30" halign="left" backgroundColor="tb" foregroundColor="white" transparent="1" />
+    <widget source="country" render="Pixmap" position="621,643" size="60,40" alphatest="blend" borderWidth="0" zPosition="2">
+      <convert type="ValueToPixmap">LanguageCode</convert>
+    </widget>
+    <ePixmap pixmap="Nacht/buttons/keyboard.png" position="22,222" size="96,50" alphatest="blend" zPosition="5" />
+    <ePixmap pixmap="Nacht/buttons/key_yellow.png" position="427,646" size="35,35" alphatest="blend" zPosition="5" />
   </screen>
   <!-- INFO -->
   <screen name="About" position="0,0" size="1920,1080" title="About" backgroundColor="transparent">

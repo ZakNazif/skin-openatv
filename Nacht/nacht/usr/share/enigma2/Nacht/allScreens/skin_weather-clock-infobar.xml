@@ -1,0 +1,37 @@
+<skin>
+  <screen name="weather-infobar">
+	  <ePixmap name="" pixmap="Nacht/e1/w7.png" position="50,50" size="500,350" transparent="1" alphatest="blend" />
+	  <widget noWrap="1" backgroundColor="tb" font="Console; 25" render="Label" position="75,272" size="190,30" source="session.MSNWeather" zPosition="1" halign="left" transparent="1" foregroundColor="white">
+		<convert type="MSNWeather">city</convert>
+	  </widget>
+	  <widget noWrap="1" backgroundColor="tb" font="Console; 22" foregroundColor="lightgrey2" render="Label" position="75,302" size="190,40" source="session.MSNWeather" zPosition="2" halign="left" transparent="1" valign="center">
+		<convert type="MSNWeather">temperature_text,current</convert>
+	  </widget>
+	  <widget noWrap="1" font="LCD; 60" render="Label" position="346,275" size="180,60" source="session.MSNWeather" transparent="1" zPosition="2" halign="center" valign="center" backgroundColor="tb" foregroundColor="white">
+		<convert type="MSNWeather">temperature_current</convert>
+	  </widget>
+	  <widget alphatest="blend" render="MSNWeatherPixmap" position="235,245" size="128,128" source="session.MSNWeather" transparent="1" zPosition="8">
+		<convert type="MSNWeather">weathericon,current,/usr/share/enigma2/Nacht/weathericon/,png</convert>
+	  </widget>
+	<ePixmap name="" pixmap="Nacht/weathericon/wind_icon.png" position="75,344" size="25,25" transparent="0" alphatest="blend" />
+	  <widget noWrap="1" backgroundColor="tb" font="Console; 25" render="Label" position="108,343" size="300,30" source="session.MSNWeather" zPosition="5" halign="left" transparent="1">
+		<convert type="MSNWeather">winddisplay</convert>
+	  </widget>
+	  <ePixmap name="" pixmap="Nacht/weathericon/humidity_icon.png" position="407,346" size="25,25" transparent="0" alphatest="blend" />
+	  <widget noWrap="1" backgroundColor="tb" font="Console; 25" render="Label" position="435,343" size="100,30" source="session.MSNWeather" zPosition="8" halign="left" transparent="1">
+		<convert type="MSNWeather">humidity</convert>
+	  </widget>
+	  <widget source="global.CurrentTime" render="Label" position="91,226" size="200,30" font="Console; 25" backgroundColor="lightgrey" transparent="1" halign="center" zPosition="5" foregroundColor="gr4">
+		<convert type="ClockToText">Format:%a, %d.%m</convert>
+	  </widget>
+	  <widget source="global.CurrentTime" render="Label" position="305,226" size="200,30" font="Console; 25" backgroundColor="lightgrey" transparent="1" halign="center" zPosition="5" foregroundColor="gr4">
+		<convert type="ClockToText">Format:%Y</convert>
+	  </widget>
+	  <widget source="global.CurrentTime" render="Label" position="97,67" size="198,166" font="LCD; 140" halign="center" foregroundColor="gr4" backgroundColor="lightgrey" transparent="1" valign="center" zPosition="5">
+		<convert type="ClockToText">Format:%H</convert>
+	  </widget>
+	  <widget source="global.CurrentTime" render="Label" position="312,67" size="198,166" font="LCD; 140" halign="center" foregroundColor="gr4" backgroundColor="lightgrey" transparent="1" valign="center" zPosition="5">
+		<convert type="ClockToText">Format:%M</convert>
+	  </widget>
+  </screen>
+</skin>  

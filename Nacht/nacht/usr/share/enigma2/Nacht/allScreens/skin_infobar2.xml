@@ -52,10 +52,10 @@
     <widget source="session.FrontendStatus" render="Label" font="Console; 40" size="150,50" backgroundColor="tb" transparent="1" zPosition="2" pixmap="Nacht/e1/snr1.png" position="1767,968" halign="center">
       <convert type="FrontendInfo">AGC</convert>
     </widget>
-    <widget source="session.FrontendStatus" render="FixedLabel" text="B E R !.." font="Regular; 100" zPosition="11" position="0,0" size="1920,1080" halign="center" alphatest="blend" backgroundColor="red" valign="center" transparent="0">
-      <convert type="FrontendInfo">BER</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
+	<widget source="session.FrontendStatus" render="FixedLabel" text="B E R !.." font="Regular; 80" zPosition="99" position="0,0" size="555,100" halign="center" alphatest="blend" backgroundColor="red" valign="center" transparent="0">
+	  <convert type="FrontendInfo">BER</convert>
+	  <convert type="ConditionalShowHide" />
+	</widget>
     <eLabel name="" text="(" position="1223,1026" size="10,40" font="Console; 30" foregroundColor="gr2" backgroundColor="tb" zPosition="9" halign="center" transparent="1" />
     <eLabel name="" text=")" position="1368,1025" size="10,40" font="Console; 30" foregroundColor="gr2" backgroundColor="tb" zPosition="9" halign="center" transparent="1" />
     <widget source="session.CurrentService" render="Label" position="1236,1020" size="130,40" font="Regular; 28" halign="center" valign="center" backgroundColor="tb" transparent="1" zPosition="2">

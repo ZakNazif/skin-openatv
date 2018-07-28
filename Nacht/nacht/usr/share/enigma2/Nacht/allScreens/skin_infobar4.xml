@@ -64,7 +64,7 @@
 	  <widget source="session.FrontendStatus" render="Label" font="Console; 18" size="50,20" backgroundColor="tb" transparent="1" zPosition="3" pixmap="Nacht/e1/snr_4.png" position="1659,854" halign="center">
 		<convert type="FrontendInfo">AGC</convert>
 	  </widget>
-	  <widget source="session.FrontendStatus" render="FixedLabel" text="B E R !.." font="Regular; 100" zPosition="11" position="0,0" size="1920,1080" halign="center" alphatest="blend" backgroundColor="red" valign="center" transparent="0">
+	  <widget source="session.FrontendStatus" render="FixedLabel" text="B E R !.." font="Regular; 80" zPosition="99" position="0,0" size="555,100" halign="center" alphatest="blend" backgroundColor="red" valign="center" transparent="0">
 		<convert type="FrontendInfo">BER</convert>
 		<convert type="ConditionalShowHide" />
 	  </widget>
