@@ -648,4 +648,210 @@
 	<widget source="saveBtn" render="Label" position="665,972" size="240,40" zPosition="8" valign="center" font="Regular; 27" halign="left" backgroundColor="tb" transparent="1" />
 	<widget source="deleteBtn" render="Label" position="940,972" size="240,40" zPosition="8" valign="center" font="Regular; 27" halign="left" backgroundColor="tb" transparent="1" />
   </screen>
+  <!-- CoolTVGuide -->
+  <screen name="CoolChannelGuide" position="0,0" size="1920,1080" title="Cool Channel Guide" backgroundColor="transparent" flags="wfNoBorder">
+    <panel name="rgyb_name" />
+    <panel name="ch" />
+    <panel name="pig" />
+    <panel name="clockneon2" />
+    <widget name="list" position="75,75" size="1100,820" itemHeight="70" zPosition="25" CoolFont="Regular;30" CoolServiceFont="Regular;30" CoolEventFont="Console2;25" CoolPico="40" CoolPicoPos="0" CoolPicoHPos="15" CoolServiceSize="650" CoolServicePos="10" CoolServiceHPos="4" CoolServiceColor="lightgrey" CoolEventPos="10" CoolEventHPos="35" CoolEventColor="#fff08c" CoolEventSize="750" CoolBarPos="1000" CoolBarHPos="44" CoolBarSize="100" CoolBarHigh="15" CoolBarColor="#3B98C9" CoolTimePos="350" CoolTimeHPos="9" CoolTimeSize="150" CoolDurationPos="1000" CoolDurationSize="100" CoolDurationColor="#b5f266" CoolRecAlarmCol="#e0a91d" CoolRecColor="red" CoolTunerCol="gr2" CoolCurrentCol="#c4ff00" CoolCurrentColSel="#ffffff" foregroundColor="lightgrey" backgroundColor="tb" transparent="1" />
+    <widget source="Event" render="Label" position="1286,455" size="100,30" font="Regular;24" foregroundColor="undddddd" backgroundColor="tb" halign="right" transparent="1">
+      <convert type="EventTime">StartTime</convert>
+      <convert type="ClockToText" />
+    </widget>
+    <widget source="Event" render="Label" position="1793,455" size="100,30" font="Regular;24" foregroundColor="undddddd" backgroundColor="tb" halign="left" transparent="1">
+      <convert type="EventTime">EndTime</convert>
+      <convert type="ClockToText">Format:%H:%M</convert>
+    </widget>
+    <widget source="Event" render="Label" position="1278,491" size="600,40" font="Console; 30" foregroundColor="une5b243" backgroundColor="tb" transparent="1" halign="center">
+      <convert type="EventName">Name</convert>
+    </widget>
+    <widget source="Event" render="Progress" position="1389,464" size="400,14" foregroundColor="blue" backgroundColor="gr" borderWidth="1" borderColor="blue" zPosition="2" transparent="1">
+      <convert type="EventTime">Progress</convert>
+    </widget>
+    <widget source="Event" render="RunningText" options="movetype=running,startdelay=5000,steptime=60,direction=top,startpoint=0,wrap=1,always=0,repeat=2,oneshot=1" position="1280,630" zPosition="1" size="600,300" font="Regular; 30" foregroundColor="undddddd" backgroundColor="tb" transparent="1" valign="top">
+      <convert type="EventName">ExtendedDescription</convert>
+    </widget>
+    <widget source="Service" render="CoolNextEvent" position="1280,545" size="600,70" font="Regular;30" backgroundColor="tb" foregroundColor="un73f5fa" transparent="1">
+    </widget>
+    <widget source="Title" render="Label" position="1281,406" size="580,40" zPosition="3" font="Console; 30" foregroundColor="b7" backgroundColor="tb" halign="center" transparent="1" />
+  </screen>
+  <screen name="CoolEasyGuide" position="0,0" size="1920,1080" title="Cool Easy Guide" backgroundColor="transparent" flags="wfNoBorder">
+    <panel name="rgyb_name" />
+    <panel name="mn2" />
+    <panel name="pig" />
+    <panel name="clockneon2" />
+    <widget name="list" position="75,401" size="1749,492" itemHeight="50" zPosition="30" CoolFont="Regular;30" CoolServiceFont="Regular;30" CoolEventFont="Regular;30" CoolPico="40" CoolPicoHPos="5" CoolServicePos="10" CoolServiceHPos="7" CoolServiceColor="#a081e3" CoolServiceSize="350" CoolBarPos="450" CoolBarHPos="15" CoolBarSize="150" CoolBarHigh="20" CoolBarColor="#5c47ff" CoolEventPos="620" CoolEventHPos="7" CoolEventSize="900" CoolEventColor="#FFFFFF" CoolCurrentCol="white" CoolDurationPos="1600" CoolDurationSize="105" CoolRecAlarmCol="orange" CoolRecColor="red" CoolTunerCol="#606060" foregroundColor="white" backgroundColor="tb" transparent="1" />
+    <widget source="Title" render="Label" position="75,79" size="360,40" zPosition="3" font="Console; 30" foregroundColor="un73f5fa" backgroundColor="tb" halign="left" transparent="1" />
+    <widget source="Event" render="Label" position="415,80" size="150,40" font="Regular; 30" foregroundColor="y3" backgroundColor="tb" halign="right" transparent="1">
+      <convert type="EventTime">StartTime</convert>
+      <convert type="ClockToText" />
+    </widget>
+    <widget source="Event" render="Label" position="573,80" size="150,40" font="Regular; 30" foregroundColor="y3" backgroundColor="tb" halign="left" transparent="1">
+      <convert type="EventTime">EndTime</convert>
+      <convert type="ClockToText">Format:- %H:%M</convert>
+    </widget>
+    <widget source="Event" render="Label" position="730,80" size="500,40" font="Regular; 30" foregroundColor="g3" backgroundColor="tb" transparent="1" halign="left">
+      <convert type="EventName">Name</convert>
+    </widget>
+    <widget source="Event" render="RunningText" options="movetype=running,startdelay=5000,steptime=60,direction=top,startpoint=0,wrap=1,always=0,repeat=2,oneshot=1" position="75,130" zPosition="1" size="1158,226" font="Regular; 30" foregroundColor="undddddd" backgroundColor="tb" transparent="1" valign="top">
+      <convert type="EventName">ExtendedDescription</convert>
+    </widget>
+  </screen>
+  <screen name="CoolMultiGuide" position="0,0" size="1920,1080" backgroundColor="transparent" title="Cool Multi Guide" flags="wfNoBorder">
+    <panel name="rgyb_name" />
+    <panel name="mn2" />
+    <panel name="pig" />
+    <panel name="clockneon2" />
+    <widget source="Event" render="Label" position="415,60" size="100,40" font="Regular;26" foregroundColor="y3" backgroundColor="tb" halign="right" transparent="1">
+      <convert type="EventTime">StartTime</convert>
+      <convert type="ClockToText" />
+    </widget>
+    <widget source="Event" render="Label" position="523,60" size="100,40" font="Regular;26" foregroundColor="y3" backgroundColor="tb" halign="left" transparent="1">
+      <convert type="EventTime">EndTime</convert>
+      <convert type="ClockToText">Format:- %H:%M</convert>
+    </widget>
+    <widget source="Event" render="Label" position="630,60" size="600,40" font="Regular;26" foregroundColor="g3" backgroundColor="tb" transparent="1" halign="left">
+      <convert type="EventName">Name</convert>
+    </widget>
+    <widget source="Event" render="RunningText" options="movetype=running,startdelay=5000,steptime=60,direction=top,startpoint=0,wrap=1,always=0,repeat=2,oneshot=1" position="75,118" zPosition="1" size="1159,237" font="Regular; 30" foregroundColor="undddddd" backgroundColor="tb" transparent="1" valign="top">
+      <convert type="EventName">ExtendedDescription</convert>
+    </widget>
+    <widget name="timeline_text" position="75,372" size="1773,40" foregroundColor="g3" backgroundColor="tb" transparent="1" font="Console; 16" />
+    <widget name="list" position="75,424" size="1773,460" CoolBorderColR="#000000" CoolBorderColL="#000000" scrollbarMode="showNever" transparent="1" />
+    <widget name="timeline_now" position="75,424" zPosition="2" size="30,460" pixmap="/usr/share/enigma2/Nacht/epg/timeline-now.png" alphatest="blend" />
+    <widget source="Title" render="Label" position="75,61" size="330,40" zPosition="3" font="Console; 26" foregroundColor="b7" backgroundColor="tb" halign="left" transparent="1" />
+  </screen>
+  <screen name="CoolNiceGuide" position="0,0" size="1920,1080" backgroundColor="transparent" title="Cool Nice Guide" flags="wfNoBorder">
+    <panel name="rgyb_name" />
+    <panel name="mn2" />
+    <panel name="pig" />
+    <panel name="clockneon2" />
+    <widget source="Event" render="Label" position="415,80" size="150,40" font="Regular; 30" foregroundColor="y3" backgroundColor="tb" halign="right" transparent="1">
+      <convert type="EventTime">StartTime</convert>
+      <convert type="ClockToText" />
+    </widget>
+    <widget source="Event" render="Label" position="573,80" size="150,40" font="Regular; 30" foregroundColor="y3" backgroundColor="tb" halign="left" transparent="1">
+      <convert type="EventTime">EndTime</convert>
+      <convert type="ClockToText">Format:- %H:%M</convert>
+    </widget>
+    <widget source="Event" render="Label" position="730,80" size="500,40" font="Regular; 30" foregroundColor="g3" backgroundColor="tb" transparent="1" halign="left">
+      <convert type="EventName">Name</convert>
+    </widget>
+    <widget source="Event" render="RunningText" options="movetype=running,startdelay=5000,steptime=60,direction=top,startpoint=0,wrap=1,always=0,repeat=2,oneshot=1" position="75,130" zPosition="1" size="1158,226" font="Regular; 30" foregroundColor="undddddd" backgroundColor="tb" transparent="1" valign="top">
+      <convert type="EventName">ExtendedDescription</convert>
+    </widget>
+    <widget name="list" position="75,399" size="1749,489" itemHeight="50" zPosition="30" CoolFont="Regular;30" CoolServiceFont="Regular;30" CoolEventFont="Regular;25" CoolServiceSize="245" CoolEventSize="645" CoolServicePos="5" CoolServiceHPos="2" CoolEventPos="430" CoolEventHPos="2" CoolBarPos="260" CoolBarHPos="5" CoolBarSize="150" CoolBarHigh="18" CoolTimePos="265" CoolTimeHPos="2" CoolTimeSize="150" CoolDurationPos="1085" CoolDurationSize="105" CoolServiceColor="#acf02d" CoolBarColor="#3B98C9" CoolEventColor="#FFFFFF" CoolBackColorSel="#000000" CoolRecAlarmCol="#B59E01" CoolRecColor="#9F1313" CoolTunerCol="#606060" foregroundColor="white" backgroundColor="tb" transparent="1" />
+    <widget source="Title" render="Label" position="75,80" size="330,40" zPosition="3" font="Console; 30" foregroundColor="b7" backgroundColor="tb" halign="left" transparent="1" />
+  </screen>
+  <screen name="CoolSearch" position="0,0" size="1920,1080" title="Cool Search" backgroundColor="tb" flags="wfNoBorder">
+	  <panel name="rgyb_name" />
+	  <panel name="mn2" />
+	  <panel name="pig" />
+	  <panel name="clockneon2" />
+	<widget source="Title" render="Label" position="1333,980" size="532,45" font="Console;30" noWrap="1" valign="center" halign="right" foregroundColor="b7" backgroundColor="tb" transparent="1" />
+	  <widget name="list" position="75,411" size="1770,465" itemHeight="50" zPosition="3" CoolFont="Regular;30" CoolServiceFont="Regular;30" CoolEventFont="Regular;30" CoolDayPos="0" CoolDayHPos="10" CoolDaySize="100" CoolDayColor="#aaa8f0" CoolDatePos="120" CoolDateHPos="10" CoolDateSize="100" CoolDateColor="#87dffa" CoolTimePos="240" CoolTimeHPos="10" CoolTimeSize="100" CoolTimeColor="#85c6ff" CoolServicePos="350" CoolServiceHPos="10" CoolServiceSize="500" CoolServiceColor="g3" CoolEventPos="850" CoolEventHPos="10" CoolEventSize="850" CoolEventColor="#d1d1d1" CoolBackColor="#000000" CoolBackColorSel="#000000" CoolRecEventBackColor="#000000" CoolRecAlarmCol="#B59E01" CoolRecColor="#9F1313" backgroundColor="tb" transparent="1" />
+	  <widget source="Event" render="Label" position="75,75" size="1100,40" font="Console; 30" foregroundColor="unffc000" backgroundColor="un605f5e" transparent="1" halign="left">
+		<convert type="EventName">Name</convert>
+	  </widget>
+	  <widget source="Event" render="RunningText" options="movetype=running,startdelay=5000,steptime=60,direction=top,startpoint=0,wrap=1,always=0,repeat=2,oneshot=1" position="75,114" size="1165,245" font="Regular; 30" backgroundColor="tb" transparent="1">
+		<convert type="EventName">ExtendedDescription</convert>
+	  </widget>
+  </screen>
+  <screen name="CoolSingleGuide" position="0,0" size="1920,1080" title="Cool Single Guide" backgroundColor="transparent" flags="wfNoBorder">
+	  <panel name="rgyb_name" />
+	  <panel name="ch" />
+	  <panel name="pig" />
+	  <panel name="clockneon2" />
+	<widget source="Title" render="Label" position="1289,411" size="600,45" font="Console;30" noWrap="1" valign="center" halign="left" foregroundColor="b7" backgroundColor="tb" transparent="1" />
+	  <widget name="list" position="75,75" size="1100,800" itemHeight="50" zPosition="25" CoolFont="Regular;30" CoolEventFont="Regular;30" CoolDayPos="0" CoolDaySize="100" CoolDayColor="#bae643" CoolDayHPos="8" CoolTimePos="120" CoolTimeSize="100" CoolTimeColor="#43e648" CoolTimeHPos="8" CoolEventPos="240" CoolEventColor="#FFFFFF" CoolEventHPos="8" CoolEventSize="850" CoolRecAlarmCol="#B59E01" CoolRecColor="#9F1313" foregroundColor="white" backgroundColor="tb" transparent="1" />
+	  <widget source="Service" render="Label" position="1289,498" size="600,40" zPosition="3" font="Console; 30" halign="left" foregroundColor="unff6600" backgroundColor="tb" transparent="1">
+		<convert type="ServiceName">Name</convert>
+	  </widget>
+	  <widget source="Event" render="Label" position="1616,462" size="150,40" font="Console; 30" foregroundColor="undddddd" halign="center" backgroundColor="tb" transparent="1">
+		<convert type="EventTime">Remaining</convert>
+		<convert type="RemainingToText">InMinutes</convert>
+	  </widget>
+	  <widget source="Event" render="Label" position="1294,462" size="150,40" font="Console; 30" foregroundColor="un3b98c9" backgroundColor="tb" halign="right" transparent="1">
+		<convert type="EventTime">StartTime</convert>
+		<convert type="ClockToText" />
+	  </widget>
+	  <widget source="Event" render="Label" position="1445,462" size="150,40" font="Console; 30" foregroundColor="un3b98c9" backgroundColor="tb" halign="left" transparent="1">
+		<convert type="EventTime">EndTime</convert>
+		<convert type="ClockToText">Format:- %H:%M</convert>
+	  </widget>
+	  <widget source="Event" render="Label" position="1289,541" size="600,40" font="Console; 30" foregroundColor="unffc435" backgroundColor="un444444" shadowColor="#444444" halign="left" transparent="1">
+		<convert type="EventName">Name</convert>
+	  </widget>
+	  <widget source="Event" render="RunningText" options="movetype=running,startdelay=5000,steptime=60,direction=top,startpoint=0,wrap=1,always=0,repeat=2,oneshot=1" position="1289,590" zPosition="1" size="600,344" font="Regular; 30" foregroundColor="undddddd" backgroundColor="un605f5e" transparent="1" valign="top">
+		<convert type="EventName">ExtendedDescription</convert>
+	  </widget>
+  </screen>
+  <screen name="CoolTinyGuide" position="0,0" size="1920,1080" backgroundColor="transparent" title="Cool Tiny Guide">
+    <panel name="rgyb_name" />
+    <panel name="mn2" />
+    <panel name="clockneon2" />
+    <widget name="timeline_text" position="75,75" size="1765,40" foregroundColor="unfff000" backgroundColor="tb" transparent="1" font="Regular; 30" />
+    <widget name="list" position="75,141" size="1765,480" scrollbarMode="showNever" transparent="1" />
+    <widget name="timeline_now" position="75,143" zPosition="2" size="30,480" pixmap="/usr/share/enigma2/Nacht/epg/timeline-now.png" alphatest="blend" />
+    <widget source="Event" render="Label" position="76,645" size="150,40" font="Regular;30" foregroundColor="y3" backgroundColor="tb" halign="right" transparent="1">
+      <convert type="EventTime">StartTime</convert>
+      <convert type="ClockToText" />
+    </widget>
+    <widget source="Event" render="Label" position="227,645" size="150,40" font="Regular;30" foregroundColor="y3" backgroundColor="tb" halign="left" transparent="1">
+      <convert type="EventTime">EndTime</convert>
+      <convert type="ClockToText">Format:- %H:%M</convert>
+    </widget>
+    <widget source="Event" render="Label" position="374,645" size="850,40" font="Regular;30" foregroundColor="g3" backgroundColor="tb" transparent="1" halign="left">
+      <convert type="EventName">Name</convert>
+    </widget>
+    <widget source="Title" render="Label" position="1334,645" size="500,40" zPosition="3" font="Console; 30" foregroundColor="b7" backgroundColor="tb" halign="right" transparent="1" />
+    <widget source="Event" render="RunningText" options="movetype=running,startdelay=5000,steptime=60,direction=top,startpoint=0,wrap=1,always=0,repeat=2,oneshot=1" position="75,699" zPosition="1" size="1761,192" font="Regular; 30" foregroundColor="undddddd" backgroundColor="tb" transparent="1" valign="top">
+      <convert type="EventName">ExtendedDescription</convert>
+    </widget>
+  </screen>
+  <screen name="CoolInfoGuide" position="0,0" size="1920,1080" backgroundColor="transparent" title="Cool Info Guide" flags="wfNoBorder">
+	  <panel name="rgyb_name" />
+	  <panel name="mn2" />
+	  <panel name="pig" />
+	  <panel name="clockneon2" />
+	  <widget source="Title" render="Label" position="75,61" size="600,45" font="Console;30" noWrap="1" valign="center" halign="left" foregroundColor="b7" backgroundColor="tb" transparent="1" />
+	  <widget source="Service" render="Label" position="75,104" size="600,40" zPosition="3" font="Console; 30" foregroundColor="unff6600" backgroundColor="tb" transparent="1">
+		<convert type="ServiceName">Name</convert>
+	  </widget>
+	  <widget source="Event" render="Label" position="744,66" size="150,40" font="Regular; 30" foregroundColor="un3b98c9" backgroundColor="tb" halign="right" transparent="1">
+		<convert type="EventTime">StartTime</convert>
+		<convert type="ClockToText" />
+	  </widget>
+	  <widget source="Event" render="Label" position="897,66" size="150,40" font="Regular; 30" foregroundColor="un3b98c9" backgroundColor="tb" halign="left" transparent="1">
+		<convert type="EventTime">EndTime</convert>
+		<convert type="ClockToText">Format:- %H:%M</convert>
+	  </widget>
+	  <widget source="Event" render="Label" position="1050,66" size="200,40" font="Regular; 30" foregroundColor="undddddd" halign="left" backgroundColor="tb" transparent="1">
+		<convert type="EventTime">Remaining</convert>
+		<convert type="RemainingToText">InMinutes</convert>
+	  </widget>
+	  <eLabel text="Similar broadcasts:" position="700,120" size="550,40" font="Regular; 30" foregroundColor="white" backgroundColor="tb" transparent="1" halign="right" />
+	  <widget name="CoolSimilar" position="700,155" size="554,200" font="Regular;22" foregroundColor="une5b243" backgroundColor="tb" transparent="1" />
+	  <widget name="CoolShort" position="75,155" size="584,200" font="Regular; 25" foregroundColor="unffc435" backgroundColor="tb" transparent="1" />
+	  <widget name="CoolEvent" position="75,370" size="1180,45" itemHeight="40" zPosition="5" CoolFont="Regular;30" CoolDayPos="0" CoolDaySize="60" CoolDayColor="#acf02d" CoolEventPos="250" CoolEventColor="#acf02d" CoolDurationPos="1060" CoolDurationSize="120" CoolDurationColor="#3B98C9" CoolTimeSize="190" CoolTimePos="60" CoolTimeColor="#3B98C9" CoolTunerCol="#606060" CoolRecAlarmCol="#B59E01" CoolRecColor="#9F1313" CoolBackColorSel="#000000" foregroundColor="white" backgroundColor="black" transparent="1" />
+	  <widget name="CoolDescription" position="75,449" size="1759,441" font="Regular; 30" foregroundColor="undddddd" backgroundColor="tb" transparent="1" />
+  </screen>
+  <screen name="CoolTVGuideSetup" position="0,0" size="1920,1080" backgroundColor="transparent" title="Cool TV Guide Setup" flags="wfNoBorder">
+	  <panel name="rgyb_name" />
+	  <panel name="ch" />
+	  <panel name="pig" />
+	  <panel name="clockneon2" />
+	  <widget source="Title" render="Label" position="1273,452" size="600,45" font="Console;30" noWrap="1" valign="center" halign="left" foregroundColor="b7" backgroundColor="tb" transparent="1" />
+	  <widget name="CoolText1" position="1272,522" size="600,40" font="Console; 30" foregroundColor="g3" backgroundColor="tb" halign="center" transparent="1" />
+	  <widget name="CoolText2" position="1273,586" size="600,40" font="Console; 30" foregroundColor="g3" backgroundColor="tb" halign="center" transparent="1" />
+	  <widget name="config" position="75,75" size="1100,800" enableWrapAround="1" transparent="1" font="Regular; 30" render="Listbox" itemHeight="50" />
+  </screen>
+  <screen name="CoolTVGuide" position="0,0" size="1920,1080" zPosition="1" title="Cool TV Guide" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="rgyb_name" />
+    <panel name="mn2" />
+    <panel name="clockneon2" />
+    <widget name="list" position="75,75" size="1765,800" backgroundColor="tb" scrollbarMode="showNever" enableWrapAround="1" zPosition="0" transparent="1" CoolPiconFontCol="b7" CoolPiconBackCol="#4e5d6b" CoolNoPiconBackCol="#4e5d6b" CoolCurrentCol="blue" CoolCurrentColSel="white" CoolFontCol="white" CoolFontColSel="white" CoolBackColor="#4e5d6b" CoolBackColorSel="#00005090" CoolNowCol="white" CoolNowColSel="white" CoolNowFontCol="white" CoolNowFontColSel="white" CoolTunerCol="b7" CoolTunerBackCol="#4e5d6b" coolbordercolL="white" coolbordercolR="white" CoolBorderColL="white" CoolBorderColR="white" CoolRecCol="red" CoolRecColSel="orange" CoolRecAlarmCol="red" />
+    <widget source="Title" render="Label" position="1333,980" size="532,45" font="Console;30" noWrap="1" valign="center" halign="right" foregroundColor="b7" backgroundColor="tb" transparent="1" />
+  </screen>
 </skin>

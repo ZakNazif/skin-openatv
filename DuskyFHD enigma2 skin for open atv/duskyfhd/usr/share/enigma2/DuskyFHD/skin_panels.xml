@@ -171,18 +171,12 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="helperimage" position="1269,498" size="600,300" backgroundColor="tb" zPosition="8" transparent="1" alphatest="blend" />
   </screen>
   <screen name="wizard">
-    <widget name="text" position="75,75" size="1100,480" itemHeight="50" font="Regular; 36" valign="bottom" foregroundColor="cyan1" backgroundColor="background" transparent="1" />
-    <widget source="list" render="Listbox" position="75,585" size="1100,350" zPosition="13" scrollbarMode="showOnDemand" transparent="1">
-      <convert type="TemplatedMultiContent">
-				{"template": [ MultiContentEntryText(pos = (8, 0), size = (1120, 50), flags = RT_HALIGN_LEFT, text = 0) ],
-				"fonts": [gFont("screen_text", 36)],
-				"itemHeight": 50
-				}
-			</convert>
-    </widget>
-    <widget name="config" position="75,585" size="1100,350" itemHeight="50" zPosition="14" font="Regular; 36" scrollbarMode="showOnDemand" transparent="1" />
-    <widget name="HelpWindow" position="1504,455" size="259,455" zPosition="1" transparent="1" alphatest="blend" />
-    <widget name="languagetext" position="123,970" size="230,40" zPosition="1" valign="center" font="Regular; 25" halign="left" backgroundColor="tb" transparent="1" />
+	<widget name="text" position="150,140" size="1100,250" font="Regular;30" foregroundColor="lightgrey" backgroundColor="tb" transparent="1"/>
+	<widget source="list" render="Listbox" position="150,400" size="1100,440" transparent="1" font="Regular;30" itemHeight="40" backgroundColor="tb" scrollbarMode="showOnDemand">
+		<convert type="StringList"/>
+	</widget>
+	<widget name="config" position="150,400" size="1100,440" transparent="1" backgroundColor="tb" scrollbarMode="showOnDemand"/>
+	<widget name="languagetext" position="118,950" size="222,80" zPosition="1" font="Regular;30" halign="left" transparent="1" valign="top" noWrap="1" foregroundColor="white" backgroundColor="tb"/>
   </screen>
   <screen name="wizardremote">
     <widget name="rc" position="1325,422" size="154,500" pixmaps="skin_default/rc.png,skin_default/rcold.png" zPosition="10" alphatest="blend" />
@@ -191,5 +185,4 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="arrowup" position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="blend" />
     <widget name="arrowup2" position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="blend" />
   </screen>
-
 </skin>

@@ -1,0 +1,7 @@
+<skin>  
+  <screen name="infobar">
+    <widget source="session.CurrentService" render="Picon" position="55,858" zPosition="4" size="400,170" transparent="1" alphatest="blend">
+      <convert type="ServiceName">Reference</convert>
+    </widget>
+  </screen>	
+</skin>   
