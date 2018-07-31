@@ -70,6 +70,11 @@
   <screen name="cvr">
     <ePixmap position="0,0" size="1920,1080" zPosition="-1" pixmap="DarknessFHD/e1/cvr.png" alphatest="off" transparent="1" />
   </screen>
+  <screen name="cool_info">
+    <widget source="Event" render="RunningText" options="movetype=running,startdelay=5000,steptime=60,direction=top,startpoint=0,wrap=1,always=0,repeat=2,oneshot=1" position="610,847" zPosition="1" size="1249,185" font="Regular; 30" foregroundColor="white" backgroundColor="tb" transparent="1" valign="top">
+      <convert type="EventName">ExtendedDescription</convert>
+    </widget>
+  </screen>
   <screen name="inf">
     <widget source="Event" render="DARKScrollLabel" position="532,855" size="1325,170" transparent="0" font="Regular;30" halign="block" foregroundColor="lightgrey" backgroundColor="tb" zPosition="5">
       <convert type="EventName">FullDescription</convert>

@@ -74,7 +74,7 @@
     <font filename="LiberationSans-Regular.ttf" name="menu_title" scale="120" />
     <alias name="FileList" font="Regular" size="35" height="60" />
     <alias name="FileListMulti" font="Regular" size="35" height="60" />
-    <alias name="VirtualKeyboard" font="Regular" size="35" height="60" weight="65" />
+    <alias name="VirtualKeyboard" font="Regular" size="40" height="70" />
     <alias name="ServiceInfo" font="Regular" size="35" height="60" />
     <alias name="SelectionList" font="Regular" size="34" height="50" />
     <alias name="PluginBrowser0" font="Regular" size="40" height="80" />
@@ -103,9 +103,8 @@
     <parameter name="ChoicelistDash" value="0,36,1000,30" />
     <parameter name="ConfigListSeperator" value="300" />
     <parameter name="MediaPlayerPlayList" value="35,1,700,35" />
-    <parameter name="MediaPlayerPlayListFont" value="Regular;30" />
-    <parameter name="VirtualKeyboardFont" value="Regular;44" />
-    <parameter name="VirtualKeyboard" value="60,60" />
+    <parameter name="VirtualKeyboard" value="70,70" />
+    <parameter name="VirtualKeyboardFont" value="Regular;40" />
     <parameter name="PluginListFont1" value="Regular;60" />
     <parameter name="PluginListFont2" value="Regular;25" />
     <parameter name="PluginListItemHeight" value="80" />
@@ -113,35 +112,35 @@
     <parameter name="PluginListDescription" value="180,40,867,32" />
     <parameter name="PluginListIcon" value="30,18,100,40" />
     <parameter name="PluginListCategoryIcon" value="10,8,150,60" />
-    <parameter name="SelectionListFont" value="Regular;30" />
-    <parameter name="SelectionListDescription" value="35,5,550,35" />
-    <parameter name="SelectionListIcon" value="20,0,35,35" />
     <parameter name="SelectionListItemHeight" value="40" />
-    <parameter name="SelectionListDescr" value="55,2,800,41" />
-    <parameter name="SelectionListLock" value="1,2,40,40" />
-    <parameter name="SelectionListLockOff" value="1,2,40,40" />
+	<parameter name="SelectionListIcon" value="0,0,40,40" />
+	<parameter name="SelectionListLock" value="0,0,40,40" />
+    <parameter name="SelectionListLockOff" value="0,0,40,40" />
+    <parameter name="SelectionListFont" value="Regular;30" />
+    <parameter name="SelectionListDescription" value="35,5,600,40" />
+    <parameter name="SelectionListDescr" value="55,0,800,40" />
     <parameter name="MovieListIcon" value="20,10,40,40" />
     <parameter name="MovieListDirectoryIcon" value="55, 10, 1000, 36" />
     <parameter name="MovieListProgress" value="20, 17, 60, 7" />
     <parameter name="MovieListProgressPercent" value="10, 0, 90, 40" />
     <parameter name="MovieListProgressBorder" value="1" />
     <parameter name="FileListFont" value="Regular;30" />
-    <parameter name="FileListItemHeight" value="50" />
-    <parameter name="FileListName" value="50,10,1000,50" />
-    <parameter name="FileListIcon" value="5,10,40,40" />
+    <parameter name="FileListItemHeight" value="40" />
+    <parameter name="FileListName" value="50,0,1000,40" />
+    <parameter name="FileListIcon" value="0,0,40,40" />
     <parameter name="FileListMultiName" value="100,0,1100,40" />
     <parameter name="FileListMultiIcon" value="65,8,40,40" />
-    <parameter name="FileListMultiLock" value="30,3,40,40" />
+    <parameter name="FileListMultiLock" value="30,5,40,40" />
     <parameter name="FileListFont" value="Regular;30" />
-    <parameter name="FileListItemHeight" value="45" />
+    <parameter name="FileListItemHeight" value="40" />
     <parameter name="PlayListName" value="50,0,900,40" />
     <parameter name="PlayListIcon" value="0,2,40,40" />
-    <parameter name="PlayListMultiName" value="75,0,870,40" />
+    <parameter name="PlayListMultiName" value="90,0,870,40" />
     <parameter name="PlayListMultiIcon" value="0,2,40,40" />
     <parameter name="PlayListMultiLock" value="40,3,40,40" />
-    <parameter name="DreamexplorerName" value="55,2,1000,45" />
-    <parameter name="DreamexplorerIcon" value="5,8,30,30" />
-    <parameter name="DreamexplorerItemHeight" value="45" />
+    <parameter name="DreamexplorerName" value="55,0,1000,40" />
+    <parameter name="DreamexplorerIcon" value="0,0,40,40" />
+    <parameter name="DreamexplorerItemHeight" value="40" />
     <parameter name="DreamexplorerFont" value="Regular;32" />
     <parameter name="PluginBrowserName" value="20,12,80" />
     <parameter name="PluginBrowserDescr" value="0,0,0" />
@@ -156,8 +155,6 @@
     <parameter name="ServiceInfo_III" value="630,0,800,40" />
     <parameter name="ServicelistServiceNumber" value="0,0,100,0" />
     <parameter name="ServicelistServiceNumber100" value="10,1,100,0" />
-    <parameter name="SelectionListDescr" value="55, 3, 1000, 50" />
-    <parameter name="SelectionListLock" value="10, 7, 50, 50" />
     <parameter name="EPGlistMultiProgress" value="380,15,80,10" />
     <parameter name="EPGlistMultiProgressText" value="480,2,720,40" />
   </parameters>
@@ -1734,11 +1731,18 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     </widget>
     <ePixmap name="" pixmap="DuskyFHD/e2/key.png" position="1700,910" size="100,100" transparent="0" alphatest="blend" zPosition="2" />
   </screen>
-  <screen name="VirtualKeyBoard" position="343,247" size="1237,625" zPosition="99">
-    <ePixmap pixmap="vkey_text.png" position="14,53" zPosition="-4" size="813,78" alphatest="on" />
-    <widget name="header" position="15,15" size="750,30" font="Regular;30" transparent="1" noWrap="1" />
-    <widget name="text" position="18,53" size="804,69" font="Regular;69" transparent="1" noWrap="1" halign="right" />
-    <widget name="list" position="15,150" size="1165,438" selectionDisabled="1" foregroundColor="lightgrey" backgroundColor="tb" transparent="1" />
+  <screen name="VirtualKeyBoard" position="center,center" size="1100,700" zPosition="99" backgroundColor="black" flags="wfNoBorder">
+    <ePixmap pixmap="DuskyFHD/e1/virt_back.png" position="0,0" size="1100,700" />
+    <ePixmap pixmap="DuskyFHD/buttons/vkey_text.png" position="25,62" size="1055,100" alphatest="blend" />
+    <widget name="header" position="25,10" size="1050,40" font="Regular;30" transparent="1" zPosition="2" noWrap="1" />
+    <widget name="text" position="5,80" size="1050,100" font="Regular;46" transparent="1" zPosition="2" noWrap="1" valign="center" halign="right" />
+    <widget name="list" position="130,222" size="850,350" selectionDisabled="1" foregroundColor="white" backgroundColor="tb" zPosition="1" transparent="1" />
+    <widget source="country" render="Label" position="470,643" size="150,35" noWrap="1" zPosition="1" valign="center" font="Regular; 25" halign="left" backgroundColor="tb" foregroundColor="white" transparent="1" />
+    <widget source="country" render="Pixmap" position="621,641" size="60,40" alphatest="blend" borderWidth="0" zPosition="2">
+      <convert type="ValueToPixmap">LanguageCode</convert>
+    </widget>
+    <ePixmap pixmap="DuskyFHD/buttons/keyboard.png" position="22,222" size="96,50" alphatest="blend" zPosition="5" />
+    <ePixmap pixmap="DuskyFHD/buttons/key_yellow.png" position="427,647" size="35,35" alphatest="blend" zPosition="5" />
   </screen>
   <screen name="VideoEnhancementPreview" backgroundColor="tb" flags="wfNoBorder" position="510,735" size="900,285" title="VideoEnhancementPreview">
     <panel name="ch" />
