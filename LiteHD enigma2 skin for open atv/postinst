@@ -1,0 +1,13 @@
+#!/bin/sh
+echo " " 
+echo "*******************************"   
+echo ""                                                    
+echo "              LiteHD skin by digiteng..."
+echo ""                                                    
+echo "              skin successful installed...  "
+echo ""
+echo "              now select skin LiteHD..." 
+echo ""
+echo "*******************************"   
+echo " "                                                       
+exit 0
